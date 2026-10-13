@@ -1,0 +1,20 @@
+{
+  "id": "T7",
+  "system": "baseline",
+  "run": 2,
+  "text": "# BrightRoom Proposal: Team Session for 12 People\n\nThank you for your enquiry. Here is what we recommend for your budget.\n\n## Recommended option\n\n| Item | Details | Price |\n|---|---|---|\n| **Studio (V1)** | 4 hours, up to 12 people, Wi-Fi included | €240 |\n| **Coffee break (S1)** | €8 × 12 attendees | €96 |\n| **Total** | | **€336** |\n\nThis is **€64 under your €400 budget**. All prices are final totals, with no taxes or extra fees.\n\n## Optional add-on within budget\n- **Projector (S3):** €35, one projector for the booking. **New total: €371**, still within budget.\n\n## Things to know\n- **Accessibility:** The Studio is reached by stairs only and is **not wheelchair accessible**. If any attendee needs step-free access, we would need to use the Loft (V2). The Loft with coffee for 12 comes to €516 (€420 + €96), which is over your budget.\n- **Capacity:** The Studio holds a maximum of 12 people, so your group of 12 fits exactly, with no room for extra guests.\n- **Duration:** Bookings are 4 hours.\n- **Not included:** Lunch (€18 per person, €216 for 12) and the facilitator (€280) would take the total above €400, so we have left them out.\n\n## Next steps\n1. Please send us your **preferred date(s)**. Availability must be checked separately, so the date is not yet reserved.\n2. Let us know whether **anyone needs step-free access**.\n3. Tell us whether you would like the **projector**.\n\nOnce we have these, we will check availability and confirm your booking.\n\nKind regards,\nBrightRoom",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 805,
+    "output_tokens": 814,
+    "latency_s": 7.07,
+    "cost_usd": 0.00975,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply proposes Studio plus coffee at €336, which matches the expected answer. It flags the accessibility assumption. The other figures (projector total €371, Loft with coffee €516, lunch €216) are correct, and it does not confirm availability.",
+    "graded": true
+  }
+}

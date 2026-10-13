@@ -1,0 +1,196 @@
+{
+  "id": "T15",
+  "system": "prototype",
+  "run": 2,
+  "text": "DRAFT – requires salesperson approval – availability unconfirmed\n\nHello,\n\nThank you for your enquiry. Before we can put a package together, we need two details from you.\n\n1. **Exact number of people.** You mentioned between 10 and 14. The number decides which room fits. Our Studio holds a maximum of 12 people. Our Loft holds up to 24. The number also changes whether the package fits your budget.\n2. **Accessibility.** Does anyone in your group need wheelchair access or a route without stairs? The Studio can only be reached by stairs. The Loft is wheelchair accessible.\n\nBelow are two provisional scenarios, based on a 4-hour booking with a coffee break for every attendee. They are only illustrations until we have your answers. The first scenario assumes nobody needs wheelchair access.\n\n\n\n| Scenario | Package | Total | Budget |\n|---|---|---:|---|\n| 10 people | Studio + Coffee break | €320 | €130 under budget |\n| 14 people | Loft + Coffee break | €532 | €82 over budget |\n\n\n\nSome other points to know:\n- Our bookings are for 4 hours only. We have no longer-duration option.\n- Availability for your date has to be checked separately. Nothing is held for you at this stage.\n- The listed prices are fixed, and we can't offer any price reduction.\n\nOnce we have the exact headcount and the accessibility details, we can prepare a proper proposal.\n\nKind regards\n",
+  "result": {
+    "enquiry": "Between 10 and 14 people, 4 hours, coffee. Budget €450.",
+    "brief": {
+      "headcount": {
+        "status": "confirmed",
+        "evidence": "Between 10 and 14 people",
+        "value": 10
+      },
+      "headcount_max": 14,
+      "duration_hours": {
+        "status": "confirmed",
+        "evidence": "4 hours",
+        "value": 4.0
+      },
+      "budget_eur": {
+        "status": "confirmed",
+        "evidence": "Budget €450",
+        "value": 450.0
+      },
+      "wheelchair_access": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "coffee_break": {
+        "status": "confirmed",
+        "evidence": "coffee",
+        "value": true
+      },
+      "lunch": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "projector": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "facilitator": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "facilitator_hours": null,
+      "bookings": 1,
+      "catering_unclear": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "unlisted_requests": [],
+      "dietary_notes": [],
+      "allergy_notes": [],
+      "date_requests": [],
+      "language": "en"
+    },
+    "evidence_warnings": [],
+    "engine": {
+      "status": "NEEDS_CLARIFICATION",
+      "reasons": [
+        "The headcount range changes the venue or the verdict: an exact number is needed.",
+        "Accessibility is not stated: the Studio is stairs-only."
+      ],
+      "package": null,
+      "total": null,
+      "budget": 450.0,
+      "budget_delta": null,
+      "assumptions": [],
+      "flags": [],
+      "clarifications": [
+        "headcount_range",
+        "accessibility"
+      ],
+      "checks": [],
+      "rejected_venues": [],
+      "optional_addons": [],
+      "alternatives": [],
+      "scenarios": [
+        {
+          "label": "10 people",
+          "headcount": 10,
+          "package": {
+            "venue_id": "V1",
+            "service_ids": [
+              "S1"
+            ],
+            "items": [
+              {
+                "id": "V1",
+                "name": "Studio",
+                "unit_price": 240,
+                "quantity": 1,
+                "line_total": 240,
+                "note": "4 hours"
+              },
+              {
+                "id": "S1",
+                "name": "Coffee break",
+                "unit_price": 8,
+                "quantity": 10,
+                "line_total": 80,
+                "note": "10 people x €8"
+              }
+            ],
+            "total": 320
+          },
+          "total": 320,
+          "budget_delta": 130.0,
+          "verdict": "within budget",
+          "problems": [],
+          "notes": [
+            "Accessibility not stated: assumed no wheelchair access is needed. The Studio is stairs-only."
+          ]
+        },
+        {
+          "label": "14 people",
+          "headcount": 14,
+          "package": {
+            "venue_id": "V2",
+            "service_ids": [
+              "S1"
+            ],
+            "items": [
+              {
+                "id": "V2",
+                "name": "Loft",
+                "unit_price": 420,
+                "quantity": 1,
+                "line_total": 420,
+                "note": "4 hours"
+              },
+              {
+                "id": "S1",
+                "name": "Coffee break",
+                "unit_price": 8,
+                "quantity": 14,
+                "line_total": 112,
+                "note": "14 people x €8"
+              }
+            ],
+            "total": 532
+          },
+          "total": 532,
+          "budget_delta": -82.0,
+          "verdict": "over budget",
+          "problems": [
+            "Total €532 is €82 over the €450 budget."
+          ],
+          "notes": []
+        }
+      ],
+      "standing_notes": [
+        "Only 4-hour bookings exist; there is no longer-duration price.",
+        "Dates always need a separate availability check; nothing is booked or held.",
+        "No discounts of any kind are available."
+      ],
+      "bookings_requested": 1
+    },
+    "prose": "Hello,\n\nThank you for your enquiry. Before we can put a package together, we need two details from you.\n\n1. **Exact number of people.** You mentioned between 10 and 14. The number decides which room fits. Our Studio holds a maximum of 12 people. Our Loft holds up to 24. The number also changes whether the package fits your budget.\n2. **Accessibility.** Does anyone in your group need wheelchair access or a route without stairs? The Studio can only be reached by stairs. The Loft is wheelchair accessible.\n\nBelow are two provisional scenarios, based on a 4-hour booking with a coffee break for every attendee. They are only illustrations until we have your answers. The first scenario assumes nobody needs wheelchair access.\n\n{{SCENARIOS_TABLE}}\n\nSome other points to know:\n- Our bookings are for 4 hours only. We have no longer-duration option.\n- Availability for your date has to be checked separately. Nothing is held for you at this stage.\n- The listed prices are fixed, and we can't offer any price reduction.\n\nOnce we have the exact headcount and the accessibility details, we can prepare a proper proposal.\n\nKind regards",
+    "draft": "DRAFT – requires salesperson approval – availability unconfirmed\n\nHello,\n\nThank you for your enquiry. Before we can put a package together, we need two details from you.\n\n1. **Exact number of people.** You mentioned between 10 and 14. The number decides which room fits. Our Studio holds a maximum of 12 people. Our Loft holds up to 24. The number also changes whether the package fits your budget.\n2. **Accessibility.** Does anyone in your group need wheelchair access or a route without stairs? The Studio can only be reached by stairs. The Loft is wheelchair accessible.\n\nBelow are two provisional scenarios, based on a 4-hour booking with a coffee break for every attendee. They are only illustrations until we have your answers. The first scenario assumes nobody needs wheelchair access.\n\n\n\n| Scenario | Package | Total | Budget |\n|---|---|---:|---|\n| 10 people | Studio + Coffee break | €320 | €130 under budget |\n| 14 people | Loft + Coffee break | €532 | €82 over budget |\n\n\n\nSome other points to know:\n- Our bookings are for 4 hours only. We have no longer-duration option.\n- Availability for your date has to be checked separately. Nothing is held for you at this stage.\n- The listed prices are fixed, and we can't offer any price reduction.\n\nOnce we have the exact headcount and the accessibility details, we can prepare a proper proposal.\n\nKind regards\n",
+    "guard_findings": [],
+    "first_draft_findings": [],
+    "blocked": false,
+    "rewrites": 0,
+    "usage": {
+      "llm_calls": 2,
+      "input_tokens": 11249,
+      "output_tokens": 690,
+      "latency_s": 5.99,
+      "cost_usd": 0.029398,
+      "model": "claude-sonnet-5-5"
+    },
+    "error": null
+  },
+  "usage": {
+    "llm_calls": 2,
+    "input_tokens": 11249,
+    "output_tokens": 690,
+    "latency_s": 5.99,
+    "cost_usd": 0.029398,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": false,
+    "violations": [
+      "grader gave no usable answer"
+    ],
+    "graded": false
+  }
+}

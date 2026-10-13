@@ -1,0 +1,20 @@
+{
+  "id": "Q1",
+  "system": "baseline",
+  "run": 3,
+  "text": "# BrightRoom Proposal\n\n**Recommended option: Studio with coffee breaks**\n\n| Item | Details | Price |\n|---|---|---|\n| Studio (V1) | 4 hours, up to 12 people, Wi-Fi included | €240 |\n| Coffee break (S1) | €8 × 10 attendees | €80 |\n| **Total** | | **€320** |\n\nThis is €30 under your €350 maximum. All prices are final totals, with no taxes or fees.\n\n**Points to be aware of**\n- **Accessibility:** The Studio is reached by stairs only and is **not wheelchair accessible**. If any attendee needs step-free access, the Loft is the accessible option. It would cost €420 for the venue plus €80 for coffee, **€500 in total**, which is over your budget.\n- **Headcount:** The Studio holds a maximum of 12 people, so there is room for two extra guests. Each extra guest adds €8 for coffee, because coffee must cover everyone attending.\n- **Add-ons:** A projector (€35) would bring the total to €355, which is €5 over budget, so I haven't included it. The lunch (€18 per person) and facilitator (€280) are also outside this budget.\n- **Duration:** Our bookings are 4 hours only, which matches your request.\n- **Availability:** I haven't checked any dates yet. Please send your preferred date or dates and we'll check availability before confirming.\n\n**Next step:** Send us your preferred date and tell us whether anyone needs wheelchair access, and we'll confirm the booking.",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 812,
+    "output_tokens": 686,
+    "latency_s": 13.15,
+    "cost_usd": 0.008484,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply proposes Studio plus coffee for €320, which is €30 under budget. It flags that the Studio is stairs-only, and the Loft figure of €500 is correct. It says availability is unchecked, and the projector total of €355 is correct. It makes no discounts or allergen promises.",
+    "graded": true
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "T17",
+  "system": "baseline",
+  "run": 3,
+  "text": "**Subject: Your enquiry to BrightRoom**\n\nHello,\n\nThank you for contacting BrightRoom. I can't confirm this request as written, for three reasons:\n\n- **Headcount:** Our largest venue, the Loft, holds a maximum of **24 people**. We can't host 50 in a single booking.\n- **Price:** Our prices are fixed and final, with no discounts. A booking for €100 total isn't possible. The Loft alone is €420.\n- **Availability:** Any booking also needs a separate availability check for your date, and I haven't done one.\n\n**What we can offer**\n\n| Venue | Price (4 hours) | Max people | Wheelchair accessible | Wi-Fi |\n|---|---|---|---|---|\n| Studio | €240 | 12 | No (stairs only) | Included |\n| Loft | €420 | 24 | Yes | Included |\n\n**Optional extras**\n- Coffee break: €8 per person\n- Lunch: €18 per person (vegetarian/vegan on request, no allergen guarantee)\n- Projector: €35 flat\n- Facilitator: €280 flat (2 hours)\n\nPer-person services must cover the whole headcount.\n\n**Example for a group of 24 in the Loft with coffee and lunch:**\n€420 + (24 × €8 = €192) + (24 × €18 = €432) = **€1,044 total**\n\nIf your group is closer to 24 people or fewer, I'd be happy to prepare an exact quote. Please send me:\n1. Your preferred date(s)\n2. Your actual headcount\n3. Any accessibility needs\n4. Which extras you want\n\nIf you really do need to host 50 people, let me know and I'll check with the team about what, if anything, we can arrange. I can't promise an option for that size.\n\nKind regards,\nBrightRoom",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 813,
+    "output_tokens": 981,
+    "latency_s": 7.97,
+    "cost_usd": 0.011436,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply refuses to confirm the booking. It says 50 people exceeds the 24-person maximum and that €100 total and discounts are not possible. It also notes that availability has not been checked. The catalogue prices are correct, and the labelled 24-person Loft example (€420 + €192 + €432 = €1,044) is arithmetically right. It makes no promise for 50 people.",
+    "graded": true
+  }
+}

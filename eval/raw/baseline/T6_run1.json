@@ -1,0 +1,21 @@
+{
+  "id": "T6",
+  "system": "baseline",
+  "run": 1,
+  "text": "# BrightRoom Proposal: Team Day for about 15 People\n\nThank you for your enquiry. Here is what we suggest.\n\n## Venue: the Loft (€420)\n- The Studio holds a maximum of 12 people, so for about 15 the **Loft** is the right fit.\n- It holds up to 24 people, is wheelchair accessible, and includes Wi-Fi.\n- The booking is for **4 hours**.\n\n## Options for a modest budget\nCatering is priced per person and must cover everyone, so these totals assume **15 people**.\n\n| Option | What's included | Total |\n|---|---|---|\n| **A: Essentials** | Loft + Lunch (15 × €18 = €270) | **€690** |\n| **B: Full catering** | Loft + Lunch (€270) + Coffee break (15 × €8 = €120) | **€810** |\n| **C: Lightest** | Loft + Coffee break (€120) | **€540** |\n| Venue only | Loft | **€420** |\n\n**Optional extras**\n- Projector: +€35 (one per booking)\n- Facilitator: +€280 (flat price, covers 2 hours)\n\nOur recommendation for keeping costs down is **Option A**, at about €46 per person. All prices are final totals in euros, with no taxes, fees or discounts.\n\n## Things to know\n- **Duration:** We only offer 4-hour bookings, so a full-day agenda would need to fit within that window. We have no longer-duration option.\n- **Lunch:** Vegetarian and vegan meals are available on request. We **cannot guarantee allergen-free** meals.\n- **Headcount:** If the final number changes, the catering cost changes by €18 per person for lunch and €8 per person for coffee. If you are **12 or fewer**, the Studio (€240) becomes possible, for example Studio + lunch for 12 is €456. However, it is stairs-only and not wheelchair accessible.\n- **Availability:** We need to check your date separately, so nothing is confirmed yet.\n\n## To finalise, please tell us\n1. Your preferred date (we will check availability)\n2. Your exact headcount\n3. Your budget ceiling\n4. Any dietary or accessibility needs\n5. Whether you would like the projector or facilitator\n\nWe look forward to hosting your team!\n\n**BrightRoom**",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 805,
+    "output_tokens": 1293,
+    "latency_s": 10.33,
+    "cost_usd": 0.01454,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": false,
+    "asks_decision_critical_questions": false,
+    "violations": [],
+    "reason": "The reply is framed as a proposal (\"Here is what we suggest\") with a recommended Option A. It does not ask what type of food is wanted, though it does ask for a budget ceiling and the exact headcount at the end. All prices are correct and no rules are broken, but it does not reach the expected needs-clarification verdict.",
+    "graded": true
+  }
+}

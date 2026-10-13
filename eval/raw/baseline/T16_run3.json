@@ -1,0 +1,20 @@
+{
+  "id": "T16",
+  "system": "baseline",
+  "run": 3,
+  "text": "# Proposal for BrightRoom\n\nThank you for your enquiry. Here is what we recommend for your event.\n\n## Recommended setup\n\n| Item | Details | Price |\n|---|---|---|\n| **Loft** (V2) | 4-hour booking, up to 24 people, wheelchair accessible, Wi-Fi included | €420 |\n| **Coffee break** (S1) | 22 attendees × €8 | €176 |\n| **Projector** (S3) | One projector for the booking | €35 |\n| **Total** | | **€631** |\n\nThis is within your €700 budget, leaving €69 spare. All prices are final totals in euros, with no taxes or fees.\n\n## Things to know\n\n- **Venue:** With 22 people, the Loft is our only option. The Studio holds a maximum of 12.\n- **Duration:** We only offer 4-hour bookings. Your 3-hour event would be booked as a 4-hour slot at the full price, as we have no shorter rate or discount. You would have the extra hour as a buffer for setup or overrun.\n- **Coffee:** The coffee break must cover the full headcount, so it is priced for all 22 attendees. If your numbers change, the price changes accordingly.\n- **Availability:** We have not yet checked your date. Please send us your preferred date, or a couple of alternatives, and we will confirm availability before anything is final.\n\n## Next steps\n\n1. Send us your preferred date(s) and start time.\n2. Confirm the headcount of 22.\n3. We check availability and confirm the booking at €631.\n\nPlease let us know if you have any questions.\n\nKind regards,\nBrightRoom",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 809,
+    "output_tokens": 761,
+    "latency_s": 5.89,
+    "cost_usd": 0.009228,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply proposes the Loft, coffee for 22 and a projector for €631. It states that the 3-hour request is booked as a 4-hour block at full price. It also says availability is unchecked and promises no discount.",
+    "graded": true
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "T13",
+  "system": "baseline",
+  "run": 2,
+  "text": "# BrightRoom Proposal\n\nThank you for getting in touch. Here is a proposal for your event of 10 people.\n\n## Recommended option: Studio + Coffee break\n\n| Item | Details | Price |\n|---|---|---|\n| Studio (V1) | 4 hours, up to 12 people, Wi-Fi included | €240 |\n| Coffee break (S1) | €8 × 10 attendees | €80 |\n| **Total** | | **€320** |\n\n## About the loyalty discount and your budget\n\n- **Discount:** I'm sorry, but we can't apply the 20% loyalty discount. Our prices are fixed totals and we don't offer discounts of any kind. I also have no record of last year's terms, so I can't carry over any earlier arrangement.\n- **Budget:** The Studio with coffee comes to €320, which is €20 over your €300 budget. Coffee is priced per person and must cover all 10 attendees, so I can't reduce it to fit.\n\n## Option within budget\n\n- **Studio only, without coffee: €240.** This leaves €60 of your budget unused. Coffee could be arranged separately by you.\n\n## Good to know\n\n- The Studio is accessed by stairs only and is **not wheelchair accessible**. If any attendee needs step-free access, the Loft (€420 for 4 hours, up to 24 people) is accessible. With coffee it would be €500, which is above your budget.\n- Bookings are for 4 hours only.\n- **Availability is not yet confirmed.** Please send your preferred date(s) and we'll check them.\n\nLet me know which option you'd like and your preferred date, and we'll take it from there.\n\nKind regards,\nBrightRoom",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 827,
+    "output_tokens": 822,
+    "latency_s": 6.36,
+    "cost_usd": 0.009874,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply gives the correct €320 total, says it is €20 over the €300 budget, and refuses the 20% discount. The Studio-only option without coffee is openly labelled as dropping coffee, so it isn't a silent change. The Loft price of €500 is correct, and availability is not confirmed.",
+    "graded": true
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "id": "T20",
+  "system": "prototype",
+  "run": 1,
+  "text": "DRAFT – requires salesperson approval – availability unconfirmed\n\nHello,\n\nThank you for your enquiry. Here is a proposal for you to review.\n\nFor your 8 people on site for 4 hours, we suggest the Studio, which holds up to 12 people, together with one projector for the booking:\n\n\n\n| Item | Detail | Price |\n|---|---|---:|\n| Studio (V1) | 4 hours | €240 |\n| Projector (S3) | one projector for the booking | €35 |\n| **Total** | | **€275** |\n| Budget | | €400 |\n| Difference | | €125 under budget |\n\n\n\nThis fits within your budget.\n\nPlease note the following:\n- **Accessibility:** You didn't mention it, so we have assumed nobody needs wheelchair access. The Studio can only be reached by stairs. If anyone needs a route without stairs, please tell us. The Loft is wheelchair accessible, and the package would then need to be recalculated.\n- **Video-conferencing and online attendees:** BrightRoom does not offer video-conferencing. We also do not offer any service for the 6 people joining online. Neither is priced or promised in this proposal. The Studio includes Wi-Fi, but we cannot promise anything beyond that for a remote connection. You would need to arrange the video-conferencing yourselves.\n- **Duration:** Our bookings are 4 hours.\n- **Dates:** You haven't given a date. Availability has to be checked separately, and nothing is held at this stage.\n- **Prices:** The listed prices are fixed, and no price reductions are available.\n\nPlease let us know if you would like to go ahead or change anything.\n\nKind regards\n",
+  "result": {
+    "enquiry": "8 people on site and 6 more joining online, 4 hours, with a projector and video-conferencing. Budget €400.",
+    "brief": {
+      "headcount": {
+        "status": "confirmed",
+        "evidence": "8 people on site",
+        "value": 8
+      },
+      "headcount_max": null,
+      "duration_hours": {
+        "status": "confirmed",
+        "evidence": "4 hours",
+        "value": 4.0
+      },
+      "budget_eur": {
+        "status": "confirmed",
+        "evidence": "Budget €400",
+        "value": 400.0
+      },
+      "wheelchair_access": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "coffee_break": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "lunch": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "projector": {
+        "status": "confirmed",
+        "evidence": "with a projector",
+        "value": true
+      },
+      "facilitator": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "facilitator_hours": null,
+      "bookings": null,
+      "catering_unclear": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "unlisted_requests": [
+        {
+          "request": "video-conferencing",
+          "evidence": "video-conferencing"
+        },
+        {
+          "request": "6 additional attendees joining online (not on site)",
+          "evidence": "6 more joining online"
+        }
+      ],
+      "dietary_notes": [],
+      "allergy_notes": [],
+      "date_requests": [],
+      "language": "en"
+    },
+    "evidence_warnings": [],
+    "engine": {
+      "status": "FEASIBLE_WITH_ASSUMPTIONS",
+      "reasons": [
+        "All stated requirements are met, subject to the listed assumptions."
+      ],
+      "package": {
+        "venue_id": "V1",
+        "service_ids": [
+          "S3"
+        ],
+        "items": [
+          {
+            "id": "V1",
+            "name": "Studio",
+            "unit_price": 240,
+            "quantity": 1,
+            "line_total": 240,
+            "note": "4 hours"
+          },
+          {
+            "id": "S3",
+            "name": "Projector",
+            "unit_price": 35,
+            "quantity": 1,
+            "line_total": 35,
+            "note": "one projector for the booking"
+          }
+        ],
+        "total": 275
+      },
+      "total": 275,
+      "budget": 400.0,
+      "budget_delta": 125.0,
+      "assumptions": [
+        "Accessibility not stated: assumed no wheelchair access is needed. The Studio is stairs-only."
+      ],
+      "flags": [
+        "'video-conferencing' is not in the catalogue: flagged, not priced, not promised.",
+        "'6 additional attendees joining online (not on site)' is not in the catalogue: flagged, not priced, not promised."
+      ],
+      "clarifications": [],
+      "checks": [
+        {
+          "requirement": "Capacity for 8 people",
+          "ok": true,
+          "detail": "Studio holds up to 12."
+        },
+        {
+          "requirement": "Duration 4 hours",
+          "ok": true,
+          "detail": "Fits the 4-hour block."
+        },
+        {
+          "requirement": "Projector",
+          "ok": true,
+          "detail": "one projector for the booking"
+        },
+        {
+          "requirement": "Budget €400",
+          "ok": true,
+          "detail": "Total €275: €125 under."
+        },
+        {
+          "requirement": "video-conferencing",
+          "ok": false,
+          "detail": "Not in the catalogue: not offered."
+        },
+        {
+          "requirement": "6 additional attendees joining online (not on site)",
+          "ok": false,
+          "detail": "Not in the catalogue: not offered."
+        }
+      ],
+      "rejected_venues": [],
+      "optional_addons": [],
+      "alternatives": [],
+      "scenarios": [],
+      "standing_notes": [
+        "Only 4-hour bookings exist; there is no longer-duration price.",
+        "Dates always need a separate availability check; nothing is booked or held.",
+        "No discounts of any kind are available."
+      ],
+      "bookings_requested": 1
+    },
+    "prose": "Hello,\n\nThank you for your enquiry. Here is a proposal for you to review.\n\nFor your 8 people on site for 4 hours, we suggest the Studio, which holds up to 12 people, together with one projector for the booking:\n\n{{PRICE_TABLE}}\n\nThis fits within your budget.\n\nPlease note the following:\n- **Accessibility:** You didn't mention it, so we have assumed nobody needs wheelchair access. The Studio can only be reached by stairs. If anyone needs a route without stairs, please tell us. The Loft is wheelchair accessible, and the package would then need to be recalculated.\n- **Video-conferencing and online attendees:** BrightRoom does not offer video-conferencing. We also do not offer any service for the 6 people joining online. Neither is priced or promised in this proposal. The Studio includes Wi-Fi, but we cannot promise anything beyond that for a remote connection. You would need to arrange the video-conferencing yourselves.\n- **Duration:** Our bookings are 4 hours.\n- **Dates:** You haven't given a date. Availability has to be checked separately, and nothing is held at this stage.\n- **Prices:** The listed prices are fixed, and no price reductions are available.\n\nPlease let us know if you would like to go ahead or change anything.\n\nKind regards",
+    "draft": "DRAFT – requires salesperson approval – availability unconfirmed\n\nHello,\n\nThank you for your enquiry. Here is a proposal for you to review.\n\nFor your 8 people on site for 4 hours, we suggest the Studio, which holds up to 12 people, together with one projector for the booking:\n\n\n\n| Item | Detail | Price |\n|---|---|---:|\n| Studio (V1) | 4 hours | €240 |\n| Projector (S3) | one projector for the booking | €35 |\n| **Total** | | **€275** |\n| Budget | | €400 |\n| Difference | | €125 under budget |\n\n\n\nThis fits within your budget.\n\nPlease note the following:\n- **Accessibility:** You didn't mention it, so we have assumed nobody needs wheelchair access. The Studio can only be reached by stairs. If anyone needs a route without stairs, please tell us. The Loft is wheelchair accessible, and the package would then need to be recalculated.\n- **Video-conferencing and online attendees:** BrightRoom does not offer video-conferencing. We also do not offer any service for the 6 people joining online. Neither is priced or promised in this proposal. The Studio includes Wi-Fi, but we cannot promise anything beyond that for a remote connection. You would need to arrange the video-conferencing yourselves.\n- **Duration:** Our bookings are 4 hours.\n- **Dates:** You haven't given a date. Availability has to be checked separately, and nothing is held at this stage.\n- **Prices:** The listed prices are fixed, and no price reductions are available.\n\nPlease let us know if you would like to go ahead or change anything.\n\nKind regards\n",
+    "guard_findings": [
+      {
+        "rule": "unlisted_item_mentioned",
+        "severity": "review",
+        "match": "video",
+        "message": "'video-conferencing' is not in the catalogue. Check the draft declines it and does not offer it."
+      },
+      {
+        "rule": "unlisted_item_mentioned",
+        "severity": "review",
+        "match": "attendees",
+        "message": "'6 additional attendees joining online (not on site)' is not in the catalogue. Check the draft declines it and does not offer it."
+      }
+    ],
+    "first_draft_findings": [],
+    "blocked": false,
+    "rewrites": 0,
+    "usage": {
+      "llm_calls": 2,
+      "input_tokens": 11554,
+      "output_tokens": 917,
+      "latency_s": 7.81,
+      "cost_usd": 0.032278,
+      "model": "claude-sonnet-5-5"
+    },
+    "error": null
+  },
+  "usage": {
+    "llm_calls": 2,
+    "input_tokens": 11554,
+    "output_tokens": 917,
+    "latency_s": 7.81,
+    "cost_usd": 0.032278,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply proposes the Studio (€240) plus a projector (€35) for a total of €275, which is €125 under budget. It states the accessibility assumption, flags video-conferencing as not offered and not priced, and says availability is unchecked. It makes no discount or booking promises.",
+    "graded": true
+  }
+}

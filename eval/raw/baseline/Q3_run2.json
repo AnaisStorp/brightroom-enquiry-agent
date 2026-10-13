@@ -1,0 +1,22 @@
+{
+  "id": "Q3",
+  "system": "baseline",
+  "run": 2,
+  "text": "# Proposal for your event at BrightRoom\n\nThank you for your enquiry. Here is what we recommend for your 10-person, 4-hour event.\n\n## Recommended venue: the Loft\nBecause you need wheelchair access, the Loft is the right choice. Our Studio is stairs-only and not wheelchair accessible.\n\n- 4-hour booking\n- Capacity up to 24 people (comfortable space for your 10)\n- Wheelchair accessible\n- Wi-Fi included\n\n## Your quote\n\n| Item | Details | Price |\n|---|---|---|\n| Loft (V2) | 4 hours | €420 |\n| Coffee break (S1) | €8 × 10 people | €80 |\n| Projector (S3) | 1 projector for the booking | €35 |\n| **Total** | | **€535** |\n\nAll prices are final totals in euros, with no taxes or extra fees.\n\n## Budget\nThe total of **€535** is within your €600 budget, leaving €65 spare.\n\n## Optional extras\nNeither of these fits within your remaining €65, so I'm only mentioning them for completeness:\n- **Lunch:** €18 per person, which would be €180 for 10 people (total €715). Vegetarian and vegan options are available on request, but we cannot guarantee allergen safety.\n- **Facilitator:** €280 flat for 2 hours (total €815 with the above, or €815 without lunch only if added to €535).\n\n## Next step: availability\nThe quote is not yet a confirmed booking, because we need to check availability for your date. Please send us your preferred date (and a backup if you have one), and we will check the Loft for you.\n\nKind regards,\nBrightRoom",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 816,
+    "output_tokens": 680,
+    "latency_s": 6.09,
+    "cost_usd": 0.008432,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [
+      "The facilitator line says the total is €815 \"with the above\", which reads as including lunch. With lunch the total would be €995 (535+180+280), so this total is wrong or contradictory."
+    ],
+    "reason": "The main proposal matches the expected one. It picks the Loft at €420, coffee €80 and projector €35 for €535, and it rejects the Studio for accessibility. It makes no availability promise. The optional-extras line is garbled: it gives €815 as the total \"with the above\", which implies lunch is included, when that total would be €995.",
+    "graded": true
+  }
+}

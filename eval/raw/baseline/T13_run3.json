@@ -1,0 +1,20 @@
+{
+  "id": "T13",
+  "system": "baseline",
+  "run": 3,
+  "text": "# BrightRoom Proposal\n\nThank you for getting in touch again.\n\n## Recommended option: Studio + Coffee break\n\n| Item | Details | Price |\n|---|---|---|\n| Studio (V1) | 4 hours, up to 12 people, Wi-Fi included | €240 |\n| Coffee break (S1) | €8 × 10 attendees | €80 |\n| **Total** | | **€320** |\n\n## Loyalty discount and budget\n\n- **We can't apply the 20% loyalty discount.** Our pricing has no discounts of any kind, and all prices are final totals with no taxes or fees. I also can't see last year's booking terms, so this proposal uses our current catalogue prices.\n- **The total is €20 over your €300 budget.** Coffee must cover the full headcount, so I can't reduce it to fit.\n\n## Option within budget\n\n- **Studio only: €240.** This leaves €60 of your budget, which isn't enough for coffee for 10 people (€80).\n\n## Things to know\n\n- **Accessibility:** The Studio is reached by stairs only and is not wheelchair accessible. If any attendee needs step-free access, the Loft (€420 for 4 hours, up to 24 people) is the alternative. With coffee it would come to €500, which is over budget.\n- **Availability:** Please send your preferred date(s). Dates need a separate availability check, and nothing is reserved until we confirm.\n\nLet me know which option you'd like and your date, and I'll check availability.\n\nKind regards,\nBrightRoom",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 827,
+    "output_tokens": 913,
+    "latency_s": 8.54,
+    "cost_usd": 0.010784,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply gives the correct €320 total (Studio €240 + coffee €80) and says it is €20 over the €300 budget. It refuses the 20% discount and does not drop coffee. The Studio-only option is presented as not meeting the coffee requirement, and the Loft total of €500 is correct. It confirms no booking or availability.",
+    "graded": true
+  }
+}

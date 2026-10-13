@@ -1,0 +1,20 @@
+{
+  "id": "T11",
+  "system": "baseline",
+  "run": 1,
+  "text": "# BrightRoom Proposal: 4-Hour Workshop for 10 People\n\n## Important note on the facilitator\nOur facilitator package covers **2 hours only**, and it can be added only once per booking. We can't offer a facilitator for the full 4 hours. What we can offer is a facilitator for **2 of the 4 hours**, for example to lead the opening session or a key exercise, with the remaining time run by your own team.\n\n## Recommended option: Studio + Facilitator (2 h) + Coffee breaks\n| Item | Calculation | Price |\n|---|---|---|\n| Studio (4 hours, max 12 people, Wi-Fi included) | flat | €240 |\n| Facilitator (2 hours) | flat | €280 |\n| Coffee break | 10 × €8 | €80 |\n| **Total** | | **€600** |\n\nThis matches your budget exactly.\n\n## Alternative: a little under budget\n| Item | Price |\n|---|---|\n| Studio | €240 |\n| Facilitator (2 hours) | €280 |\n| Projector | €35 |\n| **Total** | **€555** |\n\nThis option has no coffee break but includes a projector for presentations.\n\n## Not possible within budget\n- **Lunch for 10** (€180) would bring the Studio + Facilitator package to €700, over budget.\n- **The Loft** (€420) with the facilitator comes to €700, also over budget.\n\n## Things to confirm\n1. **Accessibility:** The Studio is reached by stairs only and is **not wheelchair accessible**. If any attendee needs step-free access, we'd need the Loft, which doesn't fit your budget with a facilitator.\n2. **Date:** All prices are final totals with no taxes or fees, but the date still needs a separate availability check. Please send us your preferred date(s).\n3. **Option choice:** Tell us whether you prefer the coffee breaks or the projector, and we'll prepare the booking.",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 815,
+    "output_tokens": 957,
+    "latency_s": 7.31,
+    "cost_usd": 0.0112,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply says a 4-hour facilitator isn't possible and offers 2-hour facilitation instead. All of its prices are correct: 240+280+80=600, 240+280+35=555, lunch 180 giving 700, and Loft 420+280=700. It makes no discount or availability promise, and it flags the Studio's accessibility limit and the separate date check. The base alternative of Studio plus facilitator at €520 is implicit in its figures. The extras it adds are catalogue items priced correctly.",
+    "graded": true
+  }
+}

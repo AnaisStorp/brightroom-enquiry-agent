@@ -1,0 +1,20 @@
+{
+  "id": "T10",
+  "system": "baseline",
+  "run": 3,
+  "text": "# BrightRoom proposal: team session for 8 people\n\n**Important note on the nut allergy**\nOur lunch has **no allergen guarantee**. We can offer vegetarian or vegan on request, but we cannot promise a nut-free meal or protection from cross-contamination. With a severe allergy, please weigh this carefully before deciding on the lunch. Also, per-person services must cover the full headcount, so lunch is priced for all 8 people (€144) or not booked at all. We can't offer a reduced count.\n\n## Recommended option: Studio + Lunch\n\n| Item | Details | Price |\n|---|---|---|\n| Studio (V1) | 4 hours, max 12 people, Wi-Fi included | €240 |\n| Lunch (S2) | 8 × €18 | €144 |\n| **Total** | | **€384** |\n\nThis leaves **€116** of your €500 budget.\n\n## Optional add-ons within budget\n\n| Add-on | Price | New total |\n|---|---|---|\n| Projector (S3), one for the booking | €35 | €419 |\n| Coffee break (S1), 8 × €8 | €64 | €448 |\n| Projector + coffee breaks | €99 | €483 |\n\nThe Facilitator (€280) does not fit within the remaining budget.\n\n## Things to confirm\n- **Accessibility:** The Studio is stairs-only and not wheelchair accessible. If anyone in your group needs step-free access, the Loft (€420) is the alternative, but with lunch it comes to €564, which is over budget.\n- **Allergy decision:** Please tell us how you'd like to handle lunch, given that we can't guarantee it's nut-free. We'd also need to know if you want vegetarian or vegan options.\n- **Date:** All prices are final totals in euros, with no taxes, fees or discounts. Availability for your preferred date still needs a separate check, so please send us your date or a few alternatives.\n\nOnce you confirm the date and your lunch decision, we'll check availability and finalise the booking.",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 819,
+    "output_tokens": 1317,
+    "latency_s": 11.3,
+    "cost_usd": 0.014808,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply proposes Studio + Lunch at €384 and warns that lunch has no allergen guarantee. It does not promise nut-free. The add-on totals are correct (419, 448, 483), and Loft + lunch = 420 + 144 = 564 is also correct. It doesn't confirm availability or apply any discount.",
+    "graded": true
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "T19",
+  "system": "baseline",
+  "run": 1,
+  "text": "# BrightRoom Proposal: Two-Day Session for 10 People\n\n## Recommended option: Studio on both days\n\n| Item | Calculation | Cost |\n|---|---|---|\n| Studio, Day 1 (4 hours, max 12 people, Wi-Fi included) | 1 × €240 | €240 |\n| Studio, Day 2 (4 hours, max 12 people, Wi-Fi included) | 1 × €240 | €240 |\n| Coffee break, Day 1 | 10 × €8 | €80 |\n| Coffee break, Day 2 | 10 × €8 | €80 |\n| **Total** | | **€640** |\n\nThis is **€60 under your €700 budget**. Prices are final totals in euros, with no taxes, fees or discounts.\n\n## How it's structured\n- Each day is a separate 4-hour booking, because we only offer 4-hour bookings and one venue per booking.\n- Coffee covers all 10 attendees on both days.\n\n## Optional add-on within budget\n- **Projector (€35, flat):** for one of the two days, this brings the total to **€675**, still within budget. Adding it to both days would cost €70 and bring the total to €710, which is €10 over budget.\n\n## What doesn't fit the budget\n- **Lunch** (€18 per person, so €180 per day) and the **Facilitator** (€280 for 2 hours) would each push the total past €700.\n- **The Loft** (€420 per day) would bring the total to €1,000 with coffee.\n\n## Points to confirm\n1. **Accessibility:** the Studio is stairs-only and not wheelchair accessible. If anyone in your group needs step-free access, we would need the Loft, which exceeds your budget. Please let us know.\n2. **Availability:** we haven't checked your dates yet. Please send the two dates and we'll confirm availability for both days before booking.\n\nWould you like us to go ahead with the Studio option, with or without the projector?",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 817,
+    "output_tokens": 1078,
+    "latency_s": 8.73,
+    "cost_usd": 0.012414,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply proposes the Studio with coffee (€320 per day) and flags the stairs-only accessibility assumption. It treats each day as a separate booking and does not present €320 as the price for both days. Its €640 total is the sum of two separately priced bookings, and it says dates still need an availability check. It makes no discount, no booking confirmation and no allergen promise.",
+    "graded": true
+  }
+}

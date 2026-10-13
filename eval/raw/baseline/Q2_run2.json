@@ -1,0 +1,20 @@
+{
+  "id": "Q2",
+  "system": "baseline",
+  "run": 2,
+  "text": "# BrightRoom Proposal\n\n**Short answer:** We can meet your requirements for **€940**, which is **€90 over** your €850 budget. We have no discounts or fee adjustments, so we can't close that gap without changing the scope.\n\n## Recommended option (meets all requirements)\n\n| Item | Calculation | Price |\n|---|---|---|\n| Loft (4 hours, up to 24 people, wheelchair accessible, Wi-Fi included) | 1 × €420 | €420 |\n| Coffee break | 20 × €8 | €160 |\n| Lunch (vegetarian/vegan on request) | 20 × €18 | €360 |\n| **Total** | | **€940** |\n\n**Why the Loft:** The Studio holds a maximum of 12 people, so it can't fit a group of 20. The Loft is our only venue for this size.\n\n## Options if €850 is a hard limit\n\n1. **Increase the budget to €940** and keep everything as requested.\n2. **Reduce the headcount to 16 or fewer.** At 16 people the Loft, coffee and lunch cost €836 (€420 + €128 + €288). This only works if the group can actually be smaller.\n3. **Drop one service**, though you've said both are required:\n   - Loft + lunch only: €780\n   - Loft + coffee only: €580\n\nPer-person services must cover the full headcount, so we can't provide coffee or lunch for only part of the group.\n\n## Optional extras (not included above)\n- Projector: €35 flat\n- Facilitator (2 hours): €280 flat\n\n## Notes\n- All prices are final totals in euros, with no taxes or fees.\n- Lunch is vegetarian/vegan on request, but **we cannot guarantee allergen safety**.\n- Bookings are 4 hours only.\n- **The date still needs an availability check.** Please send your preferred date(s) and we'll confirm.\n\nLet us know which option you'd like and we'll move forward.",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 812,
+    "output_tokens": 1050,
+    "latency_s": 8.67,
+    "cost_usd": 0.012124,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply prices the Loft, coffee and lunch correctly at €940 and says this is €90 over the €850 budget. It says it can't close the gap with discounts. Its alternatives (€940 budget, 16 people for €836, drop lunch for €580, drop coffee for €780) are all correct and left to the client to choose. It also says the date needs an availability check and gives no allergen guarantee. The \"we can meet your requirements\" framing is a little soft, but the reply does not claim the budget is met.",
+    "graded": true
+  }
+}

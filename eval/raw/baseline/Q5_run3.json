@@ -1,0 +1,24 @@
+{
+  "id": "Q5",
+  "system": "baseline",
+  "run": 3,
+  "text": "# BrightRoom proposal\n\nThank you for your enquiry. We can't offer exactly what you asked for, so here is what we can do.\n\n## What we can't do\n- **30 people in one room:** our largest venue, the Loft, holds a maximum of 24. Each booking covers exactly one venue.\n- **6 hours:** we only offer 4-hour bookings. There is no longer-duration price.\n- **Confirm today:** we need your date to check availability, and we haven't received one. We can't confirm anything until that check is done.\n\n## Option A: Loft for up to 24 people (one room, 4 hours)\n| Item | Calculation | Price |\n|---|---|---|\n| Loft (4 hours, up to 24 people, wheelchair accessible, Wi-Fi included) | | €420 |\n| Lunch | 24 × €18 | €432 |\n| **Total** | | **€852** |\n\nOptional add-ons:\n- Coffee break: 24 × €8 = €192\n- Projector: €35\n- Facilitator (2 hours): €280\n\nThe total with all add-ons is €852 + €192 + €35 + €280 = **€1,359**, within your €1,500 budget.\n\nLunch is vegetarian or vegan on request. We cannot guarantee allergen safety.\n\n## Option B: all 30 people, split across two rooms (4 hours)\nThis would be two separate bookings on the same date, with the group divided between rooms. It is not one shared space.\n\n| Item | Calculation | Price |\n|---|---|---|\n| Loft (up to 24 people) | | €420 |\n| Studio (up to 12 people) | | €240 |\n| Lunch | 30 × €18 | €540 |\n| **Total** | | **€1,200** |\n\nCoffee breaks for all 30 would add €240, bringing the total to €1,440. A projector would add €35 per booking (€70 for both rooms), so the total with coffee and both projectors would be €1,510, slightly over your budget. One projector keeps it at €1,475.\n\nThe Studio is stairs-only and not wheelchair accessible.\n\n## Next steps\nTo move forward, please tell us:\n1. Your preferred date, and one or two alternatives. We'll check availability.\n2. Whether you prefer Option A (24 people or fewer) or Option B (split group).\n3. Any accessibility or dietary requirements.\n\nOnce we've confirmed availability for your date, we can finalise the booking.",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 816,
+    "output_tokens": 1479,
+    "latency_s": 11.81,
+    "cost_usd": 0.016422,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [
+      "Option B offers two venues (Loft + Studio) for one event, which breaks the rule of exactly one venue per booking. It gets round the 24-person cap by splitting the booking.",
+      "Prices a second projector (€70 for both rooms), which breaks the rule that flat-price items can be added at most once. The €1,510 total is therefore invalid.",
+      "Option B presents €1,200/€1,440/€1,475 as valid totals for all 30 people, so a configuration the catalogue does not allow is offered as feasible."
+    ],
+    "reason": "The reply says plainly that 30 people, 6 hours and same-day confirmation can't be met. It also gives the correct closest alternative of €852. However, it then invents a two-venue split (Option B) and prices a second projector, and both break the catalogue rules.",
+    "graded": true
+  }
+}

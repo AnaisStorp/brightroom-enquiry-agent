@@ -1,0 +1,188 @@
+{
+  "id": "T16",
+  "system": "prototype",
+  "run": 3,
+  "text": "DRAFT – requires salesperson approval – availability unconfirmed\n\nHello,\n\nThank you for your enquiry. Here is a proposal for you to review:\n\n- **Venue:** the Loft. It holds up to 24 people, so it suits your group of 22. The Studio holds a maximum of 12, so it is too small.\n- **Coffee break:** one for each of the 22 attendees.\n- **Projector:** one projector for the booking.\n\n\n\n| Item | Detail | Price |\n|---|---|---:|\n| Loft (V2) | 4 hours | €420 |\n| Coffee break (S1) | 22 people x €8 | €176 |\n| Projector (S3) | one projector for the booking | €35 |\n| **Total** | | **€631** |\n| Budget | | €700 |\n| Difference | | €69 under budget |\n\n\n\nThe table shows that this package fits within your budget.\n\nPlease note the following assumption:\n- You asked for 3 hours. BrightRoom only offers 4-hour bookings, so the price for the 4-hour block applies.\n\nDates need a separate availability check, and nothing is held for you at this stage. The listed prices are fixed.\n\nPlease tell me if you would like to adjust anything, and I can look at it with you.\n\nKind regards\n",
+  "result": {
+    "enquiry": "22 people, 3 hours, coffee and a projector. Budget €700.",
+    "brief": {
+      "headcount": {
+        "status": "confirmed",
+        "evidence": "22 people",
+        "value": 22
+      },
+      "headcount_max": null,
+      "duration_hours": {
+        "status": "confirmed",
+        "evidence": "3 hours",
+        "value": 3.0
+      },
+      "budget_eur": {
+        "status": "confirmed",
+        "evidence": "Budget €700",
+        "value": 700.0
+      },
+      "wheelchair_access": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "coffee_break": {
+        "status": "confirmed",
+        "evidence": "coffee",
+        "value": true
+      },
+      "lunch": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "projector": {
+        "status": "confirmed",
+        "evidence": "a projector",
+        "value": true
+      },
+      "facilitator": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "facilitator_hours": null,
+      "bookings": 1,
+      "catering_unclear": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "unlisted_requests": [],
+      "dietary_notes": [],
+      "allergy_notes": [],
+      "date_requests": [],
+      "language": "en"
+    },
+    "evidence_warnings": [],
+    "engine": {
+      "status": "FEASIBLE_WITH_ASSUMPTIONS",
+      "reasons": [
+        "All stated requirements are met, subject to the listed assumptions."
+      ],
+      "package": {
+        "venue_id": "V2",
+        "service_ids": [
+          "S1",
+          "S3"
+        ],
+        "items": [
+          {
+            "id": "V2",
+            "name": "Loft",
+            "unit_price": 420,
+            "quantity": 1,
+            "line_total": 420,
+            "note": "4 hours"
+          },
+          {
+            "id": "S1",
+            "name": "Coffee break",
+            "unit_price": 8,
+            "quantity": 22,
+            "line_total": 176,
+            "note": "22 people x €8"
+          },
+          {
+            "id": "S3",
+            "name": "Projector",
+            "unit_price": 35,
+            "quantity": 1,
+            "line_total": 35,
+            "note": "one projector for the booking"
+          }
+        ],
+        "total": 631
+      },
+      "total": 631,
+      "budget": 700.0,
+      "budget_delta": 69.0,
+      "assumptions": [
+        "3 hours requested: the 4-hour block price applies (no shorter booking exists)."
+      ],
+      "flags": [],
+      "clarifications": [],
+      "checks": [
+        {
+          "requirement": "Capacity for 22 people",
+          "ok": true,
+          "detail": "Loft holds up to 24."
+        },
+        {
+          "requirement": "Duration 4 hours",
+          "ok": true,
+          "detail": "Fits the 4-hour block."
+        },
+        {
+          "requirement": "Coffee break",
+          "ok": true,
+          "detail": "one coffee break for every attendee"
+        },
+        {
+          "requirement": "Projector",
+          "ok": true,
+          "detail": "one projector for the booking"
+        },
+        {
+          "requirement": "Budget €700",
+          "ok": true,
+          "detail": "Total €631: €69 under."
+        }
+      ],
+      "rejected_venues": [
+        {
+          "venue_id": "V1",
+          "name": "Studio",
+          "would_cost": null,
+          "reasons": [
+            "Studio holds max 12 people (22 requested)."
+          ]
+        }
+      ],
+      "optional_addons": [],
+      "alternatives": [],
+      "scenarios": [],
+      "standing_notes": [
+        "Only 4-hour bookings exist; there is no longer-duration price.",
+        "Dates always need a separate availability check; nothing is booked or held.",
+        "No discounts of any kind are available."
+      ],
+      "bookings_requested": 1
+    },
+    "prose": "Hello,\n\nThank you for your enquiry. Here is a proposal for you to review:\n\n- **Venue:** the Loft. It holds up to 24 people, so it suits your group of 22. The Studio holds a maximum of 12, so it is too small.\n- **Coffee break:** one for each of the 22 attendees.\n- **Projector:** one projector for the booking.\n\n{{PRICE_TABLE}}\n\nThe table shows that this package fits within your budget.\n\nPlease note the following assumption:\n- You asked for 3 hours. BrightRoom only offers 4-hour bookings, so the price for the 4-hour block applies.\n\nDates need a separate availability check, and nothing is held for you at this stage. The listed prices are fixed.\n\nPlease tell me if you would like to adjust anything, and I can look at it with you.\n\nKind regards",
+    "draft": "DRAFT – requires salesperson approval – availability unconfirmed\n\nHello,\n\nThank you for your enquiry. Here is a proposal for you to review:\n\n- **Venue:** the Loft. It holds up to 24 people, so it suits your group of 22. The Studio holds a maximum of 12, so it is too small.\n- **Coffee break:** one for each of the 22 attendees.\n- **Projector:** one projector for the booking.\n\n\n\n| Item | Detail | Price |\n|---|---|---:|\n| Loft (V2) | 4 hours | €420 |\n| Coffee break (S1) | 22 people x €8 | €176 |\n| Projector (S3) | one projector for the booking | €35 |\n| **Total** | | **€631** |\n| Budget | | €700 |\n| Difference | | €69 under budget |\n\n\n\nThe table shows that this package fits within your budget.\n\nPlease note the following assumption:\n- You asked for 3 hours. BrightRoom only offers 4-hour bookings, so the price for the 4-hour block applies.\n\nDates need a separate availability check, and nothing is held for you at this stage. The listed prices are fixed.\n\nPlease tell me if you would like to adjust anything, and I can look at it with you.\n\nKind regards\n",
+    "guard_findings": [],
+    "first_draft_findings": [],
+    "blocked": false,
+    "rewrites": 0,
+    "usage": {
+      "llm_calls": 2,
+      "input_tokens": 11384,
+      "output_tokens": 584,
+      "latency_s": 5.79,
+      "cost_usd": 0.028608,
+      "model": "claude-sonnet-5-5"
+    },
+    "error": null
+  },
+  "usage": {
+    "llm_calls": 2,
+    "input_tokens": 11384,
+    "output_tokens": 584,
+    "latency_s": 5.79,
+    "cost_usd": 0.028608,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply proposes the Loft with coffee and a projector for €631, which matches the expected total. It states the 4-hour block assumption, says availability is unconfirmed, and does not offer a discount or confirm a booking.",
+    "graded": true
+  }
+}

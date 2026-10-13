@@ -1,0 +1,21 @@
+{
+  "id": "Q4",
+  "system": "baseline",
+  "run": 3,
+  "text": "**Subject: Your team workshop at BrightRoom: proposal and next steps**\n\nHello,\n\nThank you for your enquiry. To give you an exact quote, I need your headcount and preferred date. In the meantime, here is what we offer and how the pricing works.\n\n**1. Choose a venue (4-hour booking, Wi-Fi included)**\n\n| Venue | Capacity | Accessibility | Price |\n|---|---|---|---|\n| **Studio** | up to 12 people | stairs only, **not** wheelchair accessible | €240 |\n| **Loft** | up to 24 people | wheelchair accessible | €420 |\n\n**2. Optional extras**\n\n| Service | Price | Notes |\n|---|---|---|\n| Coffee break | €8 per person | covers every attendee |\n| Lunch | €18 per person | covers every attendee; vegetarian/vegan on request; **we cannot guarantee allergen-free meals** |\n| Projector | €35 flat | one per booking |\n| Facilitator | €280 flat | one facilitator for 2 hours (not the full 4) |\n\n**3. Illustrative totals (examples only, not a quote for your group)**\n\n- **10 people, Studio, coffee + lunch + projector:** €240 + €80 + €180 + €35 = **€535**\n- **Same, plus facilitator:** **€815**\n- **20 people, Loft, coffee + lunch + projector:** €420 + €160 + €360 + €35 = **€975**\n- **Same, plus facilitator:** **€1,255**\n\n**About the \"best offer\":** our prices are final totals in euros, with no taxes or fees. We only offer 4-hour bookings and don't give discounts, so the prices above are our best and only prices. The most economical option is to choose the smallest venue that fits your group and add only the extras you need.\n\n**To confirm your quote, please tell me:**\n1. How many people will attend?\n2. What date do you prefer? Dates need a separate availability check, so nothing is reserved until we confirm.\n3. Does anyone need wheelchair access? If so, the Loft is the right choice.\n4. Which extras do you want: coffee, lunch, projector, facilitator? Please also tell me about any dietary requirements.\n\nOnce I have these, I'll send you a final price and check availability.\n\nKind regards,\nBrightRoom",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 807,
+    "output_tokens": 1208,
+    "latency_s": 9.69,
+    "cost_usd": 0.013694,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "asks_decision_critical_questions": true,
+    "violations": [],
+    "reason": "The reply doesn't give a firm quote. It asks for headcount, services and accessibility, and it also asks for the date. It doesn't ask about budget. It states the 4-hour-only rule, the separate availability check and the no-discount rule, and it makes no allergen promise. The illustrative totals are labelled as examples, and I checked them: €535, €815, €975 and €1,255 are all correct.",
+    "graded": true
+  }
+}

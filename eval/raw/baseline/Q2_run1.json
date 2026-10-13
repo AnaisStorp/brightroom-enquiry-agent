@@ -1,0 +1,20 @@
+{
+  "id": "Q2",
+  "system": "baseline",
+  "run": 1,
+  "text": "# BrightRoom Proposal: 20-Person Event (4 hours)\n\n## Summary\nFor 20 people with coffee and lunch, the total is **€940**, which is **€90 over your €850 budget**. We have no discounts or lower-priced options that fit this group, so I can't bring this exact request under budget.\n\n## Recommended booking\n\n| Item | Calculation | Price |\n|---|---|---|\n| Loft (4 hours, max 24 people, wheelchair accessible, Wi-Fi included) | flat | €420 |\n| Coffee break | 20 × €8 | €160 |\n| Lunch | 20 × €18 | €360 |\n| **Total** | | **€940** |\n\n**Why the Loft:** The Studio (€240) holds a maximum of 12 people, so it can't host 20. Each booking covers exactly one venue, so we also can't combine two rooms.\n\n**Lunch note:** Vegetarian and vegan options are available on request. We cannot guarantee anything regarding allergens.\n\n## If the €850 budget is fixed\n- **Reduce the headcount to 16 or fewer.** In the Loft, 16 people cost €420 + 16 × €26 = **€836**. Coffee and lunch must cover everyone attending.\n- **Reduce to 12 or fewer and use the Studio.** For 12 people the cost is €240 + 12 × €26 = **€552**. The Studio is stairs-only and not wheelchair accessible.\n- **Increase the budget to €940** to keep all 20 people with both services.\n\nDropping coffee or lunch would bring the 20-person Loft booking under budget (€780 without coffee, €580 without lunch), but since you said both are required, I haven't proposed it.\n\n## Optional extras (not included above)\n- Projector: €35 (once per booking)\n- Facilitator: €280 (covers 2 hours)\n\nAdding either would increase the total further.\n\n## Next steps\nPrices are final totals in euros, with no taxes or fees. Please send your preferred date so we can check availability, as dates are not confirmed until we do. Let me know which option you'd like and I'll prepare the booking.",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 812,
+    "output_tokens": 1121,
+    "latency_s": 10.31,
+    "cost_usd": 0.012834,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply says the €940 total is €90 over budget and can't be met as specified. Its alternatives are correct: €836 for 16 people, €780 without coffee, €580 without lunch, and a €940 budget. The Studio option at €552 for 12 people is also correct (240 + 12×26). It confirms no availability and promises no discount or allergen guarantee.",
+    "graded": true
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "T11",
+  "system": "baseline",
+  "run": 3,
+  "text": "# BrightRoom Proposal: 10-Person Workshop\n\n**Important:** Our facilitator is a flat €280 package for **2 hours only**, and it can be added only once per booking. We can't offer a facilitator for the full 4 hours. The proposal below has the facilitator for 2 of the 4 hours. The other 2 hours would be self-led by your group.\n\n## Recommended option: Studio + Facilitator\n\n| Item | Details | Price |\n|---|---|---|\n| Studio (V1) | 4 hours, up to 12 people, Wi-Fi included | €240 |\n| Facilitator (S4) | 2 hours, flat | €280 |\n| **Total** | | **€520** |\n\nThis leaves €80 of your €600 budget. If you'd like to use it, you could add one of these:\n\n| Add-on | Calculation | New total |\n|---|---|---|\n| Projector (S3) | €35 flat | **€555** |\n| Coffee break (S1) | 10 × €8 = €80 | **€600** |\n\nBoth add-ons together would come to €635, which is over budget. Lunch for 10 (€180) doesn't fit within budget either.\n\n## Things to confirm\n- **Accessibility:** The Studio is stairs only and not wheelchair accessible. If any attendee needs step-free access, we'd need the Loft (€420, up to 24 people, wheelchair accessible). With the facilitator, that comes to €700, which is €100 over budget.\n- **Date:** All prices are final totals, with no taxes, fees or discounts. Availability for your date still needs a separate check, so please send us your preferred date(s).\n- **Timing:** Would you like the facilitator in the first or second half of the session?\n\nLet us know which option you prefer, and we'll check availability and confirm the booking.",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 815,
+    "output_tokens": 955,
+    "latency_s": 8.0,
+    "cost_usd": 0.01118,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply says a full 4-hour facilitator can't be offered and proposes the Studio plus a 2-hour facilitator at €520. Every price and add-on total checks out against the catalogue: €555, €600, €635, €700. It makes no discount or availability promises and doesn't confirm any booking.",
+    "graded": true
+  }
+}

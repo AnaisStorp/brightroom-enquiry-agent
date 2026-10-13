@@ -1,0 +1,249 @@
+{
+  "id": "T8",
+  "system": "prototype",
+  "run": 2,
+  "text": "DRAFT – requires salesperson approval – availability unconfirmed\nNot sendable as an offer\n\nHello,\n\nThank you for your enquiry. As specified, we can't meet this request within your budget.\n\nFor 13 people, only the Loft works. It holds up to 24 people and has wheelchair access. The Studio holds a maximum of 12, so it is too small for your group. The Loft with a coffee break for each attendee, for the 4 hours you asked for, comes to more than your budget:\n\n\n\n| Item | Detail | Price |\n|---|---|---:|\n| Loft (V2) | 4 hours | €420 |\n| Coffee break (S1) | 13 people x €8 | €104 |\n| **Total** | | **€524** |\n| Budget | | €400 |\n| Difference | | €124 over budget |\n\n\n\nHere are two alternatives. Each one would need your agreement, and each means giving something up:\n\n\n\n| Option | Package | People | Total | What the client gives up |\n|---|---|---:|---:|---|\n| 1 | Loft + Coffee break | 13 | €524 | budget raised from €400 to €524 (+€124) |\n| 2 | Studio + Coffee break | 12 | €336 | headcount reduced from 13 to at most 12 |\n\nEvery option changes a stated requirement and needs the client's explicit consent.\n\n\n\n- **Option 1: Loft with coffee break for 13 people.** You would raise your budget to the amount shown in the table.\n- **Option 2: Studio with coffee break for up to 12 people.** You would reduce your headcount from 13 to 12 at most. The Studio can only be reached by stairs. You haven't mentioned accessibility needs, so please tell us if anyone in your group needs a route without stairs.\n\nPlease also note:\n- Our venues are only available as 4-hour sessions, and there is no longer-duration price.\n- Our listed prices are fixed, so we can't offer any price reduction.\n- You haven't given a date. Availability has to be checked separately, and nothing is held at this stage.\n\nPlease let me know if you'd like to go ahead with one of these options or if you'd like to change the request.\n\nKind regards\n",
+  "result": {
+    "enquiry": "13 people, 4 hours, coffee. Budget €400.",
+    "brief": {
+      "headcount": {
+        "status": "confirmed",
+        "evidence": "13 people",
+        "value": 13
+      },
+      "headcount_max": null,
+      "duration_hours": {
+        "status": "confirmed",
+        "evidence": "4 hours",
+        "value": 4.0
+      },
+      "budget_eur": {
+        "status": "confirmed",
+        "evidence": "Budget €400",
+        "value": 400.0
+      },
+      "wheelchair_access": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "coffee_break": {
+        "status": "confirmed",
+        "evidence": "coffee",
+        "value": true
+      },
+      "lunch": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "projector": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "facilitator": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "facilitator_hours": null,
+      "bookings": null,
+      "catering_unclear": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "unlisted_requests": [],
+      "dietary_notes": [],
+      "allergy_notes": [],
+      "date_requests": [],
+      "language": "en"
+    },
+    "evidence_warnings": [],
+    "engine": {
+      "status": "INFEASIBLE",
+      "reasons": [
+        "Total €524 is €124 over the €400 budget."
+      ],
+      "package": {
+        "venue_id": "V2",
+        "service_ids": [
+          "S1"
+        ],
+        "items": [
+          {
+            "id": "V2",
+            "name": "Loft",
+            "unit_price": 420,
+            "quantity": 1,
+            "line_total": 420,
+            "note": "4 hours"
+          },
+          {
+            "id": "S1",
+            "name": "Coffee break",
+            "unit_price": 8,
+            "quantity": 13,
+            "line_total": 104,
+            "note": "13 people x €8"
+          }
+        ],
+        "total": 524
+      },
+      "total": 524,
+      "budget": 400.0,
+      "budget_delta": -124.0,
+      "assumptions": [],
+      "flags": [],
+      "clarifications": [],
+      "checks": [
+        {
+          "requirement": "Capacity for 13 people",
+          "ok": true,
+          "detail": "Loft holds up to 24."
+        },
+        {
+          "requirement": "Duration 4 hours",
+          "ok": true,
+          "detail": "Fits the 4-hour block."
+        },
+        {
+          "requirement": "Coffee break",
+          "ok": true,
+          "detail": "one coffee break for every attendee"
+        },
+        {
+          "requirement": "Budget €400",
+          "ok": false,
+          "detail": "Total €524: €124 over."
+        }
+      ],
+      "rejected_venues": [
+        {
+          "venue_id": "V1",
+          "name": "Studio",
+          "would_cost": null,
+          "reasons": [
+            "Studio holds max 12 people (13 requested)."
+          ]
+        }
+      ],
+      "optional_addons": [],
+      "alternatives": [
+        {
+          "relaxed": [
+            "budget"
+          ],
+          "description": "Loft + Coffee break for 13 people = €524",
+          "headcount": 13,
+          "gives_up": "budget raised from €400 to €524 (+€124)",
+          "requires_client_consent": true,
+          "package": {
+            "venue_id": "V2",
+            "service_ids": [
+              "S1"
+            ],
+            "items": [
+              {
+                "id": "V2",
+                "name": "Loft",
+                "unit_price": 420,
+                "quantity": 1,
+                "line_total": 420,
+                "note": "4 hours"
+              },
+              {
+                "id": "S1",
+                "name": "Coffee break",
+                "unit_price": 8,
+                "quantity": 13,
+                "line_total": 104,
+                "note": "13 people x €8"
+              }
+            ],
+            "total": 524
+          },
+          "total": 524,
+          "budget_delta": -124.0,
+          "notes": []
+        },
+        {
+          "relaxed": [
+            "headcount"
+          ],
+          "description": "Studio + Coffee break for 12 people = €336",
+          "headcount": 12,
+          "gives_up": "headcount reduced from 13 to at most 12",
+          "requires_client_consent": true,
+          "package": {
+            "venue_id": "V1",
+            "service_ids": [
+              "S1"
+            ],
+            "items": [
+              {
+                "id": "V1",
+                "name": "Studio",
+                "unit_price": 240,
+                "quantity": 1,
+                "line_total": 240,
+                "note": "4 hours"
+              },
+              {
+                "id": "S1",
+                "name": "Coffee break",
+                "unit_price": 8,
+                "quantity": 12,
+                "line_total": 96,
+                "note": "12 people x €8"
+              }
+            ],
+            "total": 336
+          },
+          "total": 336,
+          "budget_delta": 64.0,
+          "notes": [
+            "Studio is stairs-only and accessibility needs were not stated."
+          ]
+        }
+      ],
+      "scenarios": [],
+      "standing_notes": [
+        "Only 4-hour bookings exist; there is no longer-duration price.",
+        "Dates always need a separate availability check; nothing is booked or held.",
+        "No discounts of any kind are available."
+      ],
+      "bookings_requested": 1
+    },
+    "prose": "Hello,\n\nThank you for your enquiry. As specified, we can't meet this request within your budget.\n\nFor 13 people, only the Loft works. It holds up to 24 people and has wheelchair access. The Studio holds a maximum of 12, so it is too small for your group. The Loft with a coffee break for each attendee, for the 4 hours you asked for, comes to more than your budget:\n\n{{PRICE_TABLE}}\n\nHere are two alternatives. Each one would need your agreement, and each means giving something up:\n\n{{ALTERNATIVES_TABLE}}\n\n- **Option 1: Loft with coffee break for 13 people.** You would raise your budget to the amount shown in the table.\n- **Option 2: Studio with coffee break for up to 12 people.** You would reduce your headcount from 13 to 12 at most. The Studio can only be reached by stairs. You haven't mentioned accessibility needs, so please tell us if anyone in your group needs a route without stairs.\n\nPlease also note:\n- Our venues are only available as 4-hour sessions, and there is no longer-duration price.\n- Our listed prices are fixed, so we can't offer any price reduction.\n- You haven't given a date. Availability has to be checked separately, and nothing is held at this stage.\n\nPlease let me know if you'd like to go ahead with one of these options or if you'd like to change the request.\n\nKind regards",
+    "draft": "DRAFT – requires salesperson approval – availability unconfirmed\nNot sendable as an offer\n\nHello,\n\nThank you for your enquiry. As specified, we can't meet this request within your budget.\n\nFor 13 people, only the Loft works. It holds up to 24 people and has wheelchair access. The Studio holds a maximum of 12, so it is too small for your group. The Loft with a coffee break for each attendee, for the 4 hours you asked for, comes to more than your budget:\n\n\n\n| Item | Detail | Price |\n|---|---|---:|\n| Loft (V2) | 4 hours | €420 |\n| Coffee break (S1) | 13 people x €8 | €104 |\n| **Total** | | **€524** |\n| Budget | | €400 |\n| Difference | | €124 over budget |\n\n\n\nHere are two alternatives. Each one would need your agreement, and each means giving something up:\n\n\n\n| Option | Package | People | Total | What the client gives up |\n|---|---|---:|---:|---|\n| 1 | Loft + Coffee break | 13 | €524 | budget raised from €400 to €524 (+€124) |\n| 2 | Studio + Coffee break | 12 | €336 | headcount reduced from 13 to at most 12 |\n\nEvery option changes a stated requirement and needs the client's explicit consent.\n\n\n\n- **Option 1: Loft with coffee break for 13 people.** You would raise your budget to the amount shown in the table.\n- **Option 2: Studio with coffee break for up to 12 people.** You would reduce your headcount from 13 to 12 at most. The Studio can only be reached by stairs. You haven't mentioned accessibility needs, so please tell us if anyone in your group needs a route without stairs.\n\nPlease also note:\n- Our venues are only available as 4-hour sessions, and there is no longer-duration price.\n- Our listed prices are fixed, so we can't offer any price reduction.\n- You haven't given a date. Availability has to be checked separately, and nothing is held at this stage.\n\nPlease let me know if you'd like to go ahead with one of these options or if you'd like to change the request.\n\nKind regards\n",
+    "guard_findings": [],
+    "first_draft_findings": [],
+    "blocked": false,
+    "rewrites": 0,
+    "usage": {
+      "llm_calls": 2,
+      "input_tokens": 11545,
+      "output_tokens": 760,
+      "latency_s": 6.56,
+      "cost_usd": 0.03069,
+      "model": "claude-sonnet-5-5"
+    },
+    "error": null
+  },
+  "usage": {
+    "llm_calls": 2,
+    "input_tokens": 11545,
+    "output_tokens": 760,
+    "latency_s": 6.56,
+    "cost_usd": 0.03069,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply says the request can't be met as specified. It shows the correct Loft + coffee total of €524, which is €124 over budget. It offers the two expected alternatives (€524 for 13 people, or €336 for 12 people in the Studio). It gives no discount and confirms no availability, and it notes the Studio's stairs-only access.",
+    "graded": true
+  }
+}

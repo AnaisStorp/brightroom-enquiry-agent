@@ -1,0 +1,20 @@
+{
+  "id": "Q5",
+  "system": "baseline",
+  "run": 2,
+  "text": "# BrightRoom proposal\n\nThank you for your enquiry. Three parts of the request don't fit what we can offer, so here is what we can do.\n\n## What we can't do\n- **30 people:** Our largest venue, the Loft, holds a maximum of 24. Each booking covers exactly one venue, so we can't accommodate 30 in a single booking.\n- **6 hours:** We only offer 4-hour bookings. We have no longer-duration option.\n- **Confirmation today:** Every date needs a separate availability check, so I can't confirm anything until we've done that. Please send us your preferred date(s).\n\n## Option for up to 24 people (Loft, 4 hours)\nThe Loft is wheelchair accessible, has Wi-Fi included, and fits comfortably within your €1,500 budget.\n\n| Item | Calculation | Price |\n|---|---|---|\n| Loft (4 hours, max 24 people) | flat | €420 |\n| Lunch | 24 × €18 | €432 |\n| **Total (venue + lunch)** | | **€852** |\n\n**Optional add-ons** (lunch and coffee must cover the full headcount):\n- Coffee break: 24 × €8 = €192\n- Projector: €35\n- Facilitator (2 hours of the 4): €280\n\n| Package | Total |\n|---|---|\n| Loft + lunch | €852 |\n| Loft + lunch + coffee break | €1,044 |\n| Loft + lunch + coffee break + projector | €1,079 |\n| Loft + lunch + coffee break + projector + facilitator | €1,359 |\n\nIf your group is smaller than 24, per-person costs drop accordingly (€26 per person for lunch and coffee).\n\n## Notes\n- Prices are final totals in euros, with no taxes or fees.\n- Lunch can include vegetarian or vegan options on request, but we **cannot guarantee allergen safety**.\n- The Studio (€240, max 12 people) is cheaper but only reachable by stairs, so it is not wheelchair accessible.\n\n## Next steps\nPlease tell us:\n1. Whether you can bring the group down to 24 or fewer, or whether the 30 is fixed.\n2. Your preferred date(s), so we can check availability.\n3. Which add-ons you'd like, and any dietary requirements.\n\nOnce we've confirmed availability, we can finalise the booking.",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 816,
+    "output_tokens": 1396,
+    "latency_s": 10.35,
+    "cost_usd": 0.015592,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply says 30 people, 6 hours and same-day confirmation cannot be met. It offers the Loft with 24 people, 4 hours and lunch at €852, which matches the expected alternative. All add-on totals are correct, and it applies no discount, confirms no booking and promises nothing on allergens.",
+    "graded": true
+  }
+}

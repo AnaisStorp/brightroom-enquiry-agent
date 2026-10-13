@@ -1,0 +1,20 @@
+{
+  "id": "T14",
+  "system": "baseline",
+  "run": 3,
+  "text": "**Objet : Proposition BrightRoom – demi-journée pour 18 personnes**\n\nBonjour,\n\nMerci pour votre demande. Voici notre proposition.\n\n**Lieu recommandé : le Loft (4 heures)**\n- Capacité maximale de 24 personnes, donc adapté à votre groupe de 18.\n- Accessible en fauteuil roulant. Le Studio, accessible uniquement par escaliers, ne convient pas à votre collègue.\n- Wi-Fi inclus.\n\n**Détail du devis**\n\n| Élément | Calcul | Prix |\n|---|---|---|\n| Loft (4 h) | forfait | 420 € |\n| Déjeuner végétarien | 18 personnes × 18 € | 324 € |\n| Vidéoprojecteur | forfait | 35 € |\n| **Total** | | **779 €** |\n\nLe total est de 779 €, soit 21 € sous votre budget de 800 €. Les prix sont définitifs, sans taxes ni frais supplémentaires.\n\n**Points à noter**\n- Le déjeuner végétarien est proposé sur demande et prévu pour l'ensemble des 18 participants. Nous ne pouvons toutefois pas garantir l'absence d'allergènes. Si certains participants ont des allergies, merci de nous le signaler.\n- Nous n'avons pas inclus de pause café (8 € par personne, soit 144 € pour 18 personnes), car elle ferait dépasser votre budget (923 € au total).\n- Cette offre n'est pas une réservation. La disponibilité dépend de la date et doit être vérifiée séparément.\n\nPour poursuivre, pouvez-vous nous indiquer la date souhaitée ? Nous vérifierons la disponibilité du Loft avant de confirmer.\n\nCordialement,\nL'équipe BrightRoom",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 865,
+    "output_tokens": 795,
+    "latency_s": 6.02,
+    "cost_usd": 0.00968,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply proposes the Loft at €420, lunch at €324 and the projector at €35, for a total of €779 and €21 under budget. It is in French and says vegetarian lunch is on request. It makes no allergen promise and confirms no booking. The coffee break figures (€144, total €923) are correct.",
+    "graded": true
+  }
+}

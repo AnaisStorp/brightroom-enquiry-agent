@@ -1,0 +1,21 @@
+{
+  "id": "T15",
+  "system": "baseline",
+  "run": 1,
+  "text": "# BrightRoom Proposal\n\nThank you for your enquiry. Your headcount range (10–14) straddles the capacity of our Studio (max 12), so the right option depends on your final numbers.\n\n## Option A: Studio (for 10–12 people), within budget\n- **Studio**, 4 hours, Wi-Fi included: €240\n- **Coffee break**, €8 per person for every attendee\n\n| Headcount | Venue | Coffee | **Total** |\n|---|---|---|---|\n| 10 | €240 | €80 | **€320** |\n| 11 | €240 | €88 | **€328** |\n| 12 | €240 | €96 | **€336** |\n\nThis leaves €114–130 of your budget free. If you need a projector (flat €35), the total for 12 people would be **€371**, still within budget.\n\nPlease note that the Studio is reached by stairs only and is **not wheelchair accessible**.\n\n## Option B: Loft (for 13–14 people), over budget\nThe Studio can't hold more than 12 people, so 13 or 14 attendees would need the Loft (max 24, wheelchair accessible, Wi-Fi included):\n\n| Headcount | Venue | Coffee | **Total** |\n|---|---|---|---|\n| 13 | €420 | €104 | **€524** |\n| 14 | €420 | €112 | **€532** |\n\nBoth exceed your €450 budget by €74–82. Our bookings are a fixed 4 hours with no discounts, so I can't lower these prices. Even for 10 people, the Loft would cost €500.\n\n## Summary\n- **12 or fewer attendees:** the Studio fits your budget at €320–€336.\n- **13–14 attendees:** we have no option within €450. The Loft would be €524–€532, or you could keep the group to 12 or fewer.\n\n## Next steps\n1. Confirm your final headcount.\n2. Let me know if anyone needs wheelchair access, since that would require the Loft.\n3. Send your preferred date so we can check availability. Dates always need a separate check, so nothing is reserved yet.\n\nOnce I have those details, I can confirm the booking.\n\nKind regards,\nBrightRoom",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 812,
+    "output_tokens": 1151,
+    "latency_s": 8.56,
+    "cost_usd": 0.013134,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "asks_decision_critical_questions": true,
+    "reason": "The reply shows both scenarios with correct totals: 10 people is €320 and within budget, and 14 people is €532 and over budget. It asks for the final headcount, which is the missing information. It also asks about wheelchair access and the date. All arithmetic matches the catalogue, and it makes no discounts and no availability promises. It states that nothing is reserved.",
+    "graded": true
+  }
+}

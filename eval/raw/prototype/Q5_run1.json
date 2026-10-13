@@ -1,0 +1,218 @@
+{
+  "id": "Q5",
+  "system": "prototype",
+  "run": 1,
+  "text": "DRAFT – requires salesperson approval – availability unconfirmed\nNot sendable as an offer\n\nHello,\n\nThank you for your enquiry. As specified, we can't meet this request, for two reasons:\n\n- **Group size:** You have 30 people. Our largest room, the Loft, holds a maximum of 24, and the Studio holds a maximum of 12.\n- **Duration:** You asked for 6 hours. We only offer 4-hour bookings, and there is no longer-duration option or price.\n\nBecause of this, we can't put together a package that matches your request, and so we can't compare one against your budget.\n\nThere is one alternative. You would have to agree to it, and it means giving up some of what you asked for:\n\n\n\n| Option | Package | People | Total | What the client gives up |\n|---|---|---:|---:|---|\n| 1 | Loft + Lunch | 24 | €852 | duration shortened from 6 hours to the only available 4-hour block; headcount reduced from 30 to at most 24 |\n\nEvery option changes a stated requirement and needs the client's explicit consent.\n\n\n\nThis option is the Loft with lunch for up to 24 people. It gives up the 6-hour length, because the booking would be a single 4-hour block. It also gives up your full group, because the headcount would drop from 30 to at most 24.\n\nYou asked us to confirm today. We can't do that from this message. Availability for any date has to be checked separately, and nothing is held for you at this point.\n\nIf the alternative could work for you, or if you'd like to talk through other ways to split or shorten the event, please get in touch.\n\nKind regards\n",
+  "result": {
+    "enquiry": "30 people for 6 hours with lunch. We can spend €1,500. Please confirm it today.",
+    "brief": {
+      "headcount": {
+        "status": "confirmed",
+        "evidence": "30 people",
+        "value": 30
+      },
+      "headcount_max": null,
+      "duration_hours": {
+        "status": "confirmed",
+        "evidence": "6 hours",
+        "value": 6.0
+      },
+      "budget_eur": {
+        "status": "confirmed",
+        "evidence": "We can spend €1,500",
+        "value": 1500.0
+      },
+      "wheelchair_access": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "coffee_break": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "lunch": {
+        "status": "confirmed",
+        "evidence": "with lunch",
+        "value": true
+      },
+      "projector": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "facilitator": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "facilitator_hours": null,
+      "bookings": null,
+      "catering_unclear": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "unlisted_requests": [
+        {
+          "request": "confirm the booking today",
+          "evidence": "Please confirm it today."
+        }
+      ],
+      "dietary_notes": [],
+      "allergy_notes": [],
+      "date_requests": [
+        "Please confirm it today."
+      ],
+      "language": "en"
+    },
+    "evidence_warnings": [],
+    "engine": {
+      "status": "INFEASIBLE",
+      "reasons": [
+        "30 people exceeds the largest venue (Loft, max 24).",
+        "6 hours requested: only 4-hour bookings exist and there is no longer-duration price."
+      ],
+      "package": null,
+      "total": null,
+      "budget": 1500.0,
+      "budget_delta": null,
+      "assumptions": [],
+      "flags": [
+        "'confirm the booking today' is not in the catalogue: flagged, not priced, not promised.",
+        "Date/urgency request (Please confirm it today.): dates need a separate availability check. Nothing can be confirmed or booked from this draft."
+      ],
+      "clarifications": [],
+      "checks": [
+        {
+          "requirement": "Capacity for 30 people",
+          "ok": false,
+          "detail": "30 people exceeds the largest venue (Loft, max 24)."
+        },
+        {
+          "requirement": "Duration 6 hours",
+          "ok": false,
+          "detail": "6 hours requested: only 4-hour bookings exist and there is no longer-duration price."
+        },
+        {
+          "requirement": "Lunch",
+          "ok": false,
+          "detail": "Not included."
+        },
+        {
+          "requirement": "Budget €1,500",
+          "ok": false,
+          "detail": "No package to compare."
+        },
+        {
+          "requirement": "confirm the booking today",
+          "ok": false,
+          "detail": "Not in the catalogue: not offered."
+        }
+      ],
+      "rejected_venues": [
+        {
+          "venue_id": "V1",
+          "name": "Studio",
+          "would_cost": null,
+          "reasons": [
+            "Studio holds max 12 people (30 requested)."
+          ]
+        },
+        {
+          "venue_id": "V2",
+          "name": "Loft",
+          "would_cost": null,
+          "reasons": [
+            "Loft holds max 24 people (30 requested)."
+          ]
+        }
+      ],
+      "optional_addons": [],
+      "alternatives": [
+        {
+          "relaxed": [
+            "headcount",
+            "duration"
+          ],
+          "description": "Loft + Lunch for 24 people = €852",
+          "headcount": 24,
+          "gives_up": "duration shortened from 6 hours to the only available 4-hour block; headcount reduced from 30 to at most 24",
+          "requires_client_consent": true,
+          "package": {
+            "venue_id": "V2",
+            "service_ids": [
+              "S2"
+            ],
+            "items": [
+              {
+                "id": "V2",
+                "name": "Loft",
+                "unit_price": 420,
+                "quantity": 1,
+                "line_total": 420,
+                "note": "4 hours"
+              },
+              {
+                "id": "S2",
+                "name": "Lunch",
+                "unit_price": 18,
+                "quantity": 24,
+                "line_total": 432,
+                "note": "24 people x €18"
+              }
+            ],
+            "total": 852
+          },
+          "total": 852,
+          "budget_delta": 648.0,
+          "notes": []
+        }
+      ],
+      "scenarios": [],
+      "standing_notes": [
+        "Only 4-hour bookings exist; there is no longer-duration price.",
+        "Dates always need a separate availability check; nothing is booked or held.",
+        "No discounts of any kind are available."
+      ],
+      "bookings_requested": 1
+    },
+    "prose": "Hello,\n\nThank you for your enquiry. As specified, we can't meet this request, for two reasons:\n\n- **Group size:** You have 30 people. Our largest room, the Loft, holds a maximum of 24, and the Studio holds a maximum of 12.\n- **Duration:** You asked for 6 hours. We only offer 4-hour bookings, and there is no longer-duration option or price.\n\nBecause of this, we can't put together a package that matches your request, and so we can't compare one against your budget.\n\nThere is one alternative. You would have to agree to it, and it means giving up some of what you asked for:\n\n{{ALTERNATIVES_TABLE}}\n\nThis option is the Loft with lunch for up to 24 people. It gives up the 6-hour length, because the booking would be a single 4-hour block. It also gives up your full group, because the headcount would drop from 30 to at most 24.\n\nYou asked us to confirm today. We can't do that from this message. Availability for any date has to be checked separately, and nothing is held for you at this point.\n\nIf the alternative could work for you, or if you'd like to talk through other ways to split or shorten the event, please get in touch.\n\nKind regards",
+    "draft": "DRAFT – requires salesperson approval – availability unconfirmed\nNot sendable as an offer\n\nHello,\n\nThank you for your enquiry. As specified, we can't meet this request, for two reasons:\n\n- **Group size:** You have 30 people. Our largest room, the Loft, holds a maximum of 24, and the Studio holds a maximum of 12.\n- **Duration:** You asked for 6 hours. We only offer 4-hour bookings, and there is no longer-duration option or price.\n\nBecause of this, we can't put together a package that matches your request, and so we can't compare one against your budget.\n\nThere is one alternative. You would have to agree to it, and it means giving up some of what you asked for:\n\n\n\n| Option | Package | People | Total | What the client gives up |\n|---|---|---:|---:|---|\n| 1 | Loft + Lunch | 24 | €852 | duration shortened from 6 hours to the only available 4-hour block; headcount reduced from 30 to at most 24 |\n\nEvery option changes a stated requirement and needs the client's explicit consent.\n\n\n\nThis option is the Loft with lunch for up to 24 people. It gives up the 6-hour length, because the booking would be a single 4-hour block. It also gives up your full group, because the headcount would drop from 30 to at most 24.\n\nYou asked us to confirm today. We can't do that from this message. Availability for any date has to be checked separately, and nothing is held for you at this point.\n\nIf the alternative could work for you, or if you'd like to talk through other ways to split or shorten the event, please get in touch.\n\nKind regards\n",
+    "guard_findings": [
+      {
+        "rule": "unlisted_item_mentioned",
+        "severity": "review",
+        "match": "confirm",
+        "message": "'confirm the booking today' is not in the catalogue. Check the draft declines it and does not offer it."
+      }
+    ],
+    "first_draft_findings": [],
+    "blocked": false,
+    "rewrites": 0,
+    "usage": {
+      "llm_calls": 2,
+      "input_tokens": 11669,
+      "output_tokens": 721,
+      "latency_s": 6.61,
+      "cost_usd": 0.030548,
+      "model": "claude-sonnet-5-5"
+    },
+    "error": null
+  },
+  "usage": {
+    "llm_calls": 2,
+    "input_tokens": 11669,
+    "output_tokens": 721,
+    "latency_s": 6.61,
+    "cost_usd": 0.030548,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply says the request can't be met as specified because 30 people exceeds the 24-person maximum and only 4-hour bookings exist. It says it can't confirm today and that availability needs a separate check. It offers the closest alternative, Loft plus lunch for 24 people at €852 (420 + 24×18), and states what the client gives up. It applies no discount and promises nothing extra.",
+    "graded": true
+  }
+}

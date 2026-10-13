@@ -1,0 +1,203 @@
+{
+  "id": "T14",
+  "system": "prototype",
+  "run": 1,
+  "text": "DRAFT – requires salesperson approval – availability unconfirmed\n\nBonjour,\n\nMerci pour votre demande. Voici une proposition que vous pouvez examiner, pour 18 personnes sur une demi-journée de 4 heures :\n\n- Le Loft, qui accueille jusqu'à 24 personnes et est accessible en fauteuil roulant. Votre collègue pourra donc y accéder. Le Studio ne convient pas : il est limité à 12 personnes et ne s'atteint que par des escaliers.\n- Un déjeuner pour chaque participant, en version végétarienne, sur demande.\n- Un vidéoprojecteur pour l'ensemble de l'événement.\n\n\n\n| Item | Detail | Price |\n|---|---|---:|\n| Loft (V2) | 4 hours | €420 |\n| Lunch (S2) | 18 people x €18 | €324 |\n| Projector (S3) | one projector for the booking | €35 |\n| **Total** | | **€779** |\n| Budget | | €800 |\n| Difference | | €21 under budget |\n\n\n\nLe total reste dans les limites de votre budget.\n\nQuelques précisions :\n- Le déjeuner végétarien est proposé sur demande. BrightRoom ne peut pas promettre de repas sans allergènes. Si certains participants ont des allergies, merci de nous le dire, mais nous ne pouvons rien promettre à ce sujet.\n- Les prix indiqués sont fixes.\n- Nous proposons uniquement des créneaux de 4 heures.\n- Les disponibilités doivent être vérifiées séparément. Rien n'est retenu à ce stade. Si vous avez une date en tête, indiquez-la-nous et nous la vérifierons.\n\nN'hésitez pas à nous contacter si vous souhaitez ajuster la proposition.\n\nCordialement,\n",
+  "result": {
+    "enquiry": "Bonjour, nous serions 18 personnes pour une demi-journée (4h), avec déjeuner végétarien pour tous et un vidéoprojecteur. Une collègue est en fauteuil roulant. Budget max 800 €.",
+    "brief": {
+      "headcount": {
+        "status": "confirmed",
+        "evidence": "nous serions 18 personnes",
+        "value": 18
+      },
+      "headcount_max": null,
+      "duration_hours": {
+        "status": "confirmed",
+        "evidence": "une demi-journée (4h)",
+        "value": 4.0
+      },
+      "budget_eur": {
+        "status": "confirmed",
+        "evidence": "Budget max 800 €",
+        "value": 800.0
+      },
+      "wheelchair_access": {
+        "status": "confirmed",
+        "evidence": "Une collègue est en fauteuil roulant",
+        "value": true
+      },
+      "coffee_break": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "lunch": {
+        "status": "confirmed",
+        "evidence": "déjeuner végétarien pour tous",
+        "value": true
+      },
+      "projector": {
+        "status": "confirmed",
+        "evidence": "un vidéoprojecteur",
+        "value": true
+      },
+      "facilitator": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "facilitator_hours": null,
+      "bookings": 1,
+      "catering_unclear": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "unlisted_requests": [],
+      "dietary_notes": [
+        "déjeuner végétarien pour tous"
+      ],
+      "allergy_notes": [],
+      "date_requests": [],
+      "language": "fr"
+    },
+    "evidence_warnings": [],
+    "engine": {
+      "status": "FEASIBLE",
+      "reasons": [
+        "All stated requirements are met within budget."
+      ],
+      "package": {
+        "venue_id": "V2",
+        "service_ids": [
+          "S2",
+          "S3"
+        ],
+        "items": [
+          {
+            "id": "V2",
+            "name": "Loft",
+            "unit_price": 420,
+            "quantity": 1,
+            "line_total": 420,
+            "note": "4 hours"
+          },
+          {
+            "id": "S2",
+            "name": "Lunch",
+            "unit_price": 18,
+            "quantity": 18,
+            "line_total": 324,
+            "note": "18 people x €18"
+          },
+          {
+            "id": "S3",
+            "name": "Projector",
+            "unit_price": 35,
+            "quantity": 1,
+            "line_total": 35,
+            "note": "one projector for the booking"
+          }
+        ],
+        "total": 779
+      },
+      "total": 779,
+      "budget": 800.0,
+      "budget_delta": 21.0,
+      "assumptions": [],
+      "flags": [
+        "Dietary note (déjeuner végétarien pour tous): vegetarian/vegan lunch is available on request; nothing else is guaranteed."
+      ],
+      "clarifications": [],
+      "checks": [
+        {
+          "requirement": "Capacity for 18 people",
+          "ok": true,
+          "detail": "Loft holds up to 24."
+        },
+        {
+          "requirement": "Duration 4 hours",
+          "ok": true,
+          "detail": "Fits the 4-hour block."
+        },
+        {
+          "requirement": "Wheelchair access",
+          "ok": true,
+          "detail": "Loft is wheelchair accessible."
+        },
+        {
+          "requirement": "Lunch",
+          "ok": true,
+          "detail": "one lunch for every attendee; vegetarian/vegan on request; NO allergen guarantee"
+        },
+        {
+          "requirement": "Projector",
+          "ok": true,
+          "detail": "one projector for the booking"
+        },
+        {
+          "requirement": "Budget €800",
+          "ok": true,
+          "detail": "Total €779: €21 under."
+        }
+      ],
+      "rejected_venues": [
+        {
+          "venue_id": "V1",
+          "name": "Studio",
+          "would_cost": null,
+          "reasons": [
+            "Studio holds max 12 people (18 requested).",
+            "Studio is stairs-only: not wheelchair accessible."
+          ]
+        }
+      ],
+      "optional_addons": [],
+      "alternatives": [],
+      "scenarios": [],
+      "standing_notes": [
+        "Only 4-hour bookings exist; there is no longer-duration price.",
+        "Dates always need a separate availability check; nothing is booked or held.",
+        "No discounts of any kind are available."
+      ],
+      "bookings_requested": 1
+    },
+    "prose": "Bonjour,\n\nMerci pour votre demande. Voici une proposition que vous pouvez examiner, pour 18 personnes sur une demi-journée de 4 heures :\n\n- Le Loft, qui accueille jusqu'à 24 personnes et est accessible en fauteuil roulant. Votre collègue pourra donc y accéder. Le Studio ne convient pas : il est limité à 12 personnes et ne s'atteint que par des escaliers.\n- Un déjeuner pour chaque participant, en version végétarienne, sur demande.\n- Un vidéoprojecteur pour l'ensemble de l'événement.\n\n{{PRICE_TABLE}}\n\nLe total reste dans les limites de votre budget.\n\nQuelques précisions :\n- Le déjeuner végétarien est proposé sur demande. BrightRoom ne peut pas promettre de repas sans allergènes. Si certains participants ont des allergies, merci de nous le dire, mais nous ne pouvons rien promettre à ce sujet.\n- Les prix indiqués sont fixes.\n- Nous proposons uniquement des créneaux de 4 heures.\n- Les disponibilités doivent être vérifiées séparément. Rien n'est retenu à ce stade. Si vous avez une date en tête, indiquez-la-nous et nous la vérifierons.\n\nN'hésitez pas à nous contacter si vous souhaitez ajuster la proposition.\n\nCordialement,",
+    "draft": "DRAFT – requires salesperson approval – availability unconfirmed\n\nBonjour,\n\nMerci pour votre demande. Voici une proposition que vous pouvez examiner, pour 18 personnes sur une demi-journée de 4 heures :\n\n- Le Loft, qui accueille jusqu'à 24 personnes et est accessible en fauteuil roulant. Votre collègue pourra donc y accéder. Le Studio ne convient pas : il est limité à 12 personnes et ne s'atteint que par des escaliers.\n- Un déjeuner pour chaque participant, en version végétarienne, sur demande.\n- Un vidéoprojecteur pour l'ensemble de l'événement.\n\n\n\n| Item | Detail | Price |\n|---|---|---:|\n| Loft (V2) | 4 hours | €420 |\n| Lunch (S2) | 18 people x €18 | €324 |\n| Projector (S3) | one projector for the booking | €35 |\n| **Total** | | **€779** |\n| Budget | | €800 |\n| Difference | | €21 under budget |\n\n\n\nLe total reste dans les limites de votre budget.\n\nQuelques précisions :\n- Le déjeuner végétarien est proposé sur demande. BrightRoom ne peut pas promettre de repas sans allergènes. Si certains participants ont des allergies, merci de nous le dire, mais nous ne pouvons rien promettre à ce sujet.\n- Les prix indiqués sont fixes.\n- Nous proposons uniquement des créneaux de 4 heures.\n- Les disponibilités doivent être vérifiées séparément. Rien n'est retenu à ce stade. Si vous avez une date en tête, indiquez-la-nous et nous la vérifierons.\n\nN'hésitez pas à nous contacter si vous souhaitez ajuster la proposition.\n\nCordialement,\n",
+    "guard_findings": [],
+    "first_draft_findings": [
+      {
+        "rule": "forbidden_word",
+        "severity": "block",
+        "match": "réduction",
+        "message": "Promise word. A draft never confirms, books, reserves, guarantees or discounts."
+      }
+    ],
+    "blocked": false,
+    "rewrites": 1,
+    "usage": {
+      "llm_calls": 3,
+      "input_tokens": 18884,
+      "output_tokens": 1653,
+      "latency_s": 12.56,
+      "cost_usd": 0.054298,
+      "model": "claude-sonnet-5-5"
+    },
+    "error": null
+  },
+  "usage": {
+    "llm_calls": 3,
+    "input_tokens": 18884,
+    "output_tokens": 1653,
+    "latency_s": 12.56,
+    "cost_usd": 0.054298,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply is in French and proposes the Loft, lunch for 18 and the projector. The total of €779 and the €21 margin are correct. It notes that vegetarian lunch is on request, gives no allergen promise, and says availability must be checked separately. It applies no discount.",
+    "graded": true
+  }
+}

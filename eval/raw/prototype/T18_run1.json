@@ -1,0 +1,201 @@
+{
+  "id": "T18",
+  "system": "prototype",
+  "run": 1,
+  "text": "DRAFT – requires salesperson approval – availability unconfirmed\nNot sendable as an offer\n\nHello,\n\nThank you for your enquiry. As specified, we can't meet this request. Your group of 30 is more than our largest room, the Loft, which holds at most 24 people. The Studio holds at most 12. The tool treated your two sessions of 15 as 2 separate bookings, and it didn't price a package for them. I've assumed the standard 4-hour block for each session, since you didn't give a length.\n\nThere is one option, and it would need your agreement. It gives up part of your plan: the headcount would drop from 30 to at most 24. It would use the Loft with a coffee break for each attendee:\n\n\n\n| Option | Package | People | Total | What the client gives up |\n|---|---|---:|---:|---|\n| 1 | Loft + Coffee break | 24 | €612 | headcount reduced from 30 to at most 24 |\n\nEvery option changes a stated requirement and needs the client's explicit consent.\n\n\n\nThe prices shown are for ONE booking only. If you still want two sessions, the other booking has to be priced separately. The listed prices are fixed, so a price reduction isn't possible.\n\nYou asked for the same day. Availability has to be checked separately, and nothing is held for you at this stage.\n\nLet me know if you'd like to go ahead with this option or change the plan, for example the group size or the number of sessions.\n\nKind regards\n",
+  "result": {
+    "enquiry": "We are 30 people. Could we split into two sessions of 15 on the same day, with coffee for everyone? Budget €1,200.",
+    "brief": {
+      "headcount": {
+        "status": "confirmed",
+        "evidence": "We are 30 people.",
+        "value": 30
+      },
+      "headcount_max": null,
+      "duration_hours": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "budget_eur": {
+        "status": "confirmed",
+        "evidence": "Budget €1,200.",
+        "value": 1200.0
+      },
+      "wheelchair_access": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "coffee_break": {
+        "status": "confirmed",
+        "evidence": "with coffee for everyone",
+        "value": true
+      },
+      "lunch": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "projector": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "facilitator": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "facilitator_hours": null,
+      "bookings": 2,
+      "catering_unclear": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "unlisted_requests": [],
+      "dietary_notes": [],
+      "allergy_notes": [],
+      "date_requests": [
+        "on the same day"
+      ],
+      "language": "en"
+    },
+    "evidence_warnings": [],
+    "engine": {
+      "status": "INFEASIBLE",
+      "reasons": [
+        "30 people exceeds the largest venue (Loft, max 24)."
+      ],
+      "package": null,
+      "total": null,
+      "budget": 1200.0,
+      "budget_delta": null,
+      "assumptions": [
+        "The request involves 2 separate bookings (several days, sessions or rooms). Every price shown is for ONE booking only; the other bookings have to be priced separately by the salesperson.",
+        "Duration not stated: assumed the standard 4-hour block."
+      ],
+      "flags": [
+        "Date/urgency request (on the same day): dates need a separate availability check. Nothing can be confirmed or booked from this draft."
+      ],
+      "clarifications": [],
+      "checks": [
+        {
+          "requirement": "Capacity for 30 people",
+          "ok": false,
+          "detail": "30 people exceeds the largest venue (Loft, max 24)."
+        },
+        {
+          "requirement": "Duration 4 hours",
+          "ok": true,
+          "detail": "Fits the 4-hour block."
+        },
+        {
+          "requirement": "Coffee break",
+          "ok": false,
+          "detail": "Not included."
+        },
+        {
+          "requirement": "Budget €1,200",
+          "ok": false,
+          "detail": "No package to compare."
+        }
+      ],
+      "rejected_venues": [
+        {
+          "venue_id": "V1",
+          "name": "Studio",
+          "would_cost": null,
+          "reasons": [
+            "Studio holds max 12 people (30 requested)."
+          ]
+        },
+        {
+          "venue_id": "V2",
+          "name": "Loft",
+          "would_cost": null,
+          "reasons": [
+            "Loft holds max 24 people (30 requested)."
+          ]
+        }
+      ],
+      "optional_addons": [],
+      "alternatives": [
+        {
+          "relaxed": [
+            "headcount"
+          ],
+          "description": "Loft + Coffee break for 24 people = €612",
+          "headcount": 24,
+          "gives_up": "headcount reduced from 30 to at most 24",
+          "requires_client_consent": true,
+          "package": {
+            "venue_id": "V2",
+            "service_ids": [
+              "S1"
+            ],
+            "items": [
+              {
+                "id": "V2",
+                "name": "Loft",
+                "unit_price": 420,
+                "quantity": 1,
+                "line_total": 420,
+                "note": "4 hours"
+              },
+              {
+                "id": "S1",
+                "name": "Coffee break",
+                "unit_price": 8,
+                "quantity": 24,
+                "line_total": 192,
+                "note": "24 people x €8"
+              }
+            ],
+            "total": 612
+          },
+          "total": 612,
+          "budget_delta": 588.0,
+          "notes": []
+        }
+      ],
+      "scenarios": [],
+      "standing_notes": [
+        "Only 4-hour bookings exist; there is no longer-duration price.",
+        "Dates always need a separate availability check; nothing is booked or held.",
+        "No discounts of any kind are available."
+      ],
+      "bookings_requested": 2
+    },
+    "prose": "Hello,\n\nThank you for your enquiry. As specified, we can't meet this request. Your group of 30 is more than our largest room, the Loft, which holds at most 24 people. The Studio holds at most 12. The tool treated your two sessions of 15 as 2 separate bookings, and it didn't price a package for them. I've assumed the standard 4-hour block for each session, since you didn't give a length.\n\nThere is one option, and it would need your agreement. It gives up part of your plan: the headcount would drop from 30 to at most 24. It would use the Loft with a coffee break for each attendee:\n\n{{ALTERNATIVES_TABLE}}\n\nThe prices shown are for ONE booking only. If you still want two sessions, the other booking has to be priced separately. The listed prices are fixed, so a price reduction isn't possible.\n\nYou asked for the same day. Availability has to be checked separately, and nothing is held for you at this stage.\n\nLet me know if you'd like to go ahead with this option or change the plan, for example the group size or the number of sessions.\n\nKind regards",
+    "draft": "DRAFT – requires salesperson approval – availability unconfirmed\nNot sendable as an offer\n\nHello,\n\nThank you for your enquiry. As specified, we can't meet this request. Your group of 30 is more than our largest room, the Loft, which holds at most 24 people. The Studio holds at most 12. The tool treated your two sessions of 15 as 2 separate bookings, and it didn't price a package for them. I've assumed the standard 4-hour block for each session, since you didn't give a length.\n\nThere is one option, and it would need your agreement. It gives up part of your plan: the headcount would drop from 30 to at most 24. It would use the Loft with a coffee break for each attendee:\n\n\n\n| Option | Package | People | Total | What the client gives up |\n|---|---|---:|---:|---|\n| 1 | Loft + Coffee break | 24 | €612 | headcount reduced from 30 to at most 24 |\n\nEvery option changes a stated requirement and needs the client's explicit consent.\n\n\n\nThe prices shown are for ONE booking only. If you still want two sessions, the other booking has to be priced separately. The listed prices are fixed, so a price reduction isn't possible.\n\nYou asked for the same day. Availability has to be checked separately, and nothing is held for you at this stage.\n\nLet me know if you'd like to go ahead with this option or change the plan, for example the group size or the number of sessions.\n\nKind regards\n",
+    "guard_findings": [],
+    "first_draft_findings": [],
+    "blocked": false,
+    "rewrites": 0,
+    "usage": {
+      "llm_calls": 2,
+      "input_tokens": 11589,
+      "output_tokens": 610,
+      "latency_s": 5.55,
+      "cost_usd": 0.029278,
+      "model": "claude-sonnet-5-5"
+    },
+    "error": null
+  },
+  "usage": {
+    "llm_calls": 2,
+    "input_tokens": 11589,
+    "output_tokens": 610,
+    "latency_s": 5.55,
+    "cost_usd": 0.029278,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply says the request can't be met as specified (30 > Loft max 24) and flags the two-session split as not priced and needing separate handling. It marks the draft as needing salesperson approval. The €612 option (Loft €420 + 24 × €8) is correct and is labelled as one booking only, so it isn't presented as the price of the whole event. Availability is not confirmed and no discount is promised.",
+    "graded": true
+  }
+}

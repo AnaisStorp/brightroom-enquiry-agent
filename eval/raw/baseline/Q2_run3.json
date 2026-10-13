@@ -1,0 +1,20 @@
+{
+  "id": "Q2",
+  "system": "baseline",
+  "run": 3,
+  "text": "# BrightRoom Proposal\n\n**Short answer:** We can't deliver your full requirements for €850. The closest compliant package costs **€940**, which is €90 over budget.\n\n## Recommended package (meets all requirements)\n\n| Item | Calculation | Price |\n|---|---|---|\n| Loft (4 hours, up to 24 people, wheelchair accessible, Wi-Fi included) | flat | €420 |\n| Coffee break | 20 × €8 | €160 |\n| Lunch | 20 × €18 | €360 |\n| **Total** | | **€940** |\n\n**Why the Loft:** The Studio holds a maximum of 12 people, so it can't host 20. The Loft is our only venue that fits your group.\n\n**Why we can't lower the price:** All our prices are final, and we offer no discounts. Both services must cover all 20 attendees, and a booking includes exactly one venue.\n\n## Options if €850 is a firm limit\n\n1. **Reduce the group to 16 people or fewer.** At 16 people in the Loft: €420 + €128 coffee + €288 lunch = **€836**. At 17 people the total is €862, which is over budget.\n2. **Drop one of the services.** You said both are required, so this is only a fallback. For 20 people in the Loft, coffee only is €580 and lunch only is €780.\n3. **Increase the budget to €940** for the full package as above.\n\n## Notes\n- Lunch includes vegetarian and vegan options on request. We **cannot guarantee allergen safety**.\n- A projector (€35) and a 2-hour facilitator (€280) are available as add-ons, but both would increase the total. They aren't included above.\n- Bookings are 4 hours only, and there is no longer-duration option.\n- **Availability:** We need to check your date separately. Please send your preferred date(s) and we'll confirm.\n\nLet us know which option you prefer and we'll proceed once the date is confirmed.",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 812,
+    "output_tokens": 985,
+    "latency_s": 8.36,
+    "cost_usd": 0.011474,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply says the request can't be met at €850 and gives the correct €940 total (Loft €420, coffee €160, lunch €360). Its alternatives match the expected ones: 16 people at €836, coffee only at €580, lunch only at €780, or a €940 budget. It promises no discount, allergen safety or availability, and it asks for the client's choice and date.",
+    "graded": true
+  }
+}

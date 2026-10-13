@@ -1,0 +1,20 @@
+{
+  "id": "T8",
+  "system": "baseline",
+  "run": 2,
+  "text": "# BrightRoom Proposal\n\nThank you for your enquiry. Your group of 13 doesn't fit within the €400 budget as asked, so here is what we can offer.\n\n## The constraint\n- **Studio (€240)** holds a maximum of **12 people**, so it can't host 13.\n- **Loft (€420)** is the only venue for 13 people. The venue alone is already over €400.\n\n## Option A: Loft, full group of 13 (recommended if all 13 must attend)\n| Item | Cost |\n|---|---|\n| Loft, 4 hours (up to 24 people, wheelchair accessible, Wi-Fi) | €420 |\n| Coffee break × 13 (€8 each) | €104 |\n| **Total** | **€524** |\n\nThis is **€124 over your budget**. We have no discounts or shorter-duration pricing, so I can't lower this figure.\n\n## Option B: Studio, if the group can be 12 people\n| Item | Cost |\n|---|---|\n| Studio, 4 hours (max 12 people, Wi-Fi) | €240 |\n| Coffee break × 12 (€8 each) | €96 |\n| **Total** | **€336** |\n\nThis is **€64 under budget**. Optionally, add a projector (€35) for a **total of €371**, still within budget.\n\nPlease note that the Studio is **stairs only and not wheelchair accessible**. It is only suitable if no attendee needs step-free access.\n\n## Next steps\n- Please confirm which option suits you, and whether any attendee needs wheelchair access.\n- Send us your preferred **date**. Availability must be checked separately, and nothing is reserved until it is confirmed.\n\nAll prices are final totals in euros, with no taxes or extra fees.",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 805,
+    "output_tokens": 890,
+    "latency_s": 7.15,
+    "cost_usd": 0.01051,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply says the budget can't be met for 13 people. It gives the correct Loft total of €524 (€124 over) and the 12-person Studio alternative at €336. The optional projector total of €371 is correct. It promises no discount and confirms no booking or availability.",
+    "graded": true
+  }
+}

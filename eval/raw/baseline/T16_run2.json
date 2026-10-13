@@ -1,0 +1,20 @@
+{
+  "id": "T16",
+  "system": "baseline",
+  "run": 2,
+  "text": "# Proposal for BrightRoom: Team Event for 22 People\n\nThank you for your enquiry. Here is what we can offer.\n\n## Recommended setup\n\n| Item | Details | Price |\n|---|---|---|\n| **Loft** (V2) | Up to 24 people, wheelchair accessible, Wi-Fi included, 4-hour booking | €420 |\n| **Coffee break** (S1) | 22 attendees × €8 | €176 |\n| **Projector** (S3) | One projector for the booking | €35 |\n| **Total** | | **€631** |\n\nThis is €69 under your €700 budget. All prices are final totals, with no taxes or fees.\n\n## Points to note\n\n- **Venue:** With 22 people, the Loft is the only option. The Studio holds a maximum of 12.\n- **Duration:** You asked for 3 hours, but we only offer 4-hour bookings. The price is the same €420 for the Loft, and there is no reduced rate for a shorter time. You are welcome to use the full 4 hours.\n- **Coffee break:** This covers every attendee, so 22 people.\n- **Availability:** We haven't yet checked your date. Please send your preferred date, plus an alternative if you have one, and we'll confirm availability.\n\n## Optional extras (not included in the total)\n\n- **Lunch:** €18 per person, so €396 for 22 people. This would take the total to €1,027, well over budget. Vegetarian and vegan options are available on request, but we cannot guarantee allergen safety.\n- **Facilitator:** €280 for 2 hours. This would take the total to €911, also over budget.\n\nSend us your date and we'll check availability and confirm the booking.\n\nKind regards,\nBrightRoom",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 809,
+    "output_tokens": 724,
+    "latency_s": 6.27,
+    "cost_usd": 0.008858,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply proposes the Loft, coffee for 22 (€176) and a projector (€35), which totals €631 as expected. It states that the 3-hour request is priced as a 4-hour block, with no discount. It doesn't confirm availability. The optional extra totals are correct (€1,027 and €911), and it gives no allergen guarantee.",
+    "graded": true
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "Q5",
+  "system": "baseline",
+  "run": 1,
+  "text": "# BrightRoom proposal\n\nThank you for your enquiry. Two parts of the request don't fit what we offer, and I can't confirm the booking today. Here is what I can propose.\n\n## What we can't do as requested\n- **30 people:** Our largest venue, the Loft, holds a maximum of **24**. Each booking covers exactly one venue, so 30 people can't be accommodated in one booking.\n- **6 hours:** We only offer **4-hour bookings**. There is no longer-duration option and no extended-hours price.\n- **Confirmation today:** Every date needs a separate availability check, so I can't confirm until we have your date and have checked it.\n\n## Proposed option: Loft for up to 24 people, 4 hours with lunch\n\n| Item | Calculation | Price |\n|---|---|---|\n| Loft (4 hours, max 24 people, wheelchair accessible, Wi-Fi included) | flat | €420 |\n| Lunch | 24 × €18 | €432 |\n| **Total** | | **€852** |\n\nThis is well within your €1,500 budget. Lunch must cover every attendee. Vegetarian and vegan options are available on request, but we **cannot guarantee allergen safety**.\n\n## Optional add-ons (each can be added once)\n\n| Add-on | Price | Running total |\n|---|---|---|\n| Coffee break, 24 × €8 | €192 | €1,044 |\n| Projector | €35 | €1,079 |\n| Facilitator (covers 2 hours of the 4) | €280 | €1,359 |\n\nAll prices are final totals in euros, with no taxes, fees or discounts. Even with every add-on, the total of €1,359 stays under your €1,500 budget.\n\n## To move forward, please tell me:\n1. Your preferred **date**, so we can check availability.\n2. Whether you can reduce the group to **24 or fewer**, or whether you'd like to discuss alternatives for the full 30.\n3. Whether you want any of the add-ons, and any dietary requirements.\n\nOnce I have your date and the availability check is done, I can confirm the booking.",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 816,
+    "output_tokens": 1252,
+    "latency_s": 9.62,
+    "cost_usd": 0.014152,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply says the request can't be met as specified: 30 exceeds the 24 cap, 6 hours isn't offered, and it can't confirm today. It offers the correct closest alternative (Loft plus lunch for 24, 4 hours, €852). The add-on running totals (€1,044, €1,079, €1,359) are correct, and it promises no discount, no allergen safety and no booking confirmation.",
+    "graded": true
+  }
+}

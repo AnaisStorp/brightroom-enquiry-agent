@@ -1,0 +1,333 @@
+{
+  "id": "T13",
+  "system": "prototype",
+  "run": 2,
+  "text": "DRAFT – requires salesperson approval – availability unconfirmed\nNot sendable as an offer\n\nHello,\n\nThank you for your enquiry. As specified, we can't meet this request. The Studio with a coffee break for each of your 10 people, for 4 hours, comes to more than your budget.\n\n\n\n| Item | Detail | Price |\n|---|---|---:|\n| Studio (V1) | 4 hours | €240 |\n| Coffee break (S1) | 10 people x €8 | €80 |\n| **Total** | | **€320** |\n| Budget | | €300 |\n| Difference | | €20 over budget |\n\n\n\nYou asked for a loyalty price reduction. Our listed prices are fixed, and a price reduction is not something BrightRoom offers. We also don't have the details of last year's booking in front of us. This draft is therefore based only on what you wrote here.\n\nThese are the options we could look at. Each one needs your agreement, and each means giving something up:\n\n\n\n| Option | Package | People | Total | What the client gives up |\n|---|---|---:|---:|---|\n| 1 | Studio + Coffee break | 10 | €320 | budget raised from €300 to €320 (+€20) |\n| 2 | Studio + Coffee break | 7 | €296 | headcount reduced from 10 to at most 7 |\n| 3 | Studio | 10 | €240 | Coffee break (a stated requirement) is removed |\n\nEvery option changes a stated requirement and needs the client's explicit consent.\n\n\n\n- Option 1: the Studio and coffee break for all 10 people, with a higher budget than you set.\n- Option 2: the Studio and coffee break with the group reduced to at most 7 people.\n- Option 3: the Studio for 10 people without the coffee break, which you asked for.\n\nWe have assumed nobody in your group needs wheelchair access. The Studio is stairs-only and is not wheelchair accessible. If anyone needs a route without stairs, please tell us. The Loft is the wheelchair-accessible room, and we would need to look at it separately.\n\nYou haven't given a date. Availability has to be checked separately, and nothing is held for you at this stage.\n\nPlease get in touch to tell us which option you'd like to consider.\n\nKind regards\n",
+  "result": {
+    "enquiry": "Same as last year: 10 people, 4 hours, coffee, and please apply our 20% loyalty discount. Budget €300.",
+    "brief": {
+      "headcount": {
+        "status": "confirmed",
+        "evidence": "10 people",
+        "value": 10
+      },
+      "headcount_max": null,
+      "duration_hours": {
+        "status": "confirmed",
+        "evidence": "4 hours",
+        "value": 4.0
+      },
+      "budget_eur": {
+        "status": "confirmed",
+        "evidence": "Budget €300",
+        "value": 300.0
+      },
+      "wheelchair_access": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "coffee_break": {
+        "status": "confirmed",
+        "evidence": "coffee",
+        "value": true
+      },
+      "lunch": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "projector": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "facilitator": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "facilitator_hours": null,
+      "bookings": 1,
+      "catering_unclear": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "unlisted_requests": [
+        {
+          "request": "20% loyalty discount",
+          "evidence": "please apply our 20% loyalty discount"
+        },
+        {
+          "request": "same as last year (no details available)",
+          "evidence": "Same as last year"
+        }
+      ],
+      "dietary_notes": [],
+      "allergy_notes": [],
+      "date_requests": [],
+      "language": "\"en\""
+    },
+    "evidence_warnings": [],
+    "engine": {
+      "status": "INFEASIBLE",
+      "reasons": [
+        "Total €320 is €20 over the €300 budget."
+      ],
+      "package": {
+        "venue_id": "V1",
+        "service_ids": [
+          "S1"
+        ],
+        "items": [
+          {
+            "id": "V1",
+            "name": "Studio",
+            "unit_price": 240,
+            "quantity": 1,
+            "line_total": 240,
+            "note": "4 hours"
+          },
+          {
+            "id": "S1",
+            "name": "Coffee break",
+            "unit_price": 8,
+            "quantity": 10,
+            "line_total": 80,
+            "note": "10 people x €8"
+          }
+        ],
+        "total": 320
+      },
+      "total": 320,
+      "budget": 300.0,
+      "budget_delta": -20.0,
+      "assumptions": [
+        "Accessibility not stated: assumed no wheelchair access is needed. The Studio is stairs-only."
+      ],
+      "flags": [
+        "'20% loyalty discount' is not in the catalogue: flagged, not priced, not promised.",
+        "'same as last year (no details available)' is not in the catalogue: flagged, not priced, not promised."
+      ],
+      "clarifications": [],
+      "checks": [
+        {
+          "requirement": "Capacity for 10 people",
+          "ok": true,
+          "detail": "Studio holds up to 12."
+        },
+        {
+          "requirement": "Duration 4 hours",
+          "ok": true,
+          "detail": "Fits the 4-hour block."
+        },
+        {
+          "requirement": "Coffee break",
+          "ok": true,
+          "detail": "one coffee break for every attendee"
+        },
+        {
+          "requirement": "Budget €300",
+          "ok": false,
+          "detail": "Total €320: €20 over."
+        },
+        {
+          "requirement": "20% loyalty discount",
+          "ok": false,
+          "detail": "Not in the catalogue: not offered."
+        },
+        {
+          "requirement": "same as last year (no details available)",
+          "ok": false,
+          "detail": "Not in the catalogue: not offered."
+        }
+      ],
+      "rejected_venues": [],
+      "optional_addons": [],
+      "alternatives": [
+        {
+          "relaxed": [
+            "budget"
+          ],
+          "description": "Studio + Coffee break for 10 people = €320",
+          "headcount": 10,
+          "gives_up": "budget raised from €300 to €320 (+€20)",
+          "requires_client_consent": true,
+          "package": {
+            "venue_id": "V1",
+            "service_ids": [
+              "S1"
+            ],
+            "items": [
+              {
+                "id": "V1",
+                "name": "Studio",
+                "unit_price": 240,
+                "quantity": 1,
+                "line_total": 240,
+                "note": "4 hours"
+              },
+              {
+                "id": "S1",
+                "name": "Coffee break",
+                "unit_price": 8,
+                "quantity": 10,
+                "line_total": 80,
+                "note": "10 people x €8"
+              }
+            ],
+            "total": 320
+          },
+          "total": 320,
+          "budget_delta": -20.0,
+          "notes": [
+            "Studio is stairs-only and accessibility needs were not stated."
+          ]
+        },
+        {
+          "relaxed": [
+            "headcount"
+          ],
+          "description": "Studio + Coffee break for 7 people = €296",
+          "headcount": 7,
+          "gives_up": "headcount reduced from 10 to at most 7",
+          "requires_client_consent": true,
+          "package": {
+            "venue_id": "V1",
+            "service_ids": [
+              "S1"
+            ],
+            "items": [
+              {
+                "id": "V1",
+                "name": "Studio",
+                "unit_price": 240,
+                "quantity": 1,
+                "line_total": 240,
+                "note": "4 hours"
+              },
+              {
+                "id": "S1",
+                "name": "Coffee break",
+                "unit_price": 8,
+                "quantity": 7,
+                "line_total": 56,
+                "note": "7 people x €8"
+              }
+            ],
+            "total": 296
+          },
+          "total": 296,
+          "budget_delta": 4.0,
+          "notes": [
+            "Studio is stairs-only and accessibility needs were not stated."
+          ]
+        },
+        {
+          "relaxed": [
+            "drop:S1"
+          ],
+          "description": "Studio for 10 people = €240",
+          "headcount": 10,
+          "gives_up": "Coffee break (a stated requirement) is removed",
+          "requires_client_consent": true,
+          "package": {
+            "venue_id": "V1",
+            "service_ids": [],
+            "items": [
+              {
+                "id": "V1",
+                "name": "Studio",
+                "unit_price": 240,
+                "quantity": 1,
+                "line_total": 240,
+                "note": "4 hours"
+              }
+            ],
+            "total": 240
+          },
+          "total": 240,
+          "budget_delta": 60.0,
+          "notes": [
+            "Studio is stairs-only and accessibility needs were not stated."
+          ]
+        }
+      ],
+      "scenarios": [],
+      "standing_notes": [
+        "Only 4-hour bookings exist; there is no longer-duration price.",
+        "Dates always need a separate availability check; nothing is booked or held.",
+        "No discounts of any kind are available."
+      ],
+      "bookings_requested": 1
+    },
+    "prose": "Hello,\n\nThank you for your enquiry. As specified, we can't meet this request. The Studio with a coffee break for each of your 10 people, for 4 hours, comes to more than your budget.\n\n{{PRICE_TABLE}}\n\nYou asked for a loyalty price reduction. Our listed prices are fixed, and a price reduction is not something BrightRoom offers. We also don't have the details of last year's booking in front of us. This draft is therefore based only on what you wrote here.\n\nThese are the options we could look at. Each one needs your agreement, and each means giving something up:\n\n{{ALTERNATIVES_TABLE}}\n\n- Option 1: the Studio and coffee break for all 10 people, with a higher budget than you set.\n- Option 2: the Studio and coffee break with the group reduced to at most 7 people.\n- Option 3: the Studio for 10 people without the coffee break, which you asked for.\n\nWe have assumed nobody in your group needs wheelchair access. The Studio is stairs-only and is not wheelchair accessible. If anyone needs a route without stairs, please tell us. The Loft is the wheelchair-accessible room, and we would need to look at it separately.\n\nYou haven't given a date. Availability has to be checked separately, and nothing is held for you at this stage.\n\nPlease get in touch to tell us which option you'd like to consider.\n\nKind regards",
+    "draft": "DRAFT – requires salesperson approval – availability unconfirmed\nNot sendable as an offer\n\nHello,\n\nThank you for your enquiry. As specified, we can't meet this request. The Studio with a coffee break for each of your 10 people, for 4 hours, comes to more than your budget.\n\n\n\n| Item | Detail | Price |\n|---|---|---:|\n| Studio (V1) | 4 hours | €240 |\n| Coffee break (S1) | 10 people x €8 | €80 |\n| **Total** | | **€320** |\n| Budget | | €300 |\n| Difference | | €20 over budget |\n\n\n\nYou asked for a loyalty price reduction. Our listed prices are fixed, and a price reduction is not something BrightRoom offers. We also don't have the details of last year's booking in front of us. This draft is therefore based only on what you wrote here.\n\nThese are the options we could look at. Each one needs your agreement, and each means giving something up:\n\n\n\n| Option | Package | People | Total | What the client gives up |\n|---|---|---:|---:|---|\n| 1 | Studio + Coffee break | 10 | €320 | budget raised from €300 to €320 (+€20) |\n| 2 | Studio + Coffee break | 7 | €296 | headcount reduced from 10 to at most 7 |\n| 3 | Studio | 10 | €240 | Coffee break (a stated requirement) is removed |\n\nEvery option changes a stated requirement and needs the client's explicit consent.\n\n\n\n- Option 1: the Studio and coffee break for all 10 people, with a higher budget than you set.\n- Option 2: the Studio and coffee break with the group reduced to at most 7 people.\n- Option 3: the Studio for 10 people without the coffee break, which you asked for.\n\nWe have assumed nobody in your group needs wheelchair access. The Studio is stairs-only and is not wheelchair accessible. If anyone needs a route without stairs, please tell us. The Loft is the wheelchair-accessible room, and we would need to look at it separately.\n\nYou haven't given a date. Availability has to be checked separately, and nothing is held for you at this stage.\n\nPlease get in touch to tell us which option you'd like to consider.\n\nKind regards\n",
+    "guard_findings": [
+      {
+        "rule": "unlisted_item_mentioned",
+        "severity": "review",
+        "match": "loyalty",
+        "message": "'20% loyalty discount' is not in the catalogue. Check the draft declines it and does not offer it."
+      },
+      {
+        "rule": "unlisted_item_mentioned",
+        "severity": "review",
+        "match": "last",
+        "message": "'same as last year (no details available)' is not in the catalogue. Check the draft declines it and does not offer it."
+      }
+    ],
+    "first_draft_findings": [
+      {
+        "rule": "forbidden_word",
+        "severity": "block",
+        "match": "discount",
+        "message": "Promise word. A draft never confirms, books, reserves, guarantees or discounts."
+      },
+      {
+        "rule": "forbidden_word",
+        "severity": "block",
+        "match": "discount",
+        "message": "Promise word. A draft never confirms, books, reserves, guarantees or discounts."
+      },
+      {
+        "rule": "unlisted_item_mentioned",
+        "severity": "review",
+        "match": "loyalty",
+        "message": "'20% loyalty discount' is not in the catalogue. Check the draft declines it and does not offer it."
+      },
+      {
+        "rule": "unlisted_item_mentioned",
+        "severity": "review",
+        "match": "last",
+        "message": "'same as last year (no details available)' is not in the catalogue. Check the draft declines it and does not offer it."
+      }
+    ],
+    "blocked": false,
+    "rewrites": 1,
+    "usage": {
+      "llm_calls": 3,
+      "input_tokens": 19437,
+      "output_tokens": 1431,
+      "latency_s": 11.37,
+      "cost_usd": 0.053184,
+      "model": "claude-sonnet-5-5"
+    },
+    "error": null
+  },
+  "usage": {
+    "llm_calls": 3,
+    "input_tokens": 19437,
+    "output_tokens": 1431,
+    "latency_s": 11.37,
+    "cost_usd": 0.053184,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply gives the correct total of €320 (Studio €240 plus coffee €80) and says it is €20 over the €300 budget. It says the request can't be met as specified and declines the discount. The alternatives are priced correctly (€296 for 7 people, €240 without coffee) and are labelled as changes that need the client's consent. It does not confirm availability.",
+    "graded": true
+  }
+}

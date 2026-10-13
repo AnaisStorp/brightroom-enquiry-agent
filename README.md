@@ -120,7 +120,7 @@ cp .env.example .env
 .venv/bin/streamlit run app.py
 ```
 
-Pick a test enquiry from the dropdown or paste your own, then press "Prepare my draft". The draft appears on the left. On the right you see what the tool understood, with the client's quotes. If something is wrong you can correct it in the table and recalculate. Each run takes a few seconds and costs roughly 3 cents (an estimate, see below).
+The requests are listed on the left. Click one and its draft appears, next to what the tool understood (with the client's quotes) and the sums. The test requests open a saved run instantly, so you can look around without an API key; "Run it again live" or "Write my own" calls the model, which takes a few seconds and costs roughly 3 cents (an estimate). If the tool misread something, correct it in the table and recalculate.
 
 **The command line**, if you prefer:
 
@@ -144,18 +144,33 @@ We have 20 test enquiries in `data/tests.json`:
 
 For each one we worked out the correct answer **by hand** from the catalogue before trusting any code. That hand-computed answer is the reference. If the code disagrees, the code is wrong; we never change the expected answer to make a test pass.
 
-On top of that there are 136 automated tests that run without the AI. They check the calculator against the 20 expected answers, check that the safety check blocks what it should, and replay the worst case we could think of: a model that fully obeys the prompt injection. The result is still "infeasible" and the draft is blocked.
+On top of that there are 138 automated tests that run without the AI. They check the calculator against the 20 expected answers, check that the safety check blocks what it should, and replay the worst case we could think of: a model that fully obeys the prompt injection. The result is still "infeasible" and the draft is blocked.
 
 **Our baseline** is the obvious lazy solution: paste the whole catalogue into one prompt and write "Write a proposal for this enquiry." Same model, no tool, no checks. It is in `baseline/single_prompt.py`.
 
-### Where the testing stands today
+### What we found
 
-We want to be straightforward about this:
+20 enquiries, up to 3 runs each for both systems. The full table, with every failure explained, is in [`appendix/test_table.md`](appendix/test_table.md).
 
-- The full solution has been run with the real model on 8 of the 20 enquiries (Q1 to Q5 and T18 to T20), a handful of runs in total. All gave the expected status and total in the end.
-- One of them, the two-day event (T19), **failed the first time**: the draft presented the price of one day as the price for both, and our safety check did not notice. We fixed it with a new rule (the tool now knows about "separate bookings" and says the total covers one booking only). We are keeping this in the write-up because it shows the kind of mistake that still gets through.
-- The baseline has been run on the first 17 enquiries and the outputs are saved in `baseline/outputs/`, but **we have not scored them yet**. So we cannot yet say how much better our solution is than the baseline, and we are not going to claim it until the numbers exist.
-- Cost and time per enquiry are estimates from a price-per-token constant in `src/llm.py`.
+| | Baseline (one prompt) | Our solution |
+|---|---|---|
+| Tests passed on every run | 14 of 20 | 19 of 20 |
+| Individual runs passed | 46 of 57 | 56 of 57 |
+| Total correct to the euro | 38 of 39 runs | 57 of 57 runs |
+| Asks the needed questions | 4 of 9 runs | 8 of 8 runs |
+| Median time per enquiry | 8.5 s | 6.6 s |
+| Median cost per enquiry (estimate) | about 1 cent | about 3 cents |
+
+A few things we want to say plainly:
+
+- **The baseline is better than we expected.** It gets the sums right almost every time. On routine requests there is little between the two.
+- **The gap is in the awkward cases.** The baseline tends to write a proposal when it should be asking questions, it once offered two rooms for one booking to get around the 24-person limit, and four tests passed on some runs and failed on others. Our numbers cannot change between runs because code computes them.
+- **Ours costs about two and a half times more** per enquiry. It is not slower.
+- **Our one failure is real.** For a two-day event, one run in three said the proposal "fits within your budget" although only one of the two days was priced. We changed the code, but ran out of API credit before we could run it again, so that fix is not verified.
+- **Two of our own tests (T18, T19) favour our design.** They test what our rules do not cover, and the baseline's answer of simply pricing two bookings is arguably more useful. The test table says what the scores are without them.
+- **Part of the scoring is a model's judgment.** Totals are checked by code. Whether a free-text reply reaches the right verdict is judged by a grader model, the same one we are testing, so treat those figures as estimates.
+- **We did not time a human.** The efficiency gain is what we expect, not something we measured.
+- 57 of the planned 60 runs per system were scored; the last few were lost when the API credit ran out.
 
 ## What is in this repository
 
@@ -171,6 +186,8 @@ We want to be straightforward about this:
 | `src/pipeline.py` | Runs everything in order; also the command line |
 | `src/llm.py` | Lets us switch AI provider in `.env` |
 | `baseline/` | The single-prompt baseline and its saved outputs |
+| `eval/` | The evaluation runner, every raw output, and the results |
+| `appendix/` | Design rationale, test table and demo script (the submission appendix) |
 | `data/` | The catalogue and the 20 test enquiries with expected answers |
 | `tests/` | The automated tests |
 | `project_instructions.rtf` | The build brief we started from |
@@ -186,11 +203,11 @@ We want to be straightforward about this:
 
 ## Still to do before we submit
 
-- [ ] Run and score the full comparison, baseline against our solution, on all 20 enquiries
-- [ ] Appendix: design rationale (5A choice, EDGE target, human responsibilities, trade-offs)
-- [ ] Appendix: the test table with pass/fail for baseline and prototype
-- [ ] Demo video, 3 to 5 minutes: the problem, a routine case (Q3), a failure case (Q2 or Q5), results, limits
-- [ ] Fill in group members and who did what
+- [x] Run and score the comparison, baseline against our solution
+- [x] Appendix: design rationale, test table, demo script
+- [ ] Record the demo video (3 to 5 minutes, script in `appendix/demo_script.md`)
+- [ ] Fill in group members and who did what, here and in the rationale
+- [ ] Rerun the two-day test (T19) once there is API credit, to confirm the fix
 
 ## A note on how this was built
 

@@ -1,0 +1,20 @@
+{
+  "id": "T14",
+  "system": "baseline",
+  "run": 1,
+  "text": "**Objet : Proposition BrightRoom – demi-journée pour 18 personnes**\n\nBonjour,\n\nMerci pour votre demande. Voici notre proposition.\n\n**Lieu recommandé : le Loft**\n- 4 heures, jusqu'à 24 personnes, accessible en fauteuil roulant, Wi-Fi inclus.\n- Notre autre espace, le Studio, n'est pas accessible en fauteuil roulant (escaliers uniquement) et accueille 12 personnes au maximum. Il ne convient donc pas à votre groupe.\n\n**Détail du devis**\n\n| Poste | Calcul | Prix |\n|---|---|---|\n| Loft (4 h) | forfait | 420 € |\n| Déjeuner végétarien | 18 personnes × 18 € | 324 € |\n| Projecteur | forfait | 35 € |\n| **Total** | | **779 €** |\n\nLe total est de **779 €**, soit 21 € sous votre budget de 800 €. Nos prix sont finaux, sans taxes ni frais supplémentaires.\n\n**À savoir**\n- Le déjeuner végétarien (ou végan) est prévu sur demande pour l'ensemble des participants. Nous **ne pouvons toutefois pas garantir l'absence d'allergènes**. Si certains participants ont des allergies, merci de nous le signaler.\n- Une pause-café (8 € par personne, soit 144 € pour 18 personnes) n'est pas incluse. L'ajouter porterait le total à 923 €, au-dessus de votre budget.\n- Nous ne proposons que des réservations de 4 heures, et aucune remise n'est applicable.\n- **La date reste à vérifier.** Pouvez-vous m'indiquer le ou les jours souhaités afin que je contrôle la disponibilité du Loft ? La réservation ne sera confirmée qu'après cette vérification.\n\nJe reste à votre disposition pour toute question.\n\nCordialement,\nL'équipe BrightRoom",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 865,
+    "output_tokens": 827,
+    "latency_s": 6.34,
+    "cost_usd": 0.01,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply proposes Loft 420 + lunch 324 + projector 35 = 779 €, which is 21 € under budget. It is in French and says vegetarian lunch is on request with no allergen guarantee. It also says availability still has to be checked. The optional coffee break math (144 €, total 923 €) is correct. It makes no discount and confirms no booking.",
+    "graded": true
+  }
+}

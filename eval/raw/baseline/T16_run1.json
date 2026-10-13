@@ -1,0 +1,20 @@
+{
+  "id": "T16",
+  "system": "baseline",
+  "run": 1,
+  "text": "# BrightRoom Proposal\n\nThank you for your enquiry. Here is what we recommend for your group.\n\n## Recommended setup\n\n| Item | Details | Price |\n|---|---|---|\n| **Loft (V2)** | 4-hour booking, up to 24 people, wheelchair accessible, Wi-Fi included | €420 |\n| **Coffee break (S1)** | 22 attendees × €8 | €176 |\n| **Projector (S3)** | One projector for the booking | €35 |\n| **Total** | | **€631** |\n\nThis is within your €700 budget, with €69 to spare. All prices are final totals in euros, with no taxes or fees.\n\n## Points to note\n\n- **Venue:** The Studio holds a maximum of 12 people, so the Loft (max 24) is the only option for 22 attendees.\n- **Duration:** You asked for 3 hours, but we only offer 4-hour bookings. There is no shorter or discounted rate, so the price is the same. You are welcome to use the extra hour for setup, networking or overrun.\n- **Coffee:** Per-person services must cover the full headcount, so the coffee break is priced for all 22 people.\n- **Date:** Your enquiry doesn't include a date. Availability needs to be checked separately, and nothing is reserved until it is confirmed.\n\n## Options that don't fit your budget\n\n- **Lunch** (€18 per person) would add €396 for 22 people, bringing the total to €1,027.\n- **Facilitator** (€280 for 2 hours) would bring the total to €911.\n\n## Next steps\n\nPlease send us your preferred date (and a backup if possible), and we will check availability for the Loft and confirm the booking.",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 809,
+    "output_tokens": 805,
+    "latency_s": 6.34,
+    "cost_usd": 0.009668,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply proposes Loft + coffee + projector at €631 and says the 4-hour block price applies to the 3-hour request. Its extra figures are correct: lunch brings the total to €1,027 and the facilitator to €911. It does not promise availability.",
+    "graded": true
+  }
+}

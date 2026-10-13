@@ -1,0 +1,21 @@
+{
+  "id": "T15",
+  "system": "baseline",
+  "run": 2,
+  "text": "# BrightRoom proposal\n\nThank you for your enquiry. Your headcount is a range (10–14), and it decides which venue fits, so here is what works at each size.\n\n## Recommended option: Studio (for 10–12 people)\n\n| Item | Price |\n|---|---|\n| Studio, 4 hours (max 12 people, Wi-Fi included) | €240 |\n| Coffee break, €8 per person | €80 (10 people) / €88 (11) / €96 (12) |\n| **Total** | **€320 (10) / €328 (11) / €336 (12)** |\n\nThis is within your €450 budget. Your remaining budget would also cover a projector (€35, flat) if you need one. With 12 people, the total would be €371.\n\n**Please note:** the Studio is reached by stairs only and is **not wheelchair accessible**.\n\n## If you will be 13 or 14 people\n\nThe Studio holds a maximum of 12, so you would need the Loft (max 24, wheelchair accessible, Wi-Fi included):\n\n| Headcount | Loft €420 + coffee | Total |\n|---|---|---|\n| 13 | €104 | **€524** |\n| 14 | €112 | **€532** |\n\nThis **exceeds your €450 budget** by €74–€82. We have no discounts or shorter or cheaper formats. All bookings are 4 hours at fixed prices, so I can't bring this option within budget. The same applies if you need step-free access: the Loft starts at €500 even for 10 people (€420 + €80).\n\n## Notes\n- Coffee break must cover the full headcount (one per attendee).\n- All prices are final totals in euros, with no taxes or fees.\n- **Availability is not yet confirmed.** Dates need a separate check.\n\n## To finalise, please let us know:\n1. Your confirmed number of attendees (12 or fewer keeps you within budget)\n2. Whether anyone needs wheelchair access\n3. Your preferred date(s), so we can check availability\n4. Whether you'd like the projector\n\nOnce we have these, we can confirm the booking.\n\nKind regards,\nBrightRoom",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 812,
+    "output_tokens": 1121,
+    "latency_s": 9.15,
+    "cost_usd": 0.012834,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "asks_decision_critical_questions": true,
+    "reason": "The reply shows both scenarios with correct figures: Studio at 10 people is €320 and within budget, Loft at 14 people is €532 and over budget. It also gives correct totals for 11, 12 and 13 people, and for the projector add-on. It asks for the confirmed headcount, flags the Studio's lack of wheelchair access, and says availability is not yet confirmed. It applies no discounts.",
+    "graded": true
+  }
+}

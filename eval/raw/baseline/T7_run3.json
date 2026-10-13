@@ -1,0 +1,20 @@
+{
+  "id": "T7",
+  "system": "baseline",
+  "run": 3,
+  "text": "# BrightRoom Proposal: 4-Hour Team Session\n\nThank you for your enquiry. Here is what we recommend for 12 people, 4 hours, with coffee, on a €400 budget.\n\n## Recommended package\n\n| Item | Details | Price |\n|---|---|---|\n| **Studio** (V1) | 4 hours, up to 12 people, Wi-Fi included | €240 |\n| **Coffee break** (S1) | €8 × 12 attendees | €96 |\n| **Total** | | **€336** |\n\nThis leaves **€64** of your budget unused. All prices are final totals in euros, with no taxes or fees.\n\n## Optional add-on\n- **Projector** (S3), €35 flat for the booking. This would bring the total to **€371**, still within budget.\n\n## Things to know\n- **Capacity:** The Studio holds a maximum of 12 people, so your group fits exactly, with no room for extra attendees.\n- **Accessibility:** The Studio is reached by stairs only and is **not wheelchair accessible**. If anyone in your group needs step-free access, the Loft (V2) is the accessible option. At €420 for the venue plus €96 for coffee (€516 total), it would exceed your €400 budget.\n- **Duration:** Our bookings are 4 hours, which matches your request.\n- **Not included:** Lunch (€18 per person, €216 for 12) and a facilitator (€280) do not fit within your remaining budget alongside the venue.\n\n## Next steps\nAvailability must be checked separately for each date. Please send us your preferred date (and a backup, if possible), and let us know whether you'd like the projector. We'll then confirm availability and finalise your booking.\n\nKind regards,\nBrightRoom",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 805,
+    "output_tokens": 811,
+    "latency_s": 6.67,
+    "cost_usd": 0.00972,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply proposes Studio plus coffee for €336, which matches the expected total. It flags that the Studio is not wheelchair accessible, and its other figures are correct (projector add-on €371, Loft option €516, lunch €216). It confirms no availability and offers no discount.",
+    "graded": true
+  }
+}

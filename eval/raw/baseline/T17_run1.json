@@ -1,0 +1,20 @@
+{
+  "id": "T17",
+  "system": "baseline",
+  "run": 1,
+  "text": "**Subject: Your enquiry to BrightRoom**\n\nHello,\n\nThank you for your enquiry. I can't confirm a booking as described, for three reasons:\n\n- **Headcount:** Our largest venue, the Loft, holds a maximum of 24 people. We can't host 50 in a single booking, because each booking covers exactly one venue.\n- **Price:** The €100 total isn't possible. Our prices are fixed final totals, and we don't offer discounts. The Loft alone is €420 for a 4-hour booking.\n- **Availability:** Any date needs a separate availability check before it can be confirmed, and I haven't done that yet.\n\n**What we can offer**\n\n| Venue | Capacity | Price (4 hours) | Notes |\n|---|---|---|---|\n| Studio | up to 12 | €240 | Wi-Fi included; stairs only, not wheelchair accessible |\n| Loft | up to 24 | €420 | Wi-Fi included; wheelchair accessible |\n\n**Optional extras**\n- Coffee break: €8 per person (must cover everyone attending)\n- Lunch: €18 per person (must cover everyone attending; vegetarian/vegan on request; we can't guarantee allergen-free meals)\n- Projector: €35 flat\n- Facilitator: €280 flat (covers 2 hours)\n\n**Example for a group of 24 in the Loft**\n- Loft: €420\n- Coffee break, 24 × €8: €192\n- Lunch, 24 × €18: €432\n- **Total: €1,044**, with the projector (+€35) and facilitator (+€280) available on top.\n\nIf you can bring the group down to 24 or fewer, I'd be happy to prepare a tailored quote. Please send me:\n1. Your preferred date(s), so we can check availability\n2. The final headcount\n3. Any accessibility needs\n4. Which extras you'd like\n\nKind regards,\nBrightRoom",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 813,
+    "output_tokens": 1009,
+    "latency_s": 7.9,
+    "cost_usd": 0.011716,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply declines to confirm the booking. It explains that 50 people exceeds the Loft's 24-person limit and that €100 is not possible. It also says availability has not been checked. The 24-person Loft example is correct (420 + 192 + 432 = 1,044) and is labelled as an example, with the optional extras listed separately. It makes no discount, booking or allergen promises.",
+    "graded": true
+  }
+}

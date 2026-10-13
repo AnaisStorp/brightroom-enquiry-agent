@@ -1,0 +1,21 @@
+{
+  "id": "Q4",
+  "system": "baseline",
+  "run": 1,
+  "text": "**Subject: Your team workshop proposal from BrightRoom**\n\nHello,\n\nThank you for your enquiry. To give you an exact quote I need your headcount and date, so below are our options and some worked examples. I can finalise the offer as soon as I have those details.\n\n**1. Venue (choose one, 4-hour booking)**\n\n| Venue | Capacity | Accessibility | Wi-Fi | Price |\n|---|---|---|---|---|\n| Studio | up to 12 people | Stairs only, not wheelchair accessible | Included | €240 |\n| Loft | up to 24 people | Wheelchair accessible | Included | €420 |\n\n**2. Optional add-ons**\n\n| Service | Price | Notes |\n|---|---|---|\n| Coffee break | €8 per person | Must cover every attendee |\n| Lunch | €18 per person | Must cover every attendee. Vegetarian/vegan on request. We cannot guarantee allergen safety. |\n| Projector | €35 flat | One per booking |\n| Facilitator | €280 flat | One facilitator for 2 hours |\n\n**3. Examples for a full-featured workshop**\n\nThese include the venue, coffee, lunch, projector and facilitator.\n- **10 people in the Studio:** €240 + €80 + €180 + €35 + €280 = **€815**\n- **20 people in the Loft:** €420 + €160 + €360 + €35 + €280 = **€1,255**\n\nYou can remove any add-on you don't need, and the total drops by that item's price.\n\n**About pricing**\n- Prices are final totals in euros, with no taxes or fees.\n- Our bookings are 4 hours only, and we don't offer discounts or longer-duration rates. The prices above are our best and only rates.\n\n**To finalise your offer, please let me know:**\n1. How many people will attend?\n2. Your preferred date or dates next month. Availability must be checked separately, so nothing is reserved yet.\n3. Does anyone need wheelchair access? This decides whether the Studio is suitable.\n4. Which add-ons would you like? Please also tell me about any dietary requirements.\n\nOnce I have these, I'll send a confirmed quote and check availability for your date.\n\nKind regards,\nBrightRoom Team",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 807,
+    "output_tokens": 1136,
+    "latency_s": 9.01,
+    "cost_usd": 0.012974,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "asks_decision_critical_questions": false,
+    "violations": [],
+    "reason": "The reply asks for clarification instead of making a firm offer. It asks about headcount, accessibility and services, and notes the 4-hour limit, the availability check and no discounts. Its two worked examples are priced correctly (€815 and €1,255). It never asks about budget, which the expected behaviour names as missing information.",
+    "graded": true
+  }
+}

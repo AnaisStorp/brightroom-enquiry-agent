@@ -257,7 +257,8 @@
           "session"
         ]
       },
-      "probes": "A structure the rules do not know: splitting one group into two bookings."
+      "probes": "A structure the rules do not know: splitting one group into two bookings.",
+      "fairness_note": "pricing two separate Loft bookings (2 x €540 = €1,080) is a reasonable answer; it fails only because the expected behaviour says to flag the split, not price it."
     },
     {
       "id": "T19",
@@ -271,9 +272,13 @@
         "venue": "V1",
         "must_flag": [
           "ONE booking only"
+        ],
+        "baseline_also_accept_totals": [
+          640
         ]
       },
-      "probes": "A structure the rules do not know: a multi-day event."
+      "probes": "A structure the rules do not know: a multi-day event.",
+      "fairness_note": "€640 for two days (2 x €320) is accepted as a correct total for the baseline; our tool prices one booking only."
     },
     {
       "id": "T20",

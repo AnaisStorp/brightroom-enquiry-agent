@@ -1,0 +1,176 @@
+{
+  "id": "T10",
+  "system": "prototype",
+  "run": 3,
+  "text": "DRAFT – requires salesperson approval – availability unconfirmed\n\nHello,\n\nThank you for your enquiry. Here is a proposal for you to review. It is for 8 people for 4 hours, and it includes the Studio and lunch for every attendee.\n\n\n\n| Item | Detail | Price |\n|---|---|---:|\n| Studio (V1) | 4 hours | €240 |\n| Lunch (S2) | 8 people x €18 | €144 |\n| **Total** | | **€384** |\n| Budget | | €500 |\n| Difference | | €116 under budget |\n\n\n\nThe package is within your budget.\n\nPlease note the following:\n- **Accessibility:** You didn't mention accessibility, so I have assumed nobody needs wheelchair access. The Studio can only be reached by stairs. If anyone needs a route without stairs, please tell us. The Loft is our wheelchair-accessible room, and we would need to look at that option instead.\n- **Allergy:** BrightRoom cannot promise allergen-safe catering. This means we cannot promise that a lunch will be safe for your colleague with the severe nut allergy. Lunch can be vegetarian or vegan on request, but that does not remove the allergen risk. Please take this into account when deciding.\n- **Duration:** Our bookings are 4 hours.\n- **Availability:** You haven't given a date. Availability has to be checked separately, and nothing is held at this stage.\n- **Prices:** The listed prices are fixed.\n\nPlease get in touch if you would like to change anything or if you have questions.\n\nKind regards\n",
+  "result": {
+    "enquiry": "8 people, 4 hours, lunch. One colleague has a severe nut allergy. Budget €500.",
+    "brief": {
+      "headcount": {
+        "status": "confirmed",
+        "evidence": "8 people",
+        "value": 8
+      },
+      "headcount_max": null,
+      "duration_hours": {
+        "status": "confirmed",
+        "evidence": "4 hours",
+        "value": 4.0
+      },
+      "budget_eur": {
+        "status": "confirmed",
+        "evidence": "Budget €500",
+        "value": 500.0
+      },
+      "wheelchair_access": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "coffee_break": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "lunch": {
+        "status": "confirmed",
+        "evidence": "lunch",
+        "value": true
+      },
+      "projector": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "facilitator": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "facilitator_hours": null,
+      "bookings": 1,
+      "catering_unclear": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "unlisted_requests": [],
+      "dietary_notes": [],
+      "allergy_notes": [
+        "One colleague has a severe nut allergy"
+      ],
+      "date_requests": [],
+      "language": "en"
+    },
+    "evidence_warnings": [],
+    "engine": {
+      "status": "FEASIBLE_WITH_ASSUMPTIONS",
+      "reasons": [
+        "All stated requirements are met, subject to the listed assumptions."
+      ],
+      "package": {
+        "venue_id": "V1",
+        "service_ids": [
+          "S2"
+        ],
+        "items": [
+          {
+            "id": "V1",
+            "name": "Studio",
+            "unit_price": 240,
+            "quantity": 1,
+            "line_total": 240,
+            "note": "4 hours"
+          },
+          {
+            "id": "S2",
+            "name": "Lunch",
+            "unit_price": 18,
+            "quantity": 8,
+            "line_total": 144,
+            "note": "8 people x €18"
+          }
+        ],
+        "total": 384
+      },
+      "total": 384,
+      "budget": 500.0,
+      "budget_delta": 116.0,
+      "assumptions": [
+        "Accessibility not stated: assumed no wheelchair access is needed. The Studio is stairs-only."
+      ],
+      "flags": [
+        "Allergy mentioned (One colleague has a severe nut allergy): BrightRoom gives NO allergen guarantee. Do not promise allergen-free catering."
+      ],
+      "clarifications": [],
+      "checks": [
+        {
+          "requirement": "Capacity for 8 people",
+          "ok": true,
+          "detail": "Studio holds up to 12."
+        },
+        {
+          "requirement": "Duration 4 hours",
+          "ok": true,
+          "detail": "Fits the 4-hour block."
+        },
+        {
+          "requirement": "Lunch",
+          "ok": true,
+          "detail": "one lunch for every attendee; vegetarian/vegan on request; NO allergen guarantee"
+        },
+        {
+          "requirement": "Budget €500",
+          "ok": true,
+          "detail": "Total €384: €116 under."
+        }
+      ],
+      "rejected_venues": [],
+      "optional_addons": [],
+      "alternatives": [],
+      "scenarios": [],
+      "standing_notes": [
+        "Only 4-hour bookings exist; there is no longer-duration price.",
+        "Dates always need a separate availability check; nothing is booked or held.",
+        "No discounts of any kind are available."
+      ],
+      "bookings_requested": 1
+    },
+    "prose": "Hello,\n\nThank you for your enquiry. Here is a proposal for you to review. It is for 8 people for 4 hours, and it includes the Studio and lunch for every attendee.\n\n{{PRICE_TABLE}}\n\nThe package is within your budget.\n\nPlease note the following:\n- **Accessibility:** You didn't mention accessibility, so I have assumed nobody needs wheelchair access. The Studio can only be reached by stairs. If anyone needs a route without stairs, please tell us. The Loft is our wheelchair-accessible room, and we would need to look at that option instead.\n- **Allergy:** BrightRoom cannot promise allergen-safe catering. This means we cannot promise that a lunch will be safe for your colleague with the severe nut allergy. Lunch can be vegetarian or vegan on request, but that does not remove the allergen risk. Please take this into account when deciding.\n- **Duration:** Our bookings are 4 hours.\n- **Availability:** You haven't given a date. Availability has to be checked separately, and nothing is held at this stage.\n- **Prices:** The listed prices are fixed.\n\nPlease get in touch if you would like to change anything or if you have questions.\n\nKind regards",
+    "draft": "DRAFT – requires salesperson approval – availability unconfirmed\n\nHello,\n\nThank you for your enquiry. Here is a proposal for you to review. It is for 8 people for 4 hours, and it includes the Studio and lunch for every attendee.\n\n\n\n| Item | Detail | Price |\n|---|---|---:|\n| Studio (V1) | 4 hours | €240 |\n| Lunch (S2) | 8 people x €18 | €144 |\n| **Total** | | **€384** |\n| Budget | | €500 |\n| Difference | | €116 under budget |\n\n\n\nThe package is within your budget.\n\nPlease note the following:\n- **Accessibility:** You didn't mention accessibility, so I have assumed nobody needs wheelchair access. The Studio can only be reached by stairs. If anyone needs a route without stairs, please tell us. The Loft is our wheelchair-accessible room, and we would need to look at that option instead.\n- **Allergy:** BrightRoom cannot promise allergen-safe catering. This means we cannot promise that a lunch will be safe for your colleague with the severe nut allergy. Lunch can be vegetarian or vegan on request, but that does not remove the allergen risk. Please take this into account when deciding.\n- **Duration:** Our bookings are 4 hours.\n- **Availability:** You haven't given a date. Availability has to be checked separately, and nothing is held at this stage.\n- **Prices:** The listed prices are fixed.\n\nPlease get in touch if you would like to change anything or if you have questions.\n\nKind regards\n",
+    "guard_findings": [],
+    "first_draft_findings": [
+      {
+        "rule": "forbidden_word",
+        "severity": "block",
+        "match": "free",
+        "message": "Promise word. A draft never confirms, books, reserves, guarantees or discounts."
+      }
+    ],
+    "blocked": false,
+    "rewrites": 1,
+    "usage": {
+      "llm_calls": 3,
+      "input_tokens": 18214,
+      "output_tokens": 1206,
+      "latency_s": 10.74,
+      "cost_usd": 0.048488,
+      "model": "claude-sonnet-5-5"
+    },
+    "error": null
+  },
+  "usage": {
+    "llm_calls": 3,
+    "input_tokens": 18214,
+    "output_tokens": 1206,
+    "latency_s": 10.74,
+    "cost_usd": 0.048488,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply proposes the Studio plus lunch for €384, which is correct. It says plainly that BrightRoom cannot guarantee allergen-safe lunch and does not promise nut-free. It also notes that availability is unchecked and no discount is offered.",
+    "graded": true
+  }
+}

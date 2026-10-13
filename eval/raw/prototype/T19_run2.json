@@ -1,0 +1,171 @@
+{
+  "id": "T19",
+  "system": "prototype",
+  "run": 2,
+  "text": "DRAFT – requires salesperson approval – availability unconfirmed\n\nHello,\n\nThank you for your enquiry. Here is a proposal for you to review.\n\nFor 10 people, 4 hours per day, we suggest the Studio, which holds up to 12 people, together with one coffee break for every attendee. Based on the calculation, this fits within your budget.\n\n\n\n| Item | Detail | Price |\n|---|---|---:|\n| Studio (V1) | 4 hours | €240 |\n| Coffee break (S1) | 10 people x €8 | €80 |\n| **Total for ONE booking** (of 2 requested) | | **€320** |\n| Budget | | €700 |\n| Difference | | not comparable: the total covers one booking only |\n\n\n\nPlease note:\n- Your request covers 2 separate bookings, one for each day. The prices above are for ONE booking only. The second day still has to be priced, so please don't read the table as the price of both days.\n- You didn't mention accessibility, so we have assumed nobody needs wheelchair access. The Studio can only be reached by stairs. If anyone needs a route without stairs, please tell us. The Loft is wheelchair accessible.\n- Bookings are for 4 hours. We have no longer option.\n- Availability for your two consecutive days has to be checked separately. Nothing is held for you at this point, and this draft doesn't commit us to anything.\n- The listed prices are fixed.\n\nPlease let us know if you would like to go ahead or change anything, and we will check availability.\n\nKind regards\n",
+  "result": {
+    "enquiry": "10 people for two consecutive days, 4 hours each day, coffee on both days. Budget €700.",
+    "brief": {
+      "headcount": {
+        "status": "confirmed",
+        "evidence": "10 people",
+        "value": 10
+      },
+      "headcount_max": null,
+      "duration_hours": {
+        "status": "confirmed",
+        "evidence": "4 hours each day",
+        "value": 4.0
+      },
+      "budget_eur": {
+        "status": "confirmed",
+        "evidence": "Budget €700",
+        "value": 700.0
+      },
+      "wheelchair_access": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "coffee_break": {
+        "status": "confirmed",
+        "evidence": "coffee on both days",
+        "value": true
+      },
+      "lunch": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "projector": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "facilitator": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "facilitator_hours": null,
+      "bookings": 2,
+      "catering_unclear": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "unlisted_requests": [],
+      "dietary_notes": [],
+      "allergy_notes": [],
+      "date_requests": [
+        "two consecutive days"
+      ],
+      "language": "en"
+    },
+    "evidence_warnings": [],
+    "engine": {
+      "status": "FEASIBLE_WITH_ASSUMPTIONS",
+      "reasons": [
+        "All stated requirements are met, subject to the listed assumptions."
+      ],
+      "package": {
+        "venue_id": "V1",
+        "service_ids": [
+          "S1"
+        ],
+        "items": [
+          {
+            "id": "V1",
+            "name": "Studio",
+            "unit_price": 240,
+            "quantity": 1,
+            "line_total": 240,
+            "note": "4 hours"
+          },
+          {
+            "id": "S1",
+            "name": "Coffee break",
+            "unit_price": 8,
+            "quantity": 10,
+            "line_total": 80,
+            "note": "10 people x €8"
+          }
+        ],
+        "total": 320
+      },
+      "total": 320,
+      "budget": 700.0,
+      "budget_delta": 380.0,
+      "assumptions": [
+        "The request involves 2 separate bookings (several days, sessions or rooms). Every price shown is for ONE booking only; the other bookings have to be priced separately by the salesperson.",
+        "Accessibility not stated: assumed no wheelchair access is needed. The Studio is stairs-only."
+      ],
+      "flags": [
+        "Date/urgency request (two consecutive days): dates need a separate availability check. Nothing can be confirmed or booked from this draft."
+      ],
+      "clarifications": [],
+      "checks": [
+        {
+          "requirement": "Capacity for 10 people",
+          "ok": true,
+          "detail": "Studio holds up to 12."
+        },
+        {
+          "requirement": "Duration 4 hours",
+          "ok": true,
+          "detail": "Fits the 4-hour block."
+        },
+        {
+          "requirement": "Coffee break",
+          "ok": true,
+          "detail": "one coffee break for every attendee"
+        },
+        {
+          "requirement": "Budget €700",
+          "ok": true,
+          "detail": "Total €320: €380 under."
+        }
+      ],
+      "rejected_venues": [],
+      "optional_addons": [],
+      "alternatives": [],
+      "scenarios": [],
+      "standing_notes": [
+        "Only 4-hour bookings exist; there is no longer-duration price.",
+        "Dates always need a separate availability check; nothing is booked or held.",
+        "No discounts of any kind are available."
+      ],
+      "bookings_requested": 2
+    },
+    "prose": "Hello,\n\nThank you for your enquiry. Here is a proposal for you to review.\n\nFor 10 people, 4 hours per day, we suggest the Studio, which holds up to 12 people, together with one coffee break for every attendee. Based on the calculation, this fits within your budget.\n\n{{PRICE_TABLE}}\n\nPlease note:\n- Your request covers 2 separate bookings, one for each day. The prices above are for ONE booking only. The second day still has to be priced, so please don't read the table as the price of both days.\n- You didn't mention accessibility, so we have assumed nobody needs wheelchair access. The Studio can only be reached by stairs. If anyone needs a route without stairs, please tell us. The Loft is wheelchair accessible.\n- Bookings are for 4 hours. We have no longer option.\n- Availability for your two consecutive days has to be checked separately. Nothing is held for you at this point, and this draft doesn't commit us to anything.\n- The listed prices are fixed.\n\nPlease let us know if you would like to go ahead or change anything, and we will check availability.\n\nKind regards",
+    "draft": "DRAFT – requires salesperson approval – availability unconfirmed\n\nHello,\n\nThank you for your enquiry. Here is a proposal for you to review.\n\nFor 10 people, 4 hours per day, we suggest the Studio, which holds up to 12 people, together with one coffee break for every attendee. Based on the calculation, this fits within your budget.\n\n\n\n| Item | Detail | Price |\n|---|---|---:|\n| Studio (V1) | 4 hours | €240 |\n| Coffee break (S1) | 10 people x €8 | €80 |\n| **Total for ONE booking** (of 2 requested) | | **€320** |\n| Budget | | €700 |\n| Difference | | not comparable: the total covers one booking only |\n\n\n\nPlease note:\n- Your request covers 2 separate bookings, one for each day. The prices above are for ONE booking only. The second day still has to be priced, so please don't read the table as the price of both days.\n- You didn't mention accessibility, so we have assumed nobody needs wheelchair access. The Studio can only be reached by stairs. If anyone needs a route without stairs, please tell us. The Loft is wheelchair accessible.\n- Bookings are for 4 hours. We have no longer option.\n- Availability for your two consecutive days has to be checked separately. Nothing is held for you at this point, and this draft doesn't commit us to anything.\n- The listed prices are fixed.\n\nPlease let us know if you would like to go ahead or change anything, and we will check availability.\n\nKind regards\n",
+    "guard_findings": [],
+    "first_draft_findings": [],
+    "blocked": false,
+    "rewrites": 0,
+    "usage": {
+      "llm_calls": 2,
+      "input_tokens": 11424,
+      "output_tokens": 665,
+      "latency_s": 5.61,
+      "cost_usd": 0.029498,
+      "model": "claude-sonnet-5-5"
+    },
+    "error": null
+  },
+  "usage": {
+    "llm_calls": 2,
+    "input_tokens": 11424,
+    "output_tokens": 665,
+    "latency_s": 5.61,
+    "cost_usd": 0.029498,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [
+      "The intro says the proposal \"fits within your budget\", which contradicts the table's \"not comparable\" and implies a budget fit for both days when only one booking is priced."
+    ],
+    "graded": true
+  }
+}

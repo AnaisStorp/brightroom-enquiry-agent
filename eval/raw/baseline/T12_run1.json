@@ -1,0 +1,20 @@
+{
+  "id": "T12",
+  "system": "baseline",
+  "run": 1,
+  "text": "# Proposal: BrightRoom event for 10 people\n\nThank you for your enquiry. Here is what we can offer for your 4-hour session.\n\n## Recommended package\n\n| Item | Details | Price |\n|---|---|---|\n| **Studio** (V1) | 4 hours, up to 12 people, Wi-Fi included | €240 |\n| **Coffee break** (S1) | 10 people × €8 | €80 |\n| **Total** | | **€320** |\n\nThis is well within your €600 budget and leaves €280 spare.\n\n**Note on access:** the Studio is reached by stairs only and is not wheelchair accessible. If any guest needs step-free access, we recommend the **Loft** (V2, €420, wheelchair accessible, up to 24 people). With coffee, that comes to **€500**.\n\n## Optional add-ons (Studio prices)\n\n| Add-on | Price | New total |\n|---|---|---|\n| Projector (S3), flat | +€35 | €355 |\n| Lunch (S2), 10 × €18 | +€180 | €500 |\n| Projector and lunch | +€215 | €535 |\n| Facilitator (S4), 2 hours | +€280 | €600 |\n\n- Lunch can be vegetarian or vegan on request. We cannot guarantee allergen safety.\n- The facilitator covers 2 hours of your 4-hour booking. The facilitator option brings you exactly to €600, so it can't be combined with the other add-ons within budget.\n\n## Photographer and wine\n\nWe don't offer a photographer or wine service, so we can't include or quote them. You are welcome to ask whether you can arrange these yourself, but we haven't confirmed that and would need to check first. Our catalogue covers the venue, coffee, lunch, projector and facilitator only.\n\n## Next steps\n\n1. Tell us your preferred date. **Availability must be checked separately** and isn't guaranteed until confirmed.\n2. Confirm whether anyone needs wheelchair access (Studio or Loft).\n3. Choose any add-ons.\n\nAll prices are final totals in euros, with no taxes or extra fees. Bookings are 4 hours only.",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 819,
+    "output_tokens": 1086,
+    "latency_s": 12.51,
+    "cost_usd": 0.012498,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply proposes Studio plus 10 coffees for €320, which matches the expected total. It says the photographer and wine are not offered and does not price them. All add-on and Loft totals check out against the catalogue. It confirms no availability and applies no discount.",
+    "graded": true
+  }
+}

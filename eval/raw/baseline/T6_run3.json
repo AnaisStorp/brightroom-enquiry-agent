@@ -1,0 +1,21 @@
+{
+  "id": "T6",
+  "system": "baseline",
+  "run": 3,
+  "text": "# BrightRoom Proposal: Team Day for about 15 People\n\nThank you for your enquiry. Here is what we suggest.\n\n## Venue\n**Loft (V2): €420**\n- 4 hours, up to 24 people, wheelchair accessible, Wi-Fi included\n- Our Studio holds a maximum of 12, so it is too small for a group of 15.\n\n## Food\n- **Lunch (S2):** €18 × 15 = **€270**. Vegetarian and vegan options are available on request. We cannot guarantee allergen safety.\n- **Coffee break (S1):** €8 × 15 = **€120**. This is optional.\n\n## Options\n\n| Option | Includes | Total |\n|---|---|---|\n| **A: Essentials (best for a modest budget)** | Loft + lunch | **€690** |\n| **B: Add a coffee break** | Loft + lunch + coffee break | **€810** |\n| **C: Add a projector** | Option A + projector (€35) | **€725** |\n| **D: Full setup** | Option B + projector | **€845** |\n\n**Optional extra:** A facilitator (S4) is €280 flat and covers 2 hours of the session. Adding it to any option raises the total by €280.\n\n## Good to know\n- **Duration:** All bookings are 4 hours. We have no longer or full-day rate, so the team day would need to fit within that window.\n- **Pricing:** All prices are final totals in euros, with no taxes, fees or discounts.\n- **Headcount:** Food must cover everyone attending. If the group changes from 15, lunch is €18 per person and coffee break €8 per person. The Loft holds up to 24.\n- **Date:** We need to check availability for your preferred date before we can confirm anything.\n\n## Next steps\nPlease let us know:\n1. Your preferred date (or a few alternatives)\n2. The final headcount\n3. Which option you would like\n4. Any vegetarian or vegan requirements\n\nOnce we have these, we will check availability and confirm the booking.\n\nKind regards,\nBrightRoom",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 805,
+    "output_tokens": 1038,
+    "latency_s": 8.42,
+    "cost_usd": 0.01199,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": false,
+    "asks_decision_critical_questions": false,
+    "violations": [],
+    "reason": "The reply gives a full set of priced options (all correct) instead of asking what the missing information is. It never asks for the budget. It never asks what kind of food the client wants, and only asks which option they prefer. The expected verdict was NEEDS_CLARIFICATION.",
+    "graded": true
+  }
+}

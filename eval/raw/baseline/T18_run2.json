@@ -1,0 +1,26 @@
+{
+  "id": "T18",
+  "system": "baseline",
+  "run": 2,
+  "text": "# BrightRoom proposal: two sessions of 15 people, same day\n\nThank you for your enquiry. Here is a proposal that fits your budget.\n\n## Recommended setup\n\nOur Studio holds a maximum of 12 people, so it can't take a group of 15. The Loft (max 24, wheelchair accessible, Wi-Fi included) fits each session. Our bookings are 4 hours with one venue each, so the two sessions would be two separate Loft bookings on the same day.\n\n| Item | Calculation | Price |\n|---|---|---|\n| Loft, session 1 (4 hours, 15 people) | 1 × €420 | €420 |\n| Loft, session 2 (4 hours, 15 people) | 1 × €420 | €420 |\n| Coffee break, all attendees | 30 × €8 | €240 |\n| **Total** | | **€1,080** |\n\nThis leaves **€120** of your €1,200 budget unused.\n\n## Optional add-on within budget\n\n- **Projector** (€35 per booking, one per session): €70 for both sessions. This brings the total to **€1,150**, still within budget.\n\n## What doesn't fit the budget\n\n- **Lunch** (€18 per person) for 30 people would add €540, bringing the total to €1,620 or more.\n- **Facilitator** (€280 for 2 hours) would add €280 per session if needed. Even one would take you over €1,200 once the Loft and coffee are included.\n\n## Things to confirm\n\n- **Availability:** Dates always need a separate availability check. Please tell us your preferred date, and we'll check that the Loft is free for two 4-hour sessions on that day.\n- **Session timing:** Each session is a fixed 4-hour booking, so the two sessions will need to run back to back or be spaced out, depending on availability.\n- **Prices:** All prices are final totals in euros, with no taxes, fees, or discounts.\n\nSend us your preferred date and whether you'd like the projector, and we'll confirm availability and finalise the booking.\n\nKind regards,\nBrightRoom",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 827,
+    "output_tokens": 1192,
+    "latency_s": 9.67,
+    "cost_usd": 0.013574,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": false,
+    "violations": [
+      "Presents a firm total of €1,080 for the two-session split, which the catalogue rules (one venue per booking, max 24) do not cover, instead of flagging it for the salesperson.",
+      "Does not state that 30 people exceeds the Loft's max of 24 as a single booking; treats the split as a standard proposal.",
+      "Treats the two-Loft-booking arrangement as available (two separate bookings on the same day) without flagging it for human review.",
+      "Quotes a €1,150 total with projector for two projectors, which is not a catalogue-sanctioned arrangement (flat items once per booking, split not covered).",
+      "Says it will 'finalise the booking' and calls the proposal one that 'fits your budget', implying commitment beyond what the catalogue permits."
+    ],
+    "reason": "The expected outcome is INFEASIBLE as a single booking, with the split flagged for the salesperson and no event total. The reply instead presents a firm €1,080 total (and €1,150) for a two-Loft split as if the catalogue supports it.",
+    "graded": true
+  }
+}

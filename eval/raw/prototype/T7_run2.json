@@ -1,0 +1,172 @@
+{
+  "id": "T7",
+  "system": "prototype",
+  "run": 2,
+  "text": "DRAFT – requires salesperson approval – availability unconfirmed\n\nHello,\n\nThank you for your enquiry. Here is a proposal for you to review:\n\n- Venue: the Studio, which holds up to 12 people and comes as a 4-hour block. That fits your group of 12 and your 4 hours.\n- Catering: one coffee break for every attendee.\n\n\n\n| Item | Detail | Price |\n|---|---|---:|\n| Studio (V1) | 4 hours | €240 |\n| Coffee break (S1) | 12 people x €8 | €96 |\n| **Total** | | **€336** |\n| Budget | | €400 |\n| Difference | | €64 under budget |\n\n\n\nThe package comes within your budget.\n\nAssumption: you didn't mention accessibility, so I have assumed nobody needs wheelchair access. The Studio can only be reached by stairs. If anyone in your group needs a route without stairs, please tell me. The Loft is wheelchair accessible, and I can then check what the package looks like with it.\n\nOther points:\n- Only 4-hour sessions exist, so there is no longer-duration option.\n- Availability has to be checked separately for any date you have in mind. Nothing is held for you at this stage.\n- The listed prices are fixed.\n\nPlease get in touch if you'd like to adjust anything, such as adding lunch, a projector or a facilitator.\n\nKind regards\n",
+  "result": {
+    "enquiry": "12 people, 4 hours, coffee. Budget €400.",
+    "brief": {
+      "headcount": {
+        "status": "confirmed",
+        "evidence": "12 people",
+        "value": 12
+      },
+      "headcount_max": null,
+      "duration_hours": {
+        "status": "confirmed",
+        "evidence": "4 hours",
+        "value": 4.0
+      },
+      "budget_eur": {
+        "status": "confirmed",
+        "evidence": "Budget €400",
+        "value": 400.0
+      },
+      "wheelchair_access": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "coffee_break": {
+        "status": "confirmed",
+        "evidence": "coffee",
+        "value": true
+      },
+      "lunch": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "projector": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "facilitator": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "facilitator_hours": null,
+      "bookings": 1,
+      "catering_unclear": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "unlisted_requests": [],
+      "dietary_notes": [],
+      "allergy_notes": [],
+      "date_requests": [],
+      "language": "en"
+    },
+    "evidence_warnings": [],
+    "engine": {
+      "status": "FEASIBLE_WITH_ASSUMPTIONS",
+      "reasons": [
+        "All stated requirements are met, subject to the listed assumptions."
+      ],
+      "package": {
+        "venue_id": "V1",
+        "service_ids": [
+          "S1"
+        ],
+        "items": [
+          {
+            "id": "V1",
+            "name": "Studio",
+            "unit_price": 240,
+            "quantity": 1,
+            "line_total": 240,
+            "note": "4 hours"
+          },
+          {
+            "id": "S1",
+            "name": "Coffee break",
+            "unit_price": 8,
+            "quantity": 12,
+            "line_total": 96,
+            "note": "12 people x €8"
+          }
+        ],
+        "total": 336
+      },
+      "total": 336,
+      "budget": 400.0,
+      "budget_delta": 64.0,
+      "assumptions": [
+        "Accessibility not stated: assumed no wheelchair access is needed. The Studio is stairs-only."
+      ],
+      "flags": [],
+      "clarifications": [],
+      "checks": [
+        {
+          "requirement": "Capacity for 12 people",
+          "ok": true,
+          "detail": "Studio holds up to 12."
+        },
+        {
+          "requirement": "Duration 4 hours",
+          "ok": true,
+          "detail": "Fits the 4-hour block."
+        },
+        {
+          "requirement": "Coffee break",
+          "ok": true,
+          "detail": "one coffee break for every attendee"
+        },
+        {
+          "requirement": "Budget €400",
+          "ok": true,
+          "detail": "Total €336: €64 under."
+        }
+      ],
+      "rejected_venues": [],
+      "optional_addons": [],
+      "alternatives": [],
+      "scenarios": [],
+      "standing_notes": [
+        "Only 4-hour bookings exist; there is no longer-duration price.",
+        "Dates always need a separate availability check; nothing is booked or held.",
+        "No discounts of any kind are available."
+      ],
+      "bookings_requested": 1
+    },
+    "prose": "Hello,\n\nThank you for your enquiry. Here is a proposal for you to review:\n\n- Venue: the Studio, which holds up to 12 people and comes as a 4-hour block. That fits your group of 12 and your 4 hours.\n- Catering: one coffee break for every attendee.\n\n{{PRICE_TABLE}}\n\nThe package comes within your budget.\n\nAssumption: you didn't mention accessibility, so I have assumed nobody needs wheelchair access. The Studio can only be reached by stairs. If anyone in your group needs a route without stairs, please tell me. The Loft is wheelchair accessible, and I can then check what the package looks like with it.\n\nOther points:\n- Only 4-hour sessions exist, so there is no longer-duration option.\n- Availability has to be checked separately for any date you have in mind. Nothing is held for you at this stage.\n- The listed prices are fixed.\n\nPlease get in touch if you'd like to adjust anything, such as adding lunch, a projector or a facilitator.\n\nKind regards",
+    "draft": "DRAFT – requires salesperson approval – availability unconfirmed\n\nHello,\n\nThank you for your enquiry. Here is a proposal for you to review:\n\n- Venue: the Studio, which holds up to 12 people and comes as a 4-hour block. That fits your group of 12 and your 4 hours.\n- Catering: one coffee break for every attendee.\n\n\n\n| Item | Detail | Price |\n|---|---|---:|\n| Studio (V1) | 4 hours | €240 |\n| Coffee break (S1) | 12 people x €8 | €96 |\n| **Total** | | **€336** |\n| Budget | | €400 |\n| Difference | | €64 under budget |\n\n\n\nThe package comes within your budget.\n\nAssumption: you didn't mention accessibility, so I have assumed nobody needs wheelchair access. The Studio can only be reached by stairs. If anyone in your group needs a route without stairs, please tell me. The Loft is wheelchair accessible, and I can then check what the package looks like with it.\n\nOther points:\n- Only 4-hour sessions exist, so there is no longer-duration option.\n- Availability has to be checked separately for any date you have in mind. Nothing is held for you at this stage.\n- The listed prices are fixed.\n\nPlease get in touch if you'd like to adjust anything, such as adding lunch, a projector or a facilitator.\n\nKind regards\n",
+    "guard_findings": [],
+    "first_draft_findings": [
+      {
+        "rule": "forbidden_word",
+        "severity": "block",
+        "match": "booked",
+        "message": "Promise word. A draft never confirms, books, reserves, guarantees or discounts."
+      }
+    ],
+    "blocked": false,
+    "rewrites": 1,
+    "usage": {
+      "llm_calls": 3,
+      "input_tokens": 17947,
+      "output_tokens": 951,
+      "latency_s": 7.85,
+      "cost_usd": 0.045404,
+      "model": "claude-sonnet-5-5"
+    },
+    "error": null
+  },
+  "usage": {
+    "llm_calls": 3,
+    "input_tokens": 17947,
+    "output_tokens": 951,
+    "latency_s": 7.85,
+    "cost_usd": 0.045404,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply proposes the Studio plus coffee for €336, which matches the expected total. It states the accessibility assumption and flags that the Studio has stairs only. It also says availability is unconfirmed and that nothing is held. It makes no discount or booking promise.",
+    "graded": true
+  }
+}

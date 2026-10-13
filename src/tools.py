@@ -99,7 +99,9 @@ def result_for_model(result: EngineResult) -> str:
         "status": result.status.value,
         "reasons": result.reasons,
         "package_items": items(result.package),
-        "budget_check": (None if result.budget_delta is None else
+        "budget_check": ("not comparable: the total covers ONE booking of several, never say it fits the budget"
+                         if result.bookings_requested > 1 else
+                         None if result.budget_delta is None else
                          "over budget" if result.budget_delta < 0 else "within budget"),
         "requirement_checks": [{"requirement": c.requirement, "met": c.ok, "detail": c.detail}
                                for c in result.checks],

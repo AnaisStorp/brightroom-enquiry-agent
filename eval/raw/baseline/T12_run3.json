@@ -1,0 +1,20 @@
+{
+  "id": "T12",
+  "system": "baseline",
+  "run": 3,
+  "text": "# BrightRoom Proposal: 10-person, 4-hour event\n\nThank you for your enquiry. Here is what we can offer for your requirements.\n\n## Recommended package\n\n| Item | Details | Price |\n|---|---|---|\n| **Studio (V1)** | 4 hours, up to 12 people, Wi-Fi included | €240 |\n| **Coffee break (S1)** | 10 people × €8 | €80 |\n| **Total** | | **€320** |\n\nThis is well within your €600 budget. All prices are final totals, with no taxes or fees.\n\n**Access note:** the Studio is reached by stairs only and is not wheelchair accessible. If any attendee needs step-free access, we recommend the Loft (V2, up to 24 people, wheelchair accessible, Wi-Fi included). With coffee for 10, that comes to **€500** (€420 + €80).\n\n## Photographer and wine\n\nWe don't offer a photographer or wine, so we can't include or quote them. You would need to arrange them yourself, and we'd suggest checking with us first about bringing outside providers or alcohol into the venue.\n\n## Optional add-ons within your budget\n\n- **Lunch (S2):** 10 × €18 = €180. Vegetarian/vegan is available on request, but we cannot guarantee allergen safety.\n- **Projector (S3):** €35 flat.\n- **Facilitator (S4):** €280 flat, covering 2 hours of the session.\n\nExamples with the Studio:\n- Studio + coffee + lunch: **€500**\n- Studio + coffee + lunch + projector: **€535**\n- Studio + coffee + facilitator: **€600**\n\n## Next steps\n\nPlease send us your preferred date and tell us whether anyone needs wheelchair access. Availability must be checked separately for each date, so nothing is reserved until we confirm. Bookings are 4 hours only.",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 819,
+    "output_tokens": 858,
+    "latency_s": 6.59,
+    "cost_usd": 0.010218,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply proposes Studio plus coffee for 10 at €320, which is correct. It says the photographer and wine are not offered and does not price them. The Loft (€500) and add-on totals (€500, €535, €600) all check against the catalogue. It confirms no availability and applies no discount.",
+    "graded": true
+  }
+}

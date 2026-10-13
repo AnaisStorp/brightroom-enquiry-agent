@@ -1,0 +1,140 @@
+{
+  "id": "Q4",
+  "system": "prototype",
+  "run": 2,
+  "text": "DRAFT – requires salesperson approval – availability unconfirmed\n\nHello,\n\nThank you for your enquiry about a team workshop. Before I can put a package together, I need a few details from you:\n\n1. **Number of attendees.** This decides which room fits your group and what each per-person item costs. The Studio takes up to 12 people and the Loft up to 24.\n2. **Your budget.** Knowing it lets me check that a package fits.\n3. **Services.** Which of these do you need?\n   - a coffee break for every attendee\n   - lunch for every attendee (vegetarian or vegan on request; BrightRoom cannot promise allergen-safe catering)\n   - a projector\n   - a facilitator for 2 hours\n\n   Please also say whether \"food\" means a coffee break, lunch or both.\n4. **Accessibility.** Does anyone need wheelchair access? The Studio can only be reached by stairs. The Loft is wheelchair accessible.\n\nOur rooms are only available in 4-hour sessions, and I have assumed that length for now. There is no longer option.\n\nYou mentioned next month. Availability has to be checked separately, so nothing is held for you at this stage. Our listed prices are fixed.\n\nOnce I have your answers, I will prepare a proposal for you to review.\n\nKind regards\n",
+  "result": {
+    "enquiry": "Can you organise a team workshop next month? Please send me your best offer.",
+    "brief": {
+      "headcount": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "headcount_max": null,
+      "duration_hours": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "budget_eur": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "wheelchair_access": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "coffee_break": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "lunch": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "projector": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "facilitator": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "facilitator_hours": null,
+      "bookings": null,
+      "catering_unclear": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "unlisted_requests": [],
+      "dietary_notes": [],
+      "allergy_notes": [],
+      "date_requests": [
+        "next month"
+      ],
+      "language": "en"
+    },
+    "evidence_warnings": [],
+    "engine": {
+      "status": "NEEDS_CLARIFICATION",
+      "reasons": [
+        "Headcount is missing: it decides the venue and every per-person price.",
+        "Budget is not stated.",
+        "No services were mentioned: are coffee, lunch, a projector or a facilitator needed?",
+        "Accessibility is not stated: the Studio is stairs-only."
+      ],
+      "package": null,
+      "total": null,
+      "budget": null,
+      "budget_delta": null,
+      "assumptions": [
+        "Duration not stated: assumed the standard 4-hour block."
+      ],
+      "flags": [
+        "Date/urgency request (next month): dates need a separate availability check. Nothing can be confirmed or booked from this draft."
+      ],
+      "clarifications": [
+        "headcount",
+        "budget",
+        "services",
+        "accessibility"
+      ],
+      "checks": [],
+      "rejected_venues": [],
+      "optional_addons": [],
+      "alternatives": [],
+      "scenarios": [],
+      "standing_notes": [
+        "Only 4-hour bookings exist; there is no longer-duration price.",
+        "Dates always need a separate availability check; nothing is booked or held.",
+        "No discounts of any kind are available."
+      ],
+      "bookings_requested": 1
+    },
+    "prose": "Hello,\n\nThank you for your enquiry about a team workshop. Before I can put a package together, I need a few details from you:\n\n1. **Number of attendees.** This decides which room fits your group and what each per-person item costs. The Studio takes up to 12 people and the Loft up to 24.\n2. **Your budget.** Knowing it lets me check that a package fits.\n3. **Services.** Which of these do you need?\n   - a coffee break for every attendee\n   - lunch for every attendee (vegetarian or vegan on request; BrightRoom cannot promise allergen-safe catering)\n   - a projector\n   - a facilitator for 2 hours\n\n   Please also say whether \"food\" means a coffee break, lunch or both.\n4. **Accessibility.** Does anyone need wheelchair access? The Studio can only be reached by stairs. The Loft is wheelchair accessible.\n\nOur rooms are only available in 4-hour sessions, and I have assumed that length for now. There is no longer option.\n\nYou mentioned next month. Availability has to be checked separately, so nothing is held for you at this stage. Our listed prices are fixed.\n\nOnce I have your answers, I will prepare a proposal for you to review.\n\nKind regards",
+    "draft": "DRAFT – requires salesperson approval – availability unconfirmed\n\nHello,\n\nThank you for your enquiry about a team workshop. Before I can put a package together, I need a few details from you:\n\n1. **Number of attendees.** This decides which room fits your group and what each per-person item costs. The Studio takes up to 12 people and the Loft up to 24.\n2. **Your budget.** Knowing it lets me check that a package fits.\n3. **Services.** Which of these do you need?\n   - a coffee break for every attendee\n   - lunch for every attendee (vegetarian or vegan on request; BrightRoom cannot promise allergen-safe catering)\n   - a projector\n   - a facilitator for 2 hours\n\n   Please also say whether \"food\" means a coffee break, lunch or both.\n4. **Accessibility.** Does anyone need wheelchair access? The Studio can only be reached by stairs. The Loft is wheelchair accessible.\n\nOur rooms are only available in 4-hour sessions, and I have assumed that length for now. There is no longer option.\n\nYou mentioned next month. Availability has to be checked separately, so nothing is held for you at this stage. Our listed prices are fixed.\n\nOnce I have your answers, I will prepare a proposal for you to review.\n\nKind regards\n",
+    "guard_findings": [],
+    "first_draft_findings": [
+      {
+        "rule": "forbidden_word",
+        "severity": "block",
+        "match": "booked",
+        "message": "Promise word. A draft never confirms, books, reserves, guarantees or discounts."
+      }
+    ],
+    "blocked": false,
+    "rewrites": 1,
+    "usage": {
+      "llm_calls": 3,
+      "input_tokens": 17706,
+      "output_tokens": 1108,
+      "latency_s": 8.85,
+      "cost_usd": 0.046492,
+      "model": "claude-sonnet-5-5"
+    },
+    "error": null
+  },
+  "usage": {
+    "llm_calls": 3,
+    "input_tokens": 17706,
+    "output_tokens": 1108,
+    "latency_s": 8.85,
+    "cost_usd": 0.046492,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "asks_decision_critical_questions": true,
+    "violations": [],
+    "reason": "The reply asks for headcount, budget, services and accessibility. It notes 4-hour sessions only, says availability must be checked separately, and says prices are fixed, which implies no discounts. It gives no prices or promises. The allergen caveat is correct.",
+    "graded": true
+  }
+}

@@ -8,17 +8,20 @@
 Writes  eval/raw/<system>/<test>_run<n>.json   every raw output, with tokens, latency and cost
         eval/results.csv and eval/results.md   the test table and the summary
 
-How a run is scored (the same five criteria for both systems):
+How a run is scored (the same four criteria for both systems):
     status         prototype: the code-computed status equals the expected one.
                    baseline:  it has no status field, so a grader model reads the reply (see below).
     total          the expected total, to the euro. Prototype: the engine total. Baseline: an amount
                    stated on a line of its reply that mentions "total".
     violations     no catalogue rule or "must not" from the expected behaviour is broken (grader model),
                    plus, for the prototype, the structured checks (venue, alternatives, flags).
-    promises       no promise word (confirmed, booked, reserved, guaranteed, discount, free) used as
-                   a promise. Negated or conditional uses ("cannot be guaranteed", "to be confirmed")
-                   are not counted. Same detector for both systems.
+                   This includes forbidden promises: a booking, date or discount confirmed or promised.
     clarification  when the expected status is NEEDS_CLARIFICATION: the decision-critical questions are asked.
+
+Not counted in pass/fail, reported for information: the literal promise words (confirmed, booked,
+reserved, guaranteed, discount, free). Read by hand, every hit in the baseline was harmless ("booked
+twice", "your confirmed headcount", a heading "Loyalty discount"), so counting them would be unfair.
+The prototype never contains them because its guard blocks them literally.
 
 The grader model is the same model as the one being tested. Its judgments are an ESTIMATE and are
 labelled as such in the results. Totals and promise words are checked by code.
@@ -122,11 +125,12 @@ def grade(test: dict, reply: str) -> dict:
     catalogue = (ROOT / "data" / "catalogue.json").read_text(encoding="utf-8")
     user = (f"CATALOGUE\n{catalogue}\n\nENQUIRY\n{test['enquiry']}\n\nEXPECTED BEHAVIOUR\n"
             f"{test['expected_behaviour']}\n\nREPLY TO GRADE\n{reply}")
-    answer = llm.complete(GRADER_SYSTEM, [{"role": "user", "content": user}], tools=[GRADER_TOOL],
-                          force_tool="record_grade", max_tokens=700)
-    if answer.tool_call:
-        return {**answer.tool_call.input, "graded": True}
-    return {"verdict_matches_expected": False, "violations": ["grader gave no usable answer"], "graded": False}
+    for _ in range(2):  # the grader sometimes answers in text instead of calling the tool: ask once more
+        answer = llm.complete(GRADER_SYSTEM, [{"role": "user", "content": user}], tools=[GRADER_TOOL],
+                              force_tool="record_grade", max_tokens=700)
+        if answer.tool_call and "verdict_matches_expected" in answer.tool_call.input:
+            return {**answer.tool_call.input, "graded": True}
+    return {"verdict_matches_expected": False, "violations": [], "graded": False}
 
 
 # --------------------------------------------------------------------------- running
@@ -141,6 +145,12 @@ def produce(job: tuple[str, dict, int]) -> None:
     system, test, run = job
     path = raw_path(system, test["id"], run)
     if path.exists():
+        record = json.loads(path.read_text(encoding="utf-8"))
+        if record["grade"].get("graded") or not record["text"]:
+            return
+        record["grade"] = grade(test, record["text"])  # reply is saved, only the grade is missing
+        path.write_text(json.dumps(record, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(f"  {system:9} {test['id']:4} run {run} regraded", flush=True)
         return
     if system == "baseline":
         reply = run_baseline(test["enquiry"])
@@ -149,6 +159,8 @@ def produce(job: tuple[str, dict, int]) -> None:
             "latency_s": reply.latency_s, "cost_usd": round(reply.cost_usd, 6), "model": reply.model}}
     else:
         outcome = pipeline.run(test["enquiry"])
+        if outcome.error and "credit balance" in outcome.error:
+            raise RuntimeError(outcome.error)  # an account problem is not a test result: do not save it
         record = {"text": outcome.draft, "result": outcome.model_dump(mode="json"),
                   "usage": outcome.usage.model_dump()}
     record["grade"] = grade(test, record["text"]) if record["text"] else {
@@ -166,31 +178,36 @@ def score(system: str, test: dict, record: dict) -> dict:
     """The five criteria for one run. None = not applicable to this test."""
     expected, grade_, text = test["expected"], record["grade"], record["text"]
     needs_questions = expected["status"] == "NEEDS_CLARIFICATION"
-    checks = {"status": None, "total": None, "violations": None, "promises": None, "clarification": None}
+    checks = {"status": None, "total": None, "violations": None, "clarification": None}
     notes = []
-
-    found_promises = promises(record.get("result", {}).get("prose", "") if system == "prototype" else text)
-    checks["promises"] = not found_promises
-    if found_promises:
-        notes.append("promise words: " + ", ".join(sorted(set(found_promises))))
+    literal_words = promises(record.get("result", {}).get("prose", "") if system == "prototype" else text)
 
     violations = list(grade_.get("violations", []))
     if system == "baseline":
         checks["status"] = bool(grade_.get("verdict_matches_expected"))
+        if not checks["status"]:
+            notes.append("grader: verdict differs. " + str(grade_.get("reason", "")))
         totals = stated_totals(text)
         if expected["total"] is not None:
-            checks["total"] = float(expected["total"]) in totals
+            accepted = [expected["total"], *expected.get("baseline_also_accept_totals", [])]
+            checks["total"] = any(float(total) in totals for total in accepted)
             if not checks["total"]:
                 notes.append("stated totals: " + (", ".join(f"€{t:g}" for t in totals) or "none"))
         if needs_questions:
             checks["clarification"] = bool(grade_.get("asks_decision_critical_questions"))
-        summary = "stated total " + (", ".join(f"€{t:g}" for t in totals[:3]) or "none")
+            if not checks["clarification"]:
+                notes.append("grader: needed questions not asked")
+        if expected["total"] is None:
+            summary = "verdict " + ("as expected" if checks["status"] else "differs")
+        else:
+            summary = "total " + ("correct" if checks["total"] else "wrong or missing")
     else:
         result = record["result"]
         engine = result.get("engine")
         if result.get("error") or not engine:
             notes.append("error: " + str(result.get("error")))
-            return {"checks": {**checks, "status": False}, "passed": False, "notes": notes, "summary": "ERROR"}
+            return {"checks": {**checks, "status": False}, "passed": False, "notes": notes, "summary": "ERROR",
+                    "literal_words": 0}
         checks["status"] = engine["status"] == expected["status"]
         checks["total"] = engine["total"] == expected["total"]
         if not checks["status"]:
@@ -222,7 +239,8 @@ def score(system: str, test: dict, record: dict) -> dict:
     checks["violations"] = not violations
     notes += violations
     passed = all(value for value in checks.values() if value is not None)
-    return {"checks": checks, "passed": passed, "notes": notes, "summary": summary}
+    return {"checks": checks, "passed": passed, "notes": notes, "summary": summary,
+            "literal_words": len(literal_words)}
 
 
 def short(text: str, limit: int) -> str:
@@ -245,6 +263,9 @@ def write_results(tests: list[dict], runs: int) -> None:
                 if not path.exists():
                     continue
                 record = json.loads(path.read_text(encoding="utf-8"))
+                if not record["grade"].get("graded"):
+                    stats["ungraded"] = stats.get("ungraded", 0) + 1
+                    continue  # no grade yet: left out, not counted as a failure
                 scored.append(score(system, test, record))
                 usage = record["usage"]
                 stats["latency"].append(usage["latency_s"])
@@ -259,13 +280,16 @@ def write_results(tests: list[dict], runs: int) -> None:
             stats["passed"] += passes
             stats["runs"] += len(scored)
             stats["tests_all_pass"] += bool(scored) and passes == len(scored)
-            stats["consistent"] += len({(s["passed"], s["summary"]) for s in scored}) <= 1
+            stats["consistent"] += len({s["passed"] for s in scored}) <= 1
+            stats["literal"] = stats.get("literal", 0) + sum(bool(s["literal_words"]) for s in scored)
             summaries = list(dict.fromkeys(s["summary"] for s in scored))
             notes = list(dict.fromkeys(note for s in scored for note in s["notes"]))
+            if system == "baseline" and test.get("fairness_note"):
+                notes.insert(0, "FAIRNESS: " + test["fairness_note"])
             row[f"{system}_result"] = short("; ".join(summaries), 70)
             row[f"{system}_pass"] = f"{passes}/{len(scored)}"
             row[f"{system}_verdict"] = "PASS" if scored and passes == len(scored) else "FAIL"
-            row[f"{system}_notes"] = short("; ".join(notes), 260)
+            row[f"{system}_notes"] = short("; ".join(notes), 420)
         rows.append(row)
 
     with (ROOT / "eval" / "results.csv").open("w", newline="", encoding="utf-8") as handle:
@@ -276,7 +300,9 @@ def write_results(tests: list[dict], runs: int) -> None:
     model = llm.model()
     lines = [
         "# Test results: baseline against prototype", "",
-        f"{len(tests)} test enquiries, {runs} runs each per system, model `{model}`. "
+        f"{len(tests)} test enquiries, up to {runs} runs each per system, model `{model}`. "
+        f"Scored runs: {per_system['baseline']['runs']} baseline and {per_system['prototype']['runs']} prototype, "
+        f"out of {len(tests) * runs} planned for each; the number of runs behind each verdict is in brackets. "
         "Q1 to Q5 are the original enquiries; T6 onwards are ADDED – fictional, generated for testing.", "",
         "A test counts as PASS only if every run passed every applicable criterion.", "",
         "| ID | Input | Expected behaviour | Baseline result | Baseline | Prototype result | Prototype | Notes |",
@@ -300,24 +326,37 @@ def write_results(tests: list[dict], runs: int) -> None:
     lines.append(f"| Tests passed on every run | {b['tests_all_pass']} of {len(tests)} | "
                  f"{p['tests_all_pass']} of {len(tests)} |")
     lines.append(f"| Individual runs passed | {b['passed']} of {b['runs']} | {p['passed']} of {p['runs']} |")
-    lines.append(f"| Tests with the same outcome on every run | {b['consistent']} of {len(tests)} | "
+    lines.append(f"| Tests with the same pass/fail on every run | {b['consistent']} of {len(tests)} | "
                  f"{p['consistent']} of {len(tests)} |")
     labels = {"status": "Verdict correct", "total": "Total correct to the euro",
-              "violations": "No rule violation", "promises": "No promise word used as a promise",
-              "clarification": "Asks the needed questions"}
+              "violations": "No rule violation or forbidden promise", "clarification": "Asks the needed questions"}
     for name, label in labels.items():
         cells = []
         for stats in (b, p):
             hit, total = stats["criteria"].get(name, (0, 0))
             cells.append(f"{hit} of {total} runs" if total else "–")
         lines.append(f"| {label} | {cells[0]} | {cells[1]} |")
+    lines.append(f"| Runs containing a literal promise word (information only, not a failure) | "
+                 f"{b.get('literal', 0)} of {b['runs']} | {p.get('literal', 0)} of {p['runs']} |")
     lines.append(f"| Median time per enquiry | {med(b['latency']):.1f} s | {med(p['latency']):.1f} s |")
     lines.append(f"| Median cost per enquiry (estimate) | ${med(b['cost']):.4f} | ${med(p['cost']):.4f} |")
     lines.append(f"| Median tokens in / out | {med(b['tokens_in']):.0f} / {med(b['tokens_out']):.0f} | "
                  f"{med(p['tokens_in']):.0f} / {med(p['tokens_out']):.0f} |")
     lines += ["", "## How to read this", "",
-              "- **Checked by code:** the totals, the promise words and, for the prototype, the status, venue, "
-              "alternatives, questions and flags.",
+              "- **Checked by code:** the totals and, for the prototype, the status, venue, alternatives, "
+              "questions and flags.",
+              "- **Literal promise words are not counted.** We read every hit in the baseline by hand and all "
+              "were harmless (\"booked twice\", \"your confirmed headcount\", a heading \"Loyalty discount\"). "
+              "Real promises are caught under rule violations instead. The prototype shows zero because its "
+              "guard blocks these words literally, which is our own house rule, not a quality difference.",
+              "- **T18 and T19 favour the prototype by construction.** They were written to probe what our "
+              "rules do not cover (two sessions, two days). The expected behaviour is \"flag it, do not price "
+              "it\", but the baseline's answer of pricing two bookings is arguably the more useful one for the "
+              "client. Without these two tests the baseline passes "
+              f"{sum(r['baseline_verdict'] == 'PASS' for r in rows if r['id'] not in ('T18', 'T19'))} of "
+              f"{len([r for r in rows if r['id'] not in ('T18', 'T19')])} and the prototype "
+              f"{sum(r['prototype_verdict'] == 'PASS' for r in rows if r['id'] not in ('T18', 'T19'))} of "
+              f"{len([r for r in rows if r['id'] not in ('T18', 'T19')])}.",
               "- **Judged by a grader model (estimate):** the baseline's verdict, and rule violations in the "
               "text of both systems. The grader is the same model as the one tested, so treat these judgments "
               "as an estimate, not a measurement.",
@@ -354,8 +393,14 @@ def main() -> int:
                     path.unlink()
     if not args.score_only:
         jobs = [(system, test, run) for run in range(1, args.runs + 1) for test in tests for system in SYSTEMS]
+        def attempt(job):
+            try:
+                produce(job)
+            except Exception as error:  # one failed call must not lose the other results
+                print(f"  {job[0]:9} {job[1]['id']:4} run {job[2]} NOT RUN: {str(error)[:120]}", flush=True)
+
         with ThreadPoolExecutor(max_workers=args.workers) as pool:
-            list(pool.map(produce, jobs))
+            list(pool.map(attempt, jobs))
     write_results(tests, args.runs)
     return 0
 

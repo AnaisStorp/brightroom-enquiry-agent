@@ -1,0 +1,20 @@
+{
+  "id": "T11",
+  "system": "baseline",
+  "run": 2,
+  "text": "# BrightRoom Proposal: 10-Person Workshop\n\n**Important:** The facilitator is only available as a **2-hour** service, and flat-price items can be booked once per booking. We therefore **can't offer a facilitator for the full 4-hour workshop**. What we can do is have the facilitator lead 2 hours of your 4-hour session, for example the opening or the key working block. The other 2 hours would run self-led.\n\n## Recommended package\n\n| Item | Details | Price |\n|---|---|---|\n| Venue: **Studio** | 4 hours, up to 12 people, Wi-Fi included | €240 |\n| **Facilitator** | 1 facilitator for 2 hours | €280 |\n| **Total** | | **€520** |\n\nThis is €80 under your €600 budget. All prices are final, with no taxes or fees.\n\n## Optional add-ons with the remaining €80\n\nChoose one of these:\n\n- **Option A: Coffee break for all 10 attendees** (10 × €8 = €80). Total **€600**, exactly on budget.\n- **Option B: Projector** (€35, one for the booking). Total **€555**.\n\nBoth together would come to €635, which is over budget. Lunch (10 × €18 = €180) doesn't fit within €600 either.\n\n## Things to know\n\n- **Accessibility:** The Studio is reached by stairs only and is **not wheelchair accessible**. If any attendee needs step-free access, the Loft (up to 24 people, wheelchair accessible) is €420. With the facilitator that is €700, which is over budget.\n- **Duration:** We only offer 4-hour bookings, and there is no discount on any package.\n- **Availability:** Your date needs a separate availability check before we can confirm anything.\n\n## Next steps\n\nPlease let us know:\n1. Your preferred date(s)\n2. Whether you'd like Option A or B, or neither\n3. Whether anyone needs step-free access\n\nOnce we have these, we'll check availability and confirm the booking.",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 815,
+    "output_tokens": 1057,
+    "latency_s": 11.59,
+    "cost_usd": 0.0122,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply says a facilitator for the full 4 hours can't be offered. It proposes Studio plus 2-hour facilitator at €520, which matches the expected alternative. Its add-on totals (€600, €555, €635, €700) are correct, and it promises no discount or availability.",
+    "graded": true
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "T9",
+  "system": "baseline",
+  "run": 3,
+  "text": "# BrightRoom Proposal: Team Session for 10 People\n\nThank you for your enquiry. Here is a proposal that fits your budget exactly.\n\n## Recommended package\n\n| Item | Details | Price |\n|---|---|---|\n| **Studio** (V1) | 4-hour booking, up to 12 people, Wi-Fi included | €240 |\n| **Coffee break** (S1) | €8 × 10 attendees | €80 |\n| **Total** | | **€320** |\n\nThis matches your €320 budget, with nothing left over. All prices are final totals in euros, with no taxes or extra fees.\n\n## Things to know\n\n- **Accessibility:** The Studio is reached by stairs only and is **not wheelchair accessible**. If any attendee needs step-free access, the Loft is our accessible option. It costs €420 for the venue plus €80 for coffee, so **€500 in total**, which is €180 over your budget. We have no discounts that could close that gap.\n- **Capacity:** The Studio holds up to 12 people, so your group of 10 fits with room for two more. Coffee must cover the full headcount, so if the group grows, the price rises by €8 per extra person and would exceed your budget.\n- **Duration:** We only offer 4-hour bookings, which matches your request.\n- **Add-ons:** Lunch, a projector and a facilitator are available, but any of them would take you over €320.\n\n## Next step\n\nPlease send us your **preferred date(s)** so we can check availability. A date is not confirmed until we have done that check. Please also tell us whether anyone in the group needs step-free access, so we can confirm the right venue.\n\nWe look forward to hosting you at BrightRoom.",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 805,
+    "output_tokens": 691,
+    "latency_s": 5.86,
+    "cost_usd": 0.00852,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply proposes Studio plus coffee for 10 people at €320, which equals the budget. The prices are correct, the Loft alternative at €500 is correct, there are no discounts, and the date is not confirmed.",
+    "graded": true
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "Q3",
+  "system": "baseline",
+  "run": 3,
+  "text": "# Proposal for your event at BrightRoom\n\nThank you for your enquiry. Here is what we recommend.\n\n## Recommended setup\n\n| Item | Details | Price |\n|---|---|---|\n| **Loft** (venue) | 4 hours, up to 24 people, wheelchair accessible, Wi-Fi included | €420 |\n| **Coffee break** | €8 × 10 attendees | €80 |\n| **Projector** | One projector for the booking | €35 |\n| **Total** | | **€535** |\n\nThis is €65 under your €600 budget. All prices are final totals in euros, with no taxes or fees.\n\n## Why the Loft\nYou need wheelchair access, and our Studio (€240) is stairs-only and not accessible. The Loft is our only accessible venue. It comfortably fits your 10 guests and includes Wi-Fi.\n\n## Things to note\n- **Availability:** We haven't yet checked availability for your date. Please send us your preferred date (and a backup, if you have one) and we'll confirm before anything is booked.\n- **Duration:** Our bookings are 4 hours, which matches your request.\n- **Optional extras:** Lunch (€18 per person, €180 for 10) would bring the total to €715, over your budget. A facilitator (€280 for 2 hours) would also exceed it. Both are available if your budget changes.\n\nIf this works for you, send us your date and we'll check availability and confirm the booking.\n\nKind regards,\nBrightRoom",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 816,
+    "output_tokens": 639,
+    "latency_s": 5.24,
+    "cost_usd": 0.008022,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": false,
+    "violations": [
+      "grader gave no usable answer"
+    ],
+    "graded": false
+  }
+}

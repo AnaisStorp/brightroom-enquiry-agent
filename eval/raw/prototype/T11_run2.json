@@ -1,0 +1,236 @@
+{
+  "id": "T11",
+  "system": "prototype",
+  "run": 2,
+  "text": "DRAFT – requires salesperson approval – availability unconfirmed\nNot sendable as an offer\n\nHello,\n\nThank you for your enquiry. We can't meet the request exactly as written. You asked for a facilitator for the whole 4-hour workshop. Our facilitator covers 2 hours only, and we have no longer facilitator option.\n\nThe rest of your request fits. The Studio holds up to 12 people, so it suits your group of 10, and it comes as a 4-hour block. The closest package we can offer is the Studio with the facilitator for 2 hours. It stays within your budget, as the table shows:\n\n\n\n| Item | Detail | Price |\n|---|---|---:|\n| Studio (V1) | 4 hours | €240 |\n| Facilitator (S4) | one facilitator for 2 hours | €280 |\n| **Total** | | **€520** |\n| Budget | | €600 |\n| Difference | | €80 under budget |\n\n\n\nThese are the options. Each one needs your agreement, because each gives something up:\n\n\n\n| Option | Package | People | Total | What the client gives up |\n|---|---|---:|---:|---|\n| 1 | Studio | 10 | €240 | Facilitator (a stated requirement) is removed |\n| 2 | Studio + Facilitator | 10 | €520 | facilitator covers 2 hours only, not the requested 4 |\n\nEvery option changes a stated requirement and needs the client's explicit consent.\n\n\n\n- Option 1 is the Studio alone. You give up the facilitator, which you listed as a requirement.\n- Option 2 is the Studio with the facilitator. You give up facilitation for the second half of the workshop, because the facilitator covers 2 hours, not 4.\n\nYou didn't mention accessibility, so I have assumed nobody in your group needs wheelchair access. The Studio is reached by stairs only and is not wheelchair accessible. If anyone needs a route without stairs, please tell us. The Loft is wheelchair accessible, and we would then need to review the package.\n\nThe listed prices are fixed. Availability for your date has to be checked separately, and nothing is held at this stage.\n\nPlease tell us which option you would like, or whether you have any questions.\n\nKind regards\n",
+  "result": {
+    "enquiry": "10 people, 4 hours, with a facilitator for the whole workshop. Budget €600.",
+    "brief": {
+      "headcount": {
+        "status": "confirmed",
+        "evidence": "10 people",
+        "value": 10
+      },
+      "headcount_max": null,
+      "duration_hours": {
+        "status": "confirmed",
+        "evidence": "4 hours",
+        "value": 4.0
+      },
+      "budget_eur": {
+        "status": "confirmed",
+        "evidence": "Budget €600",
+        "value": 600.0
+      },
+      "wheelchair_access": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "coffee_break": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "lunch": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "projector": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "facilitator": {
+        "status": "confirmed",
+        "evidence": "with a facilitator for the whole workshop",
+        "value": true
+      },
+      "facilitator_hours": 4.0,
+      "bookings": 1,
+      "catering_unclear": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "unlisted_requests": [],
+      "dietary_notes": [],
+      "allergy_notes": [],
+      "date_requests": [],
+      "language": "en"
+    },
+    "evidence_warnings": [],
+    "engine": {
+      "status": "INFEASIBLE",
+      "reasons": [
+        "Facilitator requested for 4 hours: the catalogue facilitator covers 2 hours only."
+      ],
+      "package": {
+        "venue_id": "V1",
+        "service_ids": [
+          "S4"
+        ],
+        "items": [
+          {
+            "id": "V1",
+            "name": "Studio",
+            "unit_price": 240,
+            "quantity": 1,
+            "line_total": 240,
+            "note": "4 hours"
+          },
+          {
+            "id": "S4",
+            "name": "Facilitator",
+            "unit_price": 280,
+            "quantity": 1,
+            "line_total": 280,
+            "note": "one facilitator for 2 hours"
+          }
+        ],
+        "total": 520
+      },
+      "total": 520,
+      "budget": 600.0,
+      "budget_delta": 80.0,
+      "assumptions": [
+        "Accessibility not stated: assumed no wheelchair access is needed. The Studio is stairs-only."
+      ],
+      "flags": [
+        "Facilitator requested for 4 hours: the catalogue facilitator covers 2 hours only."
+      ],
+      "clarifications": [],
+      "checks": [
+        {
+          "requirement": "Capacity for 10 people",
+          "ok": true,
+          "detail": "Studio holds up to 12."
+        },
+        {
+          "requirement": "Duration 4 hours",
+          "ok": true,
+          "detail": "Fits the 4-hour block."
+        },
+        {
+          "requirement": "Facilitator for 4 hours",
+          "ok": false,
+          "detail": "Facilitator requested for 4 hours: the catalogue facilitator covers 2 hours only."
+        },
+        {
+          "requirement": "Budget €600",
+          "ok": true,
+          "detail": "Total €520: €80 under."
+        }
+      ],
+      "rejected_venues": [],
+      "optional_addons": [],
+      "alternatives": [
+        {
+          "relaxed": [
+            "drop:S4"
+          ],
+          "description": "Studio for 10 people = €240",
+          "headcount": 10,
+          "gives_up": "Facilitator (a stated requirement) is removed",
+          "requires_client_consent": true,
+          "package": {
+            "venue_id": "V1",
+            "service_ids": [],
+            "items": [
+              {
+                "id": "V1",
+                "name": "Studio",
+                "unit_price": 240,
+                "quantity": 1,
+                "line_total": 240,
+                "note": "4 hours"
+              }
+            ],
+            "total": 240
+          },
+          "total": 240,
+          "budget_delta": 360.0,
+          "notes": [
+            "Studio is stairs-only and accessibility needs were not stated."
+          ]
+        },
+        {
+          "relaxed": [
+            "facilitator_hours"
+          ],
+          "description": "Studio + Facilitator for 10 people = €520",
+          "headcount": 10,
+          "gives_up": "facilitator covers 2 hours only, not the requested 4",
+          "requires_client_consent": true,
+          "package": {
+            "venue_id": "V1",
+            "service_ids": [
+              "S4"
+            ],
+            "items": [
+              {
+                "id": "V1",
+                "name": "Studio",
+                "unit_price": 240,
+                "quantity": 1,
+                "line_total": 240,
+                "note": "4 hours"
+              },
+              {
+                "id": "S4",
+                "name": "Facilitator",
+                "unit_price": 280,
+                "quantity": 1,
+                "line_total": 280,
+                "note": "one facilitator for 2 hours"
+              }
+            ],
+            "total": 520
+          },
+          "total": 520,
+          "budget_delta": 80.0,
+          "notes": [
+            "Studio is stairs-only and accessibility needs were not stated."
+          ]
+        }
+      ],
+      "scenarios": [],
+      "standing_notes": [
+        "Only 4-hour bookings exist; there is no longer-duration price.",
+        "Dates always need a separate availability check; nothing is booked or held.",
+        "No discounts of any kind are available."
+      ],
+      "bookings_requested": 1
+    },
+    "prose": "Hello,\n\nThank you for your enquiry. We can't meet the request exactly as written. You asked for a facilitator for the whole 4-hour workshop. Our facilitator covers 2 hours only, and we have no longer facilitator option.\n\nThe rest of your request fits. The Studio holds up to 12 people, so it suits your group of 10, and it comes as a 4-hour block. The closest package we can offer is the Studio with the facilitator for 2 hours. It stays within your budget, as the table shows:\n\n{{PRICE_TABLE}}\n\nThese are the options. Each one needs your agreement, because each gives something up:\n\n{{ALTERNATIVES_TABLE}}\n\n- Option 1 is the Studio alone. You give up the facilitator, which you listed as a requirement.\n- Option 2 is the Studio with the facilitator. You give up facilitation for the second half of the workshop, because the facilitator covers 2 hours, not 4.\n\nYou didn't mention accessibility, so I have assumed nobody in your group needs wheelchair access. The Studio is reached by stairs only and is not wheelchair accessible. If anyone needs a route without stairs, please tell us. The Loft is wheelchair accessible, and we would then need to review the package.\n\nThe listed prices are fixed. Availability for your date has to be checked separately, and nothing is held at this stage.\n\nPlease tell us which option you would like, or whether you have any questions.\n\nKind regards",
+    "draft": "DRAFT – requires salesperson approval – availability unconfirmed\nNot sendable as an offer\n\nHello,\n\nThank you for your enquiry. We can't meet the request exactly as written. You asked for a facilitator for the whole 4-hour workshop. Our facilitator covers 2 hours only, and we have no longer facilitator option.\n\nThe rest of your request fits. The Studio holds up to 12 people, so it suits your group of 10, and it comes as a 4-hour block. The closest package we can offer is the Studio with the facilitator for 2 hours. It stays within your budget, as the table shows:\n\n\n\n| Item | Detail | Price |\n|---|---|---:|\n| Studio (V1) | 4 hours | €240 |\n| Facilitator (S4) | one facilitator for 2 hours | €280 |\n| **Total** | | **€520** |\n| Budget | | €600 |\n| Difference | | €80 under budget |\n\n\n\nThese are the options. Each one needs your agreement, because each gives something up:\n\n\n\n| Option | Package | People | Total | What the client gives up |\n|---|---|---:|---:|---|\n| 1 | Studio | 10 | €240 | Facilitator (a stated requirement) is removed |\n| 2 | Studio + Facilitator | 10 | €520 | facilitator covers 2 hours only, not the requested 4 |\n\nEvery option changes a stated requirement and needs the client's explicit consent.\n\n\n\n- Option 1 is the Studio alone. You give up the facilitator, which you listed as a requirement.\n- Option 2 is the Studio with the facilitator. You give up facilitation for the second half of the workshop, because the facilitator covers 2 hours, not 4.\n\nYou didn't mention accessibility, so I have assumed nobody in your group needs wheelchair access. The Studio is reached by stairs only and is not wheelchair accessible. If anyone needs a route without stairs, please tell us. The Loft is wheelchair accessible, and we would then need to review the package.\n\nThe listed prices are fixed. Availability for your date has to be checked separately, and nothing is held at this stage.\n\nPlease tell us which option you would like, or whether you have any questions.\n\nKind regards\n",
+    "guard_findings": [],
+    "first_draft_findings": [],
+    "blocked": false,
+    "rewrites": 0,
+    "usage": {
+      "llm_calls": 2,
+      "input_tokens": 11644,
+      "output_tokens": 953,
+      "latency_s": 8.67,
+      "cost_usd": 0.032818,
+      "model": "claude-sonnet-5-5"
+    },
+    "error": null
+  },
+  "usage": {
+    "llm_calls": 2,
+    "input_tokens": 11644,
+    "output_tokens": 953,
+    "latency_s": 8.67,
+    "cost_usd": 0.032818,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply says the request can't be met as written because the facilitator covers only 2 hours. It offers Studio + Facilitator (2h) at €520, which is correct. Option 1 at €240 is also correct. It confirms no availability, gives no discount, and flags the Studio's stairs-only access.",
+    "graded": true
+  }
+}

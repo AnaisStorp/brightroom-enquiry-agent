@@ -1,0 +1,21 @@
+{
+  "id": "Q4",
+  "system": "baseline",
+  "run": 2,
+  "text": "**Subject: Your team workshop at BrightRoom: proposal and options**\n\nHello,\n\nThank you for your enquiry. To give you an exact quote I still need a few details (listed below). In the meantime, here is how our pricing works, with examples.\n\n**Please note:** our prices are fixed final totals in euros, with no taxes or fees. We don't offer discounts, so the prices below are our best and only prices.\n\n**1. Venue (choose one, 4-hour booking)**\n\n| Venue | Capacity | Access | Wi-Fi | Price |\n|---|---|---|---|---|\n| Studio | up to 12 people | stairs only, not wheelchair accessible | included | €240 |\n| Loft | up to 24 people | wheelchair accessible | included | €420 |\n\nBookings are for 4 hours only. We have no longer option.\n\n**2. Optional extras**\n\n- **Coffee break:** €8 per person (covers every attendee)\n- **Lunch:** €18 per person (covers every attendee). Vegetarian and vegan meals are available on request. We cannot guarantee allergen-free meals.\n- **Projector:** €35 flat, one per booking\n- **Facilitator:** €280 flat, one facilitator for 2 hours of the booking\n\nCoffee and lunch together cost €26 per person.\n\n**3. Example totals (illustrations only, not a quote for your group)**\n\n- **Studio, 10 people, coffee and lunch:** 240 + (10 × 26) = **€500**\n  - with projector: **€535**\n  - with projector and facilitator: **€815**\n- **Loft, 20 people, coffee and lunch:** 420 + (20 × 26) = **€940**\n  - with projector: **€975**\n  - with projector and facilitator: **€1,255**\n\n**4. What I need from you to finalise**\n\n1. **Number of attendees:** this decides the venue (Studio up to 12, Loft up to 24).\n2. **Preferred date(s) next month:** I will check availability, as no date is confirmed until we have done so.\n3. **Accessibility needs:** the Studio is stairs only, so the Loft is the option if anyone needs step-free access.\n4. **Extras:** do you want coffee, lunch, a projector or a facilitator? Please also tell me about any vegetarian or vegan meals.\n\nOnce I have these, I'll send you a final quote and check availability for your date.\n\nKind regards,\nBrightRoom Team",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 807,
+    "output_tokens": 1156,
+    "latency_s": 9.33,
+    "cost_usd": 0.013174,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "asks_decision_critical_questions": false,
+    "violations": [],
+    "reason": "The reply asks for headcount, accessibility, services and dates, and it clearly labels its example totals as illustrations. The examples are arithmetically correct, and it notes 4-hour-only bookings, the availability check and no discounts. It never asks about budget, which the expected behaviour names as missing information.",
+    "graded": true
+  }
+}

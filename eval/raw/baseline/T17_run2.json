@@ -1,0 +1,20 @@
+{
+  "id": "T17",
+  "system": "baseline",
+  "run": 2,
+  "text": "# BrightRoom: Response to Your Enquiry\n\nThank you for contacting BrightRoom. We can't confirm this booking as requested, for two reasons.\n\n**1. Headcount of 50 is over our capacity.**\nEach booking covers exactly one venue, and our largest space, the Loft, holds a maximum of 24 people. We have no option for 50 attendees in a single booking.\n\n**2. A total of €100 isn't possible.**\nOur prices are fixed final totals with no discounts. Our lowest-priced venue is the Studio at €240 (4 hours, max 12 people).\n\n## What we can offer\n\n| Venue | Price | Capacity | Wheelchair accessible | Wi-Fi |\n|---|---|---|---|---|\n| **Studio** | €240 | up to 12 | No (stairs only) | Included |\n| **Loft** | €420 | up to 24 | Yes | Included |\n\nAll bookings are 4 hours.\n\n**Optional add-ons:**\n- Coffee break: €8 per person (must cover all attendees)\n- Lunch: €18 per person (must cover all attendees; vegetarian/vegan on request; no allergen guarantee)\n- Projector: €35 flat\n- Facilitator: €280 flat (covers 2 hours)\n\n**Example:** The Loft for 24 people with coffee breaks and a projector would be €420 + €192 + €35 = **€647**.\n\n## Next steps\n\nTo prepare an accurate quote, please tell us:\n1. The final headcount (24 or fewer for a single booking)\n2. Your preferred date, as we need to check availability separately\n3. Any accessibility needs\n4. Which add-ons you'd like\n\nOnce we have these, we'll send a precise proposal.\n\nKind regards,\nBrightRoom",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 813,
+    "output_tokens": 899,
+    "latency_s": 7.18,
+    "cost_usd": 0.010616,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply refuses to confirm the booking. It says 50 people exceeds the 24-person maximum and that €100 is not possible. The catalogue details are accurate, and the example total (€420 + €192 + €35 = €647) is correct. It confirms no booking, date, or discount.",
+    "graded": true
+  }
+}

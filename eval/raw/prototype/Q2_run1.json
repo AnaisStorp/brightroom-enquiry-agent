@@ -1,0 +1,354 @@
+{
+  "id": "Q2",
+  "system": "prototype",
+  "run": 1,
+  "text": "DRAFT – requires salesperson approval – availability unconfirmed\nNot sendable as an offer\n\nHello,\n\nThank you for your enquiry. As specified, we can't meet this request within your budget.\n\nFor 20 people over 4 hours, the Loft is the only suitable venue. The Studio holds a maximum of 12. The Loft holds up to 24, and the Studio can't take your group. With the Loft, a coffee break and a lunch for every attendee, the total comes out above your budget. The table shows the figures:\n\n\n\n| Item | Detail | Price |\n|---|---|---:|\n| Loft (V2) | 4 hours | €420 |\n| Coffee break (S1) | 20 people x €8 | €160 |\n| Lunch (S2) | 20 people x €18 | €360 |\n| **Total** | | **€940** |\n| Budget | | €850 |\n| Difference | | €90 over budget |\n\n\n\nThe options below would each need your agreement, and each one gives something up:\n\n\n\n| Option | Package | People | Total | What the client gives up |\n|---|---|---:|---:|---|\n| 1 | Loft + Coffee break + Lunch | 20 | €940 | budget raised from €850 to €940 (+€90) |\n| 2 | Loft + Coffee break + Lunch | 16 | €836 | headcount reduced from 20 to at most 16 |\n| 3 | Loft + Lunch | 20 | €780 | Coffee break (a stated requirement) is removed |\n| 4 | Loft + Coffee break | 20 | €580 | Lunch (a stated requirement) is removed |\n\nEvery option changes a stated requirement and needs the client's explicit consent.\n\n\n\n- Option 1: Keep everything as requested and raise your budget to the amount in the table.\n- Option 2: Keep the Loft, coffee break and lunch, but reduce the group to at most 16 people.\n- Option 3: Keep 20 people with the Loft and lunch, but drop the coffee break, which you listed as required.\n- Option 4: Keep 20 people with the Loft and a coffee break, but drop the lunch, which you listed as required.\n\nSome other points:\n- Our bookings are 4 hours only, so there is no longer-duration price.\n- Our listed prices are fixed, and we can't offer any price reduction.\n- We haven't asked about dates. Availability would have to be checked separately, and nothing is held for you at this stage.\n- Lunch can include vegetarian or vegan dishes on request. We can't promise allergen-safe catering.\n\nPlease let me know which option, if any, suits you, and I'll take it from there.\n\nKind regards\n",
+  "result": {
+    "enquiry": "20 people, 4 hours, coffee and lunch are required. Total budget €850.",
+    "brief": {
+      "headcount": {
+        "status": "confirmed",
+        "evidence": "20 people",
+        "value": 20
+      },
+      "headcount_max": null,
+      "duration_hours": {
+        "status": "confirmed",
+        "evidence": "4 hours",
+        "value": 4.0
+      },
+      "budget_eur": {
+        "status": "confirmed",
+        "evidence": "Total budget €850",
+        "value": 850.0
+      },
+      "wheelchair_access": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "coffee_break": {
+        "status": "confirmed",
+        "evidence": "coffee and lunch are required",
+        "value": true
+      },
+      "lunch": {
+        "status": "confirmed",
+        "evidence": "coffee and lunch are required",
+        "value": true
+      },
+      "projector": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "facilitator": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "facilitator_hours": null,
+      "bookings": 1,
+      "catering_unclear": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "unlisted_requests": [],
+      "dietary_notes": [],
+      "allergy_notes": [],
+      "date_requests": [],
+      "language": "en"
+    },
+    "evidence_warnings": [],
+    "engine": {
+      "status": "INFEASIBLE",
+      "reasons": [
+        "Total €940 is €90 over the €850 budget."
+      ],
+      "package": {
+        "venue_id": "V2",
+        "service_ids": [
+          "S1",
+          "S2"
+        ],
+        "items": [
+          {
+            "id": "V2",
+            "name": "Loft",
+            "unit_price": 420,
+            "quantity": 1,
+            "line_total": 420,
+            "note": "4 hours"
+          },
+          {
+            "id": "S1",
+            "name": "Coffee break",
+            "unit_price": 8,
+            "quantity": 20,
+            "line_total": 160,
+            "note": "20 people x €8"
+          },
+          {
+            "id": "S2",
+            "name": "Lunch",
+            "unit_price": 18,
+            "quantity": 20,
+            "line_total": 360,
+            "note": "20 people x €18"
+          }
+        ],
+        "total": 940
+      },
+      "total": 940,
+      "budget": 850.0,
+      "budget_delta": -90.0,
+      "assumptions": [],
+      "flags": [],
+      "clarifications": [],
+      "checks": [
+        {
+          "requirement": "Capacity for 20 people",
+          "ok": true,
+          "detail": "Loft holds up to 24."
+        },
+        {
+          "requirement": "Duration 4 hours",
+          "ok": true,
+          "detail": "Fits the 4-hour block."
+        },
+        {
+          "requirement": "Coffee break",
+          "ok": true,
+          "detail": "one coffee break for every attendee"
+        },
+        {
+          "requirement": "Lunch",
+          "ok": true,
+          "detail": "one lunch for every attendee; vegetarian/vegan on request; NO allergen guarantee"
+        },
+        {
+          "requirement": "Budget €850",
+          "ok": false,
+          "detail": "Total €940: €90 over."
+        }
+      ],
+      "rejected_venues": [
+        {
+          "venue_id": "V1",
+          "name": "Studio",
+          "would_cost": null,
+          "reasons": [
+            "Studio holds max 12 people (20 requested)."
+          ]
+        }
+      ],
+      "optional_addons": [],
+      "alternatives": [
+        {
+          "relaxed": [
+            "budget"
+          ],
+          "description": "Loft + Coffee break + Lunch for 20 people = €940",
+          "headcount": 20,
+          "gives_up": "budget raised from €850 to €940 (+€90)",
+          "requires_client_consent": true,
+          "package": {
+            "venue_id": "V2",
+            "service_ids": [
+              "S1",
+              "S2"
+            ],
+            "items": [
+              {
+                "id": "V2",
+                "name": "Loft",
+                "unit_price": 420,
+                "quantity": 1,
+                "line_total": 420,
+                "note": "4 hours"
+              },
+              {
+                "id": "S1",
+                "name": "Coffee break",
+                "unit_price": 8,
+                "quantity": 20,
+                "line_total": 160,
+                "note": "20 people x €8"
+              },
+              {
+                "id": "S2",
+                "name": "Lunch",
+                "unit_price": 18,
+                "quantity": 20,
+                "line_total": 360,
+                "note": "20 people x €18"
+              }
+            ],
+            "total": 940
+          },
+          "total": 940,
+          "budget_delta": -90.0,
+          "notes": []
+        },
+        {
+          "relaxed": [
+            "headcount"
+          ],
+          "description": "Loft + Coffee break + Lunch for 16 people = €836",
+          "headcount": 16,
+          "gives_up": "headcount reduced from 20 to at most 16",
+          "requires_client_consent": true,
+          "package": {
+            "venue_id": "V2",
+            "service_ids": [
+              "S1",
+              "S2"
+            ],
+            "items": [
+              {
+                "id": "V2",
+                "name": "Loft",
+                "unit_price": 420,
+                "quantity": 1,
+                "line_total": 420,
+                "note": "4 hours"
+              },
+              {
+                "id": "S1",
+                "name": "Coffee break",
+                "unit_price": 8,
+                "quantity": 16,
+                "line_total": 128,
+                "note": "16 people x €8"
+              },
+              {
+                "id": "S2",
+                "name": "Lunch",
+                "unit_price": 18,
+                "quantity": 16,
+                "line_total": 288,
+                "note": "16 people x €18"
+              }
+            ],
+            "total": 836
+          },
+          "total": 836,
+          "budget_delta": 14.0,
+          "notes": []
+        },
+        {
+          "relaxed": [
+            "drop:S1"
+          ],
+          "description": "Loft + Lunch for 20 people = €780",
+          "headcount": 20,
+          "gives_up": "Coffee break (a stated requirement) is removed",
+          "requires_client_consent": true,
+          "package": {
+            "venue_id": "V2",
+            "service_ids": [
+              "S2"
+            ],
+            "items": [
+              {
+                "id": "V2",
+                "name": "Loft",
+                "unit_price": 420,
+                "quantity": 1,
+                "line_total": 420,
+                "note": "4 hours"
+              },
+              {
+                "id": "S2",
+                "name": "Lunch",
+                "unit_price": 18,
+                "quantity": 20,
+                "line_total": 360,
+                "note": "20 people x €18"
+              }
+            ],
+            "total": 780
+          },
+          "total": 780,
+          "budget_delta": 70.0,
+          "notes": []
+        },
+        {
+          "relaxed": [
+            "drop:S2"
+          ],
+          "description": "Loft + Coffee break for 20 people = €580",
+          "headcount": 20,
+          "gives_up": "Lunch (a stated requirement) is removed",
+          "requires_client_consent": true,
+          "package": {
+            "venue_id": "V2",
+            "service_ids": [
+              "S1"
+            ],
+            "items": [
+              {
+                "id": "V2",
+                "name": "Loft",
+                "unit_price": 420,
+                "quantity": 1,
+                "line_total": 420,
+                "note": "4 hours"
+              },
+              {
+                "id": "S1",
+                "name": "Coffee break",
+                "unit_price": 8,
+                "quantity": 20,
+                "line_total": 160,
+                "note": "20 people x €8"
+              }
+            ],
+            "total": 580
+          },
+          "total": 580,
+          "budget_delta": 270.0,
+          "notes": []
+        }
+      ],
+      "scenarios": [],
+      "standing_notes": [
+        "Only 4-hour bookings exist; there is no longer-duration price.",
+        "Dates always need a separate availability check; nothing is booked or held.",
+        "No discounts of any kind are available."
+      ],
+      "bookings_requested": 1
+    },
+    "prose": "Hello,\n\nThank you for your enquiry. As specified, we can't meet this request within your budget.\n\nFor 20 people over 4 hours, the Loft is the only suitable venue. The Studio holds a maximum of 12. The Loft holds up to 24, and the Studio can't take your group. With the Loft, a coffee break and a lunch for every attendee, the total comes out above your budget. The table shows the figures:\n\n{{PRICE_TABLE}}\n\nThe options below would each need your agreement, and each one gives something up:\n\n{{ALTERNATIVES_TABLE}}\n\n- Option 1: Keep everything as requested and raise your budget to the amount in the table.\n- Option 2: Keep the Loft, coffee break and lunch, but reduce the group to at most 16 people.\n- Option 3: Keep 20 people with the Loft and lunch, but drop the coffee break, which you listed as required.\n- Option 4: Keep 20 people with the Loft and a coffee break, but drop the lunch, which you listed as required.\n\nSome other points:\n- Our bookings are 4 hours only, so there is no longer-duration price.\n- Our listed prices are fixed, and we can't offer any price reduction.\n- We haven't asked about dates. Availability would have to be checked separately, and nothing is held for you at this stage.\n- Lunch can include vegetarian or vegan dishes on request. We can't promise allergen-safe catering.\n\nPlease let me know which option, if any, suits you, and I'll take it from there.\n\nKind regards",
+    "draft": "DRAFT – requires salesperson approval – availability unconfirmed\nNot sendable as an offer\n\nHello,\n\nThank you for your enquiry. As specified, we can't meet this request within your budget.\n\nFor 20 people over 4 hours, the Loft is the only suitable venue. The Studio holds a maximum of 12. The Loft holds up to 24, and the Studio can't take your group. With the Loft, a coffee break and a lunch for every attendee, the total comes out above your budget. The table shows the figures:\n\n\n\n| Item | Detail | Price |\n|---|---|---:|\n| Loft (V2) | 4 hours | €420 |\n| Coffee break (S1) | 20 people x €8 | €160 |\n| Lunch (S2) | 20 people x €18 | €360 |\n| **Total** | | **€940** |\n| Budget | | €850 |\n| Difference | | €90 over budget |\n\n\n\nThe options below would each need your agreement, and each one gives something up:\n\n\n\n| Option | Package | People | Total | What the client gives up |\n|---|---|---:|---:|---|\n| 1 | Loft + Coffee break + Lunch | 20 | €940 | budget raised from €850 to €940 (+€90) |\n| 2 | Loft + Coffee break + Lunch | 16 | €836 | headcount reduced from 20 to at most 16 |\n| 3 | Loft + Lunch | 20 | €780 | Coffee break (a stated requirement) is removed |\n| 4 | Loft + Coffee break | 20 | €580 | Lunch (a stated requirement) is removed |\n\nEvery option changes a stated requirement and needs the client's explicit consent.\n\n\n\n- Option 1: Keep everything as requested and raise your budget to the amount in the table.\n- Option 2: Keep the Loft, coffee break and lunch, but reduce the group to at most 16 people.\n- Option 3: Keep 20 people with the Loft and lunch, but drop the coffee break, which you listed as required.\n- Option 4: Keep 20 people with the Loft and a coffee break, but drop the lunch, which you listed as required.\n\nSome other points:\n- Our bookings are 4 hours only, so there is no longer-duration price.\n- Our listed prices are fixed, and we can't offer any price reduction.\n- We haven't asked about dates. Availability would have to be checked separately, and nothing is held for you at this stage.\n- Lunch can include vegetarian or vegan dishes on request. We can't promise allergen-safe catering.\n\nPlease let me know which option, if any, suits you, and I'll take it from there.\n\nKind regards\n",
+    "guard_findings": [],
+    "first_draft_findings": [],
+    "blocked": false,
+    "rewrites": 0,
+    "usage": {
+      "llm_calls": 2,
+      "input_tokens": 11832,
+      "output_tokens": 826,
+      "latency_s": 8.97,
+      "cost_usd": 0.031924,
+      "model": "claude-sonnet-5-5"
+    },
+    "error": null
+  },
+  "usage": {
+    "llm_calls": 2,
+    "input_tokens": 11832,
+    "output_tokens": 826,
+    "latency_s": 8.97,
+    "cost_usd": 0.031924,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": false,
+    "violations": [
+      "grader gave no usable answer"
+    ],
+    "graded": false
+  }
+}

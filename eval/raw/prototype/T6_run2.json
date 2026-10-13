@@ -1,0 +1,195 @@
+{
+  "id": "T6",
+  "system": "prototype",
+  "run": 2,
+  "text": "DRAFT – requires salesperson approval – availability unconfirmed\n\nHello,\n\nThank you for your enquiry about a team day for about 15 people. Before I can put a proposal together, I need two details from you.\n\n1. **Catering:** When you say \"with food\", do you mean a coffee break, a lunch, or both? We offer one coffee break and one lunch per attendee. They are priced separately, so the answer changes the package. If anyone has vegetarian or vegan needs, we can arrange that for lunch. Please note that we cannot promise allergen-safe catering.\n2. **Budget:** You mentioned a modest budget but no figure. A figure lets us check whether a package fits, and it shows whether any adjustments are needed.\n\nFor now, I have priced two provisional scenarios for 15 people. Both use our Loft, which holds up to 24 people, is accessible by wheelchair and has Wi-Fi included. Neither has been checked against your budget yet.\n\n\n\n| Scenario | Package | Total | Budget |\n|---|---|---:|---|\n| 15 people, coffee break | Loft + Coffee break | €540 | budget not checked |\n| 15 people, lunch | Loft + Lunch | €690 | budget not checked |\n\n\n\nSome assumptions and conditions to note:\n- You didn't state a length, so I assumed our standard 4-hour block. We only offer 4-hour bookings, so there is no longer option.\n- \"About 15\" is priced as 15 people. Please tell me the final number.\n- Our Studio takes a maximum of 12 people and has stairs only, so it doesn't suit a group of 15.\n- If you need a projector or a facilitator (one facilitator covers 2 hours), tell me and I'll add them.\n- Our listed prices are fixed, so no price reductions are possible.\n- If you have a date in mind, send it over. Availability has to be checked separately, and nothing is held for you at this stage.\n\nOnce I have your answers, I can send a full proposal.\n\nKind regards\n",
+  "result": {
+    "enquiry": "A team day for about 15 people, with food, within a modest budget.",
+    "brief": {
+      "headcount": {
+        "status": "assumed",
+        "evidence": "about 15 people",
+        "value": 15
+      },
+      "headcount_max": null,
+      "duration_hours": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "budget_eur": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "wheelchair_access": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "coffee_break": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "lunch": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "projector": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "facilitator": {
+        "status": "missing",
+        "evidence": "",
+        "value": null
+      },
+      "facilitator_hours": null,
+      "bookings": null,
+      "catering_unclear": {
+        "status": "confirmed",
+        "evidence": "with food",
+        "value": true
+      },
+      "unlisted_requests": [],
+      "dietary_notes": [],
+      "allergy_notes": [],
+      "date_requests": [],
+      "language": "en"
+    },
+    "evidence_warnings": [],
+    "engine": {
+      "status": "NEEDS_CLARIFICATION",
+      "reasons": [
+        "Catering is unclear: coffee break, lunch or both?",
+        "Budget is not stated."
+      ],
+      "package": null,
+      "total": null,
+      "budget": null,
+      "budget_delta": null,
+      "assumptions": [
+        "Duration not stated: assumed the standard 4-hour block.",
+        "Headcount given approximately: priced for 15 people."
+      ],
+      "flags": [],
+      "clarifications": [
+        "catering",
+        "budget"
+      ],
+      "checks": [],
+      "rejected_venues": [],
+      "optional_addons": [],
+      "alternatives": [],
+      "scenarios": [
+        {
+          "label": "15 people, coffee break",
+          "headcount": 15,
+          "package": {
+            "venue_id": "V2",
+            "service_ids": [
+              "S1"
+            ],
+            "items": [
+              {
+                "id": "V2",
+                "name": "Loft",
+                "unit_price": 420,
+                "quantity": 1,
+                "line_total": 420,
+                "note": "4 hours"
+              },
+              {
+                "id": "S1",
+                "name": "Coffee break",
+                "unit_price": 8,
+                "quantity": 15,
+                "line_total": 120,
+                "note": "15 people x €8"
+              }
+            ],
+            "total": 540
+          },
+          "total": 540,
+          "budget_delta": null,
+          "verdict": "budget not checked",
+          "problems": [],
+          "notes": []
+        },
+        {
+          "label": "15 people, lunch",
+          "headcount": 15,
+          "package": {
+            "venue_id": "V2",
+            "service_ids": [
+              "S2"
+            ],
+            "items": [
+              {
+                "id": "V2",
+                "name": "Loft",
+                "unit_price": 420,
+                "quantity": 1,
+                "line_total": 420,
+                "note": "4 hours"
+              },
+              {
+                "id": "S2",
+                "name": "Lunch",
+                "unit_price": 18,
+                "quantity": 15,
+                "line_total": 270,
+                "note": "15 people x €18"
+              }
+            ],
+            "total": 690
+          },
+          "total": 690,
+          "budget_delta": null,
+          "verdict": "budget not checked",
+          "problems": [],
+          "notes": []
+        }
+      ],
+      "standing_notes": [
+        "Only 4-hour bookings exist; there is no longer-duration price.",
+        "Dates always need a separate availability check; nothing is booked or held.",
+        "No discounts of any kind are available."
+      ],
+      "bookings_requested": 1
+    },
+    "prose": "Hello,\n\nThank you for your enquiry about a team day for about 15 people. Before I can put a proposal together, I need two details from you.\n\n1. **Catering:** When you say \"with food\", do you mean a coffee break, a lunch, or both? We offer one coffee break and one lunch per attendee. They are priced separately, so the answer changes the package. If anyone has vegetarian or vegan needs, we can arrange that for lunch. Please note that we cannot promise allergen-safe catering.\n2. **Budget:** You mentioned a modest budget but no figure. A figure lets us check whether a package fits, and it shows whether any adjustments are needed.\n\nFor now, I have priced two provisional scenarios for 15 people. Both use our Loft, which holds up to 24 people, is accessible by wheelchair and has Wi-Fi included. Neither has been checked against your budget yet.\n\n{{SCENARIOS_TABLE}}\n\nSome assumptions and conditions to note:\n- You didn't state a length, so I assumed our standard 4-hour block. We only offer 4-hour bookings, so there is no longer option.\n- \"About 15\" is priced as 15 people. Please tell me the final number.\n- Our Studio takes a maximum of 12 people and has stairs only, so it doesn't suit a group of 15.\n- If you need a projector or a facilitator (one facilitator covers 2 hours), tell me and I'll add them.\n- Our listed prices are fixed, so no price reductions are possible.\n- If you have a date in mind, send it over. Availability has to be checked separately, and nothing is held for you at this stage.\n\nOnce I have your answers, I can send a full proposal.\n\nKind regards",
+    "draft": "DRAFT – requires salesperson approval – availability unconfirmed\n\nHello,\n\nThank you for your enquiry about a team day for about 15 people. Before I can put a proposal together, I need two details from you.\n\n1. **Catering:** When you say \"with food\", do you mean a coffee break, a lunch, or both? We offer one coffee break and one lunch per attendee. They are priced separately, so the answer changes the package. If anyone has vegetarian or vegan needs, we can arrange that for lunch. Please note that we cannot promise allergen-safe catering.\n2. **Budget:** You mentioned a modest budget but no figure. A figure lets us check whether a package fits, and it shows whether any adjustments are needed.\n\nFor now, I have priced two provisional scenarios for 15 people. Both use our Loft, which holds up to 24 people, is accessible by wheelchair and has Wi-Fi included. Neither has been checked against your budget yet.\n\n\n\n| Scenario | Package | Total | Budget |\n|---|---|---:|---|\n| 15 people, coffee break | Loft + Coffee break | €540 | budget not checked |\n| 15 people, lunch | Loft + Lunch | €690 | budget not checked |\n\n\n\nSome assumptions and conditions to note:\n- You didn't state a length, so I assumed our standard 4-hour block. We only offer 4-hour bookings, so there is no longer option.\n- \"About 15\" is priced as 15 people. Please tell me the final number.\n- Our Studio takes a maximum of 12 people and has stairs only, so it doesn't suit a group of 15.\n- If you need a projector or a facilitator (one facilitator covers 2 hours), tell me and I'll add them.\n- Our listed prices are fixed, so no price reductions are possible.\n- If you have a date in mind, send it over. Availability has to be checked separately, and nothing is held for you at this stage.\n\nOnce I have your answers, I can send a full proposal.\n\nKind regards\n",
+    "guard_findings": [],
+    "first_draft_findings": [],
+    "blocked": false,
+    "rewrites": 0,
+    "usage": {
+      "llm_calls": 2,
+      "input_tokens": 11200,
+      "output_tokens": 844,
+      "latency_s": 7.4,
+      "cost_usd": 0.03084,
+      "model": "claude-sonnet-5-5"
+    },
+    "error": null
+  },
+  "usage": {
+    "llm_calls": 2,
+    "input_tokens": 11200,
+    "output_tokens": 844,
+    "latency_s": 7.4,
+    "cost_usd": 0.03084,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "asks_decision_critical_questions": true,
+    "violations": [],
+    "reason": "The reply asks about food type and budget, as expected. Its two provisional prices are correct: Loft + coffee for 15 is 420+120 = €540, and Loft + lunch for 15 is 420+270 = €690. It labels them provisional, rules out the Studio correctly, makes no allergen promise, offers no discount, and confirms no availability.",
+    "graded": true
+  }
+}

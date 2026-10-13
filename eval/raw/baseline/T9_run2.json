@@ -1,0 +1,20 @@
+{
+  "id": "T9",
+  "system": "baseline",
+  "run": 2,
+  "text": "# BrightRoom Proposal\n\n**Your request:** 10 people, 4 hours, coffee break, budget €320\n\n## Recommended option\n\n| Item | Details | Price |\n|---|---|---|\n| **Studio (V1)** | 4 hours, up to 12 people, Wi-Fi included | €240 |\n| **Coffee break (S1)** | €8 × 10 attendees | €80 |\n| **Total** | | **€320** |\n\nThis matches your budget exactly. All prices are final totals in euros, with no taxes, fees or discounts.\n\n## Things to know\n\n- **Accessibility:** The Studio is reached by stairs only and is **not wheelchair accessible**. If any attendee needs step-free access, we would need the Loft (V2). The Loft with coffee comes to €500 (€420 + €80), which is €180 over your budget.\n- **Capacity:** The Studio holds up to 12 people, so there is room for two extra guests. If you add attendees, coffee must cover the full headcount at €8 each, so the total would go over €320.\n- **Extras:** Anything else, such as lunch, a projector or a facilitator, would take you over budget at this headcount and venue.\n- **Duration:** Bookings are 4 hours only. We have no longer option.\n- **Date:** Availability is not yet confirmed. Please send us your preferred date(s) so we can check before confirming.\n\n## Next steps\n1. Tell us your preferred date(s).\n2. Confirm that no attendee needs wheelchair access.\n3. We will check availability and confirm the booking at €320.",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 805,
+    "output_tokens": 684,
+    "latency_s": 6.3,
+    "cost_usd": 0.00845,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply proposes Studio plus coffee for 10 people at €240 + €80 = €320. That matches the budget under a ≤ check. The Loft total of €500 is correct, and the reply flags that availability is unconfirmed and still needs a check.",
+    "graded": true
+  }
+}

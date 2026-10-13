@@ -1,0 +1,20 @@
+{
+  "id": "Q3",
+  "system": "baseline",
+  "run": 1,
+  "text": "# Proposal for your event at BrightRoom\n\nThank you for your enquiry. Here is what we recommend for your group.\n\n## Recommended venue: the Loft\n- Wheelchair accessible, which you asked for\n- Holds up to 24 people, so 10 fits comfortably\n- 4-hour booking, Wi-Fi included\n\nThe Studio is cheaper (€240), but it is stairs-only and not wheelchair accessible, so we can't offer it for this booking.\n\n## Pricing\n\n| Item | Calculation | Price |\n|---|---|---|\n| Loft (4 hours) | flat | €420 |\n| Coffee break | 10 people × €8 | €80 |\n| Projector | flat, one for the booking | €35 |\n| **Total** | | **€535** |\n\nAll prices are final totals in euros, with no additional taxes or fees. The total is **€65 under your €600 budget**.\n\n## Optional extras\nAdding lunch (€18 per person, so €180 for 10 people) would bring the total to €715, over your budget. A facilitator (€280 for 2 hours) would also exceed it. We've left both out, but we're happy to discuss them if your budget changes.\n\n## Next step: availability\nEvery date needs a separate availability check, so this proposal is not yet a confirmed booking. Please send us your preferred date (and a backup if you have one), and we'll check the Loft and confirm.\n\nKind regards,\nBrightRoom",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 816,
+    "output_tokens": 652,
+    "latency_s": 6.59,
+    "cost_usd": 0.008152,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply proposes the Loft with coffee and projector for €535, which is €65 under budget. It rejects the Studio for accessibility, quotes the optional extras correctly, and does not confirm any date or booking.",
+    "graded": true
+  }
+}

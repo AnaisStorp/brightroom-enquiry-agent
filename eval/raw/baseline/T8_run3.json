@@ -1,0 +1,20 @@
+{
+  "id": "T8",
+  "system": "baseline",
+  "run": 3,
+  "text": "# BrightRoom Proposal\n\nThank you for your enquiry. **We can't fit 13 people with coffee into €400.** The Studio holds a maximum of 12, so 13 guests need the Loft. The Loft alone costs €420, which is already over budget. We have no discounts or longer or shorter pricing, so I can't lower that figure.\n\n## Option A: Keep all 13 attendees (over budget)\n| Item | Calculation | Price |\n|---|---|---|\n| Loft (4 hours, max 24, wheelchair accessible, Wi-Fi) | | €420 |\n| Coffee break | 13 × €8 | €104 |\n| **Total** | | **€524** |\n\nThis is €124 over your budget.\n\n## Option B: Reduce to 12 attendees (within budget)\n| Item | Calculation | Price |\n|---|---|---|\n| Studio (4 hours, max 12, Wi-Fi) | | €240 |\n| Coffee break | 12 × €8 | €96 |\n| **Total** | | **€336** |\n\nThis is €64 under budget. If you'd like, you could add a projector for €35, bringing the total to **€371**.\n\n**Note:** The Studio is reached by stairs only and is **not wheelchair accessible**. If any guest needs step-free access, Option A is the right choice.\n\n## Next steps\n- Please tell us which option suits you, and whether anyone needs wheelchair access.\n- Please send your preferred date. Availability must be checked separately, so neither option is confirmed until we've done that.\n\nAll prices are final totals in euros, with no taxes or fees.",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 805,
+    "output_tokens": 836,
+    "latency_s": 6.55,
+    "cost_usd": 0.00997,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply says 13 people with coffee can't fit €400. It gives the correct €524 (€124 over) for the Loft and the correct €336 for 12 people in the Studio. The projector add-on (€35, total €371) is priced correctly. It makes no discount or availability promise and flags the Studio's lack of wheelchair access.",
+    "graded": true
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "T6",
+  "system": "baseline",
+  "run": 2,
+  "text": "# Proposal: Team Day for about 15 people\n\nHello,\n\nThank you for your enquiry. Here is what we suggest.\n\n## Venue: Loft (V2), €420\n- Your group of about 15 is over the Studio's 12-person limit, so the Loft is the right fit.\n- It holds up to 24 people, is wheelchair accessible, and includes Wi-Fi.\n- Our bookings are **4 hours**. We have no longer option, so the \"day\" would be a 4-hour session.\n\n## Option A: Loft + Lunch (recommended for a modest budget)\n| Item | Calculation | Price |\n|---|---|---|\n| Loft, 4 hours | | €420 |\n| Lunch | 15 × €18 | €270 |\n| **Total** | | **€690** |\n\n## Option B: Loft + Lunch + Coffee break\n| Item | Calculation | Price |\n|---|---|---|\n| Loft, 4 hours | | €420 |\n| Lunch | 15 × €18 | €270 |\n| Coffee break | 15 × €8 | €120 |\n| **Total** | | **€810** |\n\n## Optional add-ons\n- **Projector:** €35 (one for the booking)\n- **Facilitator:** €280 (one facilitator for 2 hours)\n\n## Good to know\n- Prices are final totals in euros, with no taxes, fees, or discounts.\n- Food is priced per person and must cover everyone attending. If the headcount changes from 15, the total changes accordingly. Lunch plus coffee is €26 per person, and the Loft covers up to 24 people.\n- Vegetarian and vegan lunches are available on request. We **cannot guarantee allergen safety**, so this may not suit guests with serious allergies.\n- **Availability:** We haven't checked your date yet. Please send your preferred date or dates and we'll confirm.\n\n## To finalise, please let us know:\n1. Your preferred date(s)\n2. The confirmed headcount\n3. Which option you prefer, and any add-ons\n4. Any vegetarian or vegan requirements\n\nBest regards,\nBrightRoom",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 805,
+    "output_tokens": 1109,
+    "latency_s": 8.84,
+    "cost_usd": 0.0127,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": false,
+    "asks_decision_critical_questions": false,
+    "violations": [],
+    "reason": "The reply gives a full proposal with correct prices (€690 and €810) instead of asking first. It never asks about the budget. It also doesn't ask what kind of food the client wants, beyond \"which option you prefer\". It asks about dates, headcount and dietary needs, but not the two missing items the expected behaviour names. It has no pricing errors or other rule breaks.",
+    "graded": true
+  }
+}

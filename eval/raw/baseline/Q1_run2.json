@@ -1,0 +1,20 @@
+{
+  "id": "Q1",
+  "system": "baseline",
+  "run": 2,
+  "text": "# BrightRoom Proposal\n\n**Your requirements:** 10 people, 4 hours, coffee break for everyone, maximum budget €350.\n\n## Recommended option\n\n| Item | Details | Price |\n|---|---|---|\n| **Studio** (V1) | 4 hours, up to 12 people, Wi-Fi included | €240 |\n| **Coffee break** (S1) | 10 attendees × €8 | €80 |\n| **Total** | | **€320** |\n\nThis is **€30 under your budget**. All prices are final totals, with no taxes or fees.\n\n## Things to know\n\n- **Accessibility:** The Studio is reached by stairs only and is **not wheelchair accessible**. If any attendee needs step-free access, we would need the Loft instead. At €420 plus €80 for coffee (€500 total), it would be over your budget.\n- **Add-ons:** A projector (€35) would bring the total to €355, which is €5 over your maximum, so I haven't included it. The Facilitator (€280) and Lunch (€18 per person) would also exceed the budget.\n- **Headcount:** The Studio holds up to 12 people. Coffee is priced per person and must cover everyone, so if the group grows to 11 or 12, the total would be €328 or €336.\n- **Availability:** We haven't checked your date yet. Please send your preferred date or dates and we'll confirm availability before anything is booked.\n\n## Next steps\n1. Confirm your preferred date(s).\n2. Let us know whether anyone needs wheelchair access.\n3. We'll check availability and confirm the booking at €320.",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 812,
+    "output_tokens": 700,
+    "latency_s": 6.99,
+    "cost_usd": 0.008624,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply proposes the Studio plus coffee for €320, which is €30 under budget. It flags the stairs-only access and says availability has not been checked. All of its other figures match the catalogue: Loft plus coffee is €500, adding a projector gives €355, and 11 or 12 people would cost €328 or €336.",
+    "graded": true
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "T19",
+  "system": "baseline",
+  "run": 2,
+  "text": "# BrightRoom Proposal: Two-Day Session for 10 People\n\nThank you for your enquiry. Here is our recommended option within your €700 budget.\n\n## Recommended package\n\n| Item | Calculation | Cost |\n|---|---|---|\n| Studio, Day 1 (4 hours) | 1 × €240 | €240 |\n| Studio, Day 2 (4 hours) | 1 × €240 | €240 |\n| Coffee break, Day 1 | 10 people × €8 | €80 |\n| Coffee break, Day 2 | 10 people × €8 | €80 |\n| **Total** | | **€640** |\n\nThis is €60 under your budget. All prices are final totals in euros, with no taxes or fees.\n\n**About the Studio:** It holds up to 12 people, so 10 fits comfortably. Wi-Fi is included. Access is by stairs only, so it is **not wheelchair accessible**.\n\n## How the two days work\n- We only offer 4-hour bookings, so two days means two separate bookings, one per day. We don't offer discounts, so the price is simply 2 × the single-day rate.\n- Each coffee break covers all 10 attendees, as per-person services must cover the full headcount.\n\n## Optional add-on within budget\n- **Projector (€35, flat):** It can be added once per booking, so with your remaining €60 you can have it on one of the two days. That brings the total to **€675**. A projector on both days would be €710, which is over budget.\n\n## What doesn't fit your budget\n- **Loft** (wheelchair accessible, up to 24 people): 2 × €420 + €160 coffee = **€1,000**. If anyone in your group needs step-free access, this is the option we'd need to discuss.\n- **Lunch** (€18 per person, €180 per day) and the **Facilitator** (€280 for 2 hours) would also push the total past €700.\n\n## Next steps\n1. Please confirm your two dates. **Availability must be checked separately** and is not yet guaranteed.\n2. Please tell us whether anyone needs wheelchair access.\n3. Let us know if you'd like the projector, and on which day.\n\nOnce we have these, we'll check availability and confirm your booking.\n\nKind regards,\nBrightRoom",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 817,
+    "output_tokens": 1249,
+    "latency_s": 10.04,
+    "cost_usd": 0.014124,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "graded": true
+  }
+}

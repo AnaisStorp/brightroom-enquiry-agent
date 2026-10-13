@@ -1,0 +1,20 @@
+{
+  "id": "T20",
+  "system": "baseline",
+  "run": 2,
+  "text": "# Proposal for BrightRoom\n\n**Your request:** 8 people on site and 6 joining online, 4 hours, with a projector and video-conferencing. Budget: €400.\n\n## Recommended option\n\n| Item | Price |\n|---|---|\n| Studio (4 hours, max 12 people, Wi-Fi included) | €240 |\n| Projector (one for the booking) | €35 |\n| **Total** | **€275** |\n\nThe Studio fits your 8 on-site attendees. Its included Wi-Fi lets the 6 remote participants join a video call, and the projector can show them on screen. This leaves €125 of your budget unused.\n\n## Video-conferencing\nWe don't offer video-conferencing equipment or a hosted service, such as cameras, conference microphones or meeting software. The Studio includes Wi-Fi, so you could run the call from your own laptop and display it through our projector. I can't promise any more than that, so please check that your own setup covers your needs.\n\n## Optional add-on within budget\n- **Coffee break** at €8 per person for 8 on-site attendees: €64. This brings the **total to €339**.\n\nLunch (€18 per person) for 8 people is €144. Studio, projector and lunch would come to €419, which is over your budget. Lunch also comes with no allergen guarantee, though vegetarian and vegan options are available on request. Please confirm that catering is for the 8 on-site attendees only.\n\n## Things to check\n- **Accessibility:** The Studio is stairs-only and not wheelchair accessible. If anyone needs step-free access, the Loft (wheelchair accessible, up to 24 people) is €420, or €455 with the projector. That exceeds your budget.\n- **Availability:** Please send your preferred date. We need to check it separately before confirming.\n- **Pricing:** All prices are final totals in euros, with no taxes, fees or discounts. Bookings are 4 hours only.\n\nSend us your date and whether you'd like the coffee break, and we'll check availability.",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 823,
+    "output_tokens": 1190,
+    "latency_s": 10.17,
+    "cost_usd": 0.013546,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply proposes Studio plus projector at €275, which matches the expected figure. It flags video-conferencing as not in the catalogue and does not price it. It flags the Studio's lack of wheelchair access. The optional add-on totals (€339, €419, €455) are all correct. It makes no discount, no availability confirmation and no allergen promise.",
+    "graded": true
+  }
+}

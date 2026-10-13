@@ -32,6 +32,11 @@ def test_model_never_sees_a_price(test_id):
         assert amount not in view
 
 
+def test_model_is_not_told_the_budget_fits_when_only_one_of_several_bookings_is_priced():
+    view = tools.result_for_model(tools.execute(BRIEFS["T19"]))
+    assert '"budget_check": "not comparable' in view and '"within budget"' not in view
+
+
 def test_extra_price_fields_in_tool_input_have_no_effect():
     tampered = {**BRIEFS["Q1"].model_dump(mode="json"), "total": 100, "discount_percent": 20, "venue": "V2"}
     assert tools.execute(tools.parse_input(tampered)).total == 320
