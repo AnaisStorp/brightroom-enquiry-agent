@@ -187,10 +187,10 @@
     "model": "claude-sonnet-5-5"
   },
   "grade": {
-    "verdict_matches_expected": false,
-    "violations": [
-      "grader gave no usable answer"
-    ],
-    "graded": false
+    "verdict_matches_expected": true,
+    "violations": [],
+    "asks_decision_critical_questions": true,
+    "reason": "The reply asks for the exact headcount and shows both scenarios with correct totals: 10 people is €320 and 14 people is €532. It states the budget gaps correctly, promises no discount, and confirms no availability.",
+    "graded": true
   }
 }

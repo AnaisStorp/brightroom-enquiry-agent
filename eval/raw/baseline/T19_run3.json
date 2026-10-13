@@ -1,0 +1,18 @@
+{
+  "id": "T19",
+  "system": "baseline",
+  "run": 3,
+  "text": "# Proposal for BrightRoom: 2-Day Event for 10 People\n\nThank you for your enquiry. Here is a proposal that fits your budget.\n\n## Recommended option\n\n| Item | Calculation | Per day | 2 days |\n|---|---|---|---|\n| Studio (4 hours, max 12 people, Wi-Fi included) | €240 × 1 | €240 | €480 |\n| Coffee break | €8 × 10 people | €80 | €160 |\n| **Total** | | **€320** | **€640** |\n\n**Total: €640, which is €60 under your €700 budget.**\n\nThe Studio comfortably fits your group of 10 (maximum 12). Each day is a separate 4-hour booking, so the venue is priced once per day. All prices are final totals in euros, with no taxes or fees. We offer no multi-day discount.\n\n## Optional add-on within budget\n\n- **Projector** (€35, one projector per booking): added to one day, the total is **€675**, still within budget. Adding it to both days would bring the total to €710, which is over budget.\n\n## Options that don't fit your budget\n\n- **Lunch** (€18 per person, €180 per day) would bring the total to €1,000 for two days.\n- **Facilitator** (€280, covers 2 hours) would bring the total to €920 for one session.\n- **Loft** (€420 per day, step-free access, max 24 people) would bring the total to €1,000 with coffee on both days.\n\n## Points to confirm\n\n1. **Accessibility:** The Studio is reached by stairs only and is not wheelchair accessible. If any attendee needs step-free access, the Loft is the only suitable venue, and it would exceed your budget.\n2. **Availability:** We haven't yet checked your dates. Please send the two consecutive dates you'd like, and we'll confirm availability before finalising the booking.\n3. **Hours:** Each day is a 4-hour booking. We have no longer-duration option.\n\nSend us your dates and let us know whether you'd like the projector, and we'll confirm the booking.\n\nKind regards,\nBrightRoom",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 817,
+    "output_tokens": 1249,
+    "latency_s": 10.7,
+    "cost_usd": 0.014124,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "graded": true
+  }
+}

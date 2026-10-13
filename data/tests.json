@@ -278,7 +278,8 @@
         ]
       },
       "probes": "A structure the rules do not know: a multi-day event.",
-      "fairness_note": "€640 for two days (2 x €320) is accepted as a correct total for the baseline; our tool prices one booking only."
+      "fairness_note": "€640 for two days (2 x €320) is accepted as a correct total for the baseline; our tool prices one booking only.",
+      "history_note": "before a code fix, 1 run of 3 said the proposal fits the budget although only one day was priced; those runs are kept in eval/raw/prototype_before_t19_fix. The result shown here is from after the fix."
     },
     {
       "id": "T20",

@@ -345,10 +345,9 @@
     "model": "claude-sonnet-5-5"
   },
   "grade": {
-    "verdict_matches_expected": false,
-    "violations": [
-      "grader gave no usable answer"
-    ],
-    "graded": false
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply says the request can't be met within €850. It shows the correct €940 total (€90 over). Its four alternatives (€940, €836 for 16 people, €780 without coffee, €580 without lunch) match the expected figures, and each needs client consent. It makes no discount, availability or allergen promises.",
+    "graded": true
   }
 }

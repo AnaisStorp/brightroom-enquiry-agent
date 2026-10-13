@@ -1,0 +1,20 @@
+{
+  "id": "T20",
+  "system": "baseline",
+  "run": 3,
+  "text": "# Proposal for BrightRoom: hybrid session (8 on site and 6 online)\n\n## Recommended package\n\n| Item | Details | Price |\n|---|---|---|\n| **Studio (V1)** | 4 hours, up to 12 people, Wi-Fi included | €240 |\n| **Projector (S3)** | One projector for the booking | €35 |\n| **Total** | | **€275** |\n\nThis is within your €400 budget, with €125 to spare. Prices are final totals, with no taxes or fees.\n\n## Why the Studio\n- Your 8 on-site participants fit comfortably within the 12-person limit. The 6 online participants don't take up room space.\n- The Loft (€420 for the venue alone) would exceed your budget, and you don't need its extra capacity.\n- **Please note:** the Studio is reached by stairs only and is **not wheelchair accessible**. If any participant needs step-free access, the Loft is the only accessible option, and it is over budget at €455 with a projector.\n\n## Video-conferencing\nWe don't offer a video-conferencing service, and I can't promise conferencing equipment such as a camera, microphone or speakers. What we do provide is **Wi-Fi included in the room** and a **projector** to display the remote participants or shared slides. You would run the call yourselves, for example with your own laptop and meeting software. Please bring any camera or speakerphone you need.\n\n## Optional add-ons within budget\nThese are priced for your 8 on-site attendees. I've assumed the online participants will arrange their own refreshments.\n\n| Option | Cost | New total |\n|---|---|---|\n| Coffee break (€8 × 8) | €64 | **€339** |\n| Lunch (€18 × 8) | €144 | €419, over budget |\n| Coffee break + lunch | €208 | €483, over budget |\n| Facilitator (2 hours) | €280 | €555, over budget |\n\nLunch can be vegetarian or vegan on request, but **we can't guarantee anything regarding allergens**.\n\nMy suggestion is the €275 base package, plus the coffee break (€339 total) if you'd like refreshments.\n\n## Next steps\n1. Send me your **preferred date(s)**, as availability needs a separate check and nothing is confirmed until then.\n2. Confirm that **no one needs wheelchair access**.\n3. Tell me which add-ons you'd like, if any.\n\nBookings are 4 hours only, and there are no discounts or longer-duration options.",
+  "usage": {
+    "llm_calls": 1,
+    "input_tokens": 823,
+    "output_tokens": 1368,
+    "latency_s": 11.54,
+    "cost_usd": 0.015326,
+    "model": "claude-sonnet-5-5"
+  },
+  "grade": {
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply uses the 8 on-site people as the headcount and proposes Studio plus projector for €275, which is €125 under budget. It flags the stairs-only access as an assumption to confirm. It says video-conferencing is not offered and does not price it. All add-on totals are correct, and it confirms no date or availability and promises nothing on allergens.",
+    "graded": true
+  }
+}

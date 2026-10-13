@@ -2,7 +2,7 @@
 
 Our project for the Afternoon AI Solution Sprint (MSc DSAIB 2026–2027, Shubin Yu), **Case 02: From a client enquiry to a feasible proposal**.
 
-Group: `<name 1>`, `<name 2>`, `<name 3>`
+Group: Alix, Anais, Augustin
 
 ## The assignment, in our own words
 
@@ -150,15 +150,15 @@ On top of that there are 138 automated tests that run without the AI. They check
 
 ### What we found
 
-20 enquiries, up to 3 runs each for both systems. The full table, with every failure explained, is in [`appendix/test_table.md`](appendix/test_table.md).
+20 enquiries, 3 runs each for both systems (60 runs per system). The full table, with every failure explained, is in [`appendix/test_table.md`](appendix/test_table.md).
 
 | | Baseline (one prompt) | Our solution |
 |---|---|---|
-| Tests passed on every run | 14 of 20 | 19 of 20 |
-| Individual runs passed | 46 of 57 | 56 of 57 |
-| Total correct to the euro | 38 of 39 runs | 57 of 57 runs |
-| Asks the needed questions | 4 of 9 runs | 8 of 8 runs |
-| Median time per enquiry | 8.5 s | 6.6 s |
+| Tests passed on every run | 14 of 20 | 20 of 20 |
+| Individual runs passed | 49 of 60 | 60 of 60 |
+| Total correct to the euro | 41 of 42 runs | 60 of 60 runs |
+| Asks the needed questions | 4 of 9 runs | 9 of 9 runs |
+| Median time per enquiry | 8.6 s | 6.6 s |
 | Median cost per enquiry (estimate) | about 1 cent | about 3 cents |
 
 A few things we want to say plainly:
@@ -166,11 +166,10 @@ A few things we want to say plainly:
 - **The baseline is better than we expected.** It gets the sums right almost every time. On routine requests there is little between the two.
 - **The gap is in the awkward cases.** The baseline tends to write a proposal when it should be asking questions, it once offered two rooms for one booking to get around the 24-person limit, and four tests passed on some runs and failed on others. Our numbers cannot change between runs because code computes them.
 - **Ours costs about two and a half times more** per enquiry. It is not slower.
-- **Our one failure is real.** For a two-day event, one run in three said the proposal "fits within your budget" although only one of the two days was priced. We changed the code, but ran out of API credit before we could run it again, so that fix is not verified.
+- **20 of 20 is not a clean score.** Our solution failed the two-day test (T19) twice while we were building: first it presented one day's price as the price for both, then, after a first fix, one run in three still said the proposal "fits within your budget". We fixed both and reran it, and it now passes 3 of 3. But that means we improved the tool using the same tests we score it on. On enquiries it has never seen, expect it to do worse than 20 of 20. The earlier failing runs are kept in `eval/raw/prototype_before_t19_fix/`.
 - **Two of our own tests (T18, T19) favour our design.** They test what our rules do not cover, and the baseline's answer of simply pricing two bookings is arguably more useful. The test table says what the scores are without them.
 - **Part of the scoring is a model's judgment.** Totals are checked by code. Whether a free-text reply reaches the right verdict is judged by a grader model, the same one we are testing, so treat those figures as estimates.
 - **We did not time a human.** The efficiency gain is what we expect, not something we measured.
-- 57 of the planned 60 runs per system were scored; the last few were lost when the API credit ran out.
 
 ## What is in this repository
 
@@ -206,8 +205,7 @@ A few things we want to say plainly:
 - [x] Run and score the comparison, baseline against our solution
 - [x] Appendix: design rationale, test table, demo script
 - [ ] Record the demo video (3 to 5 minutes, script in `appendix/demo_script.md`)
-- [ ] Fill in group members and who did what, here and in the rationale
-- [ ] Rerun the two-day test (T19) once there is API credit, to confirm the fix
+- [ ] Write who did what in `appendix/design_rationale.md`
 
 ## A note on how this was built
 

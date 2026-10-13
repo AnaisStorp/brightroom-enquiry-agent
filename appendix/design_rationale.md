@@ -3,7 +3,7 @@
 Case 02, BrightRoom: from a client enquiry to a feasible proposal.
 Afternoon AI Solution Sprint, MSc DSAIB 2026–2027.
 
-Group: `<name 1>`, `<name 2>`, `<name 3>` (contributions at the end)
+Group: Alix, Anais, Augustin (contributions at the end)
 
 ## 1. Problem and user
 
@@ -109,29 +109,29 @@ How they see that a polished draft is infeasible: the status is computed by code
 
 ## 9. Results in short
 
-20 test enquiries (5 original, 15 added and labelled fictional), up to 3 runs each. The full table is in `test_table.md`.
+20 test enquiries (5 original, 15 added and labelled fictional), 3 runs each, so 60 runs per system. The full table is in `test_table.md`.
 
 | | Baseline | Prototype |
 |---|---|---|
-| Tests passed on every run | 14 of 20 | 19 of 20 |
-| Individual runs passed | 46 of 57 | 56 of 57 |
-| Total correct to the euro | 38 of 39 runs | 57 of 57 runs |
-| Asks the needed questions | 4 of 9 runs | 8 of 8 runs |
-| Median time per enquiry | 8.5 s | 6.6 s |
+| Tests passed on every run | 14 of 20 | 20 of 20 |
+| Individual runs passed | 49 of 60 | 60 of 60 |
+| Total correct to the euro | 41 of 42 runs | 60 of 60 runs |
+| Asks the needed questions | 4 of 9 runs | 9 of 9 runs |
+| Median time per enquiry | 8.6 s | 6.6 s |
 | Median cost per enquiry (estimate) | $0.012 | $0.030 |
 
 What we take from this, honestly:
 
-- **The baseline is good at arithmetic.** It got the total right in 38 of 39 runs. On the routine cases there is little between the two.
+- **The baseline is good at arithmetic.** It got the total right in 41 of 42 runs. On the routine cases there is little between the two.
 - **The difference is in the hard cases.** The baseline tends to propose when it should ask (4 of 9 runs asked the needed questions), and it varies from run to run: 4 tests passed on some runs and failed on others. The prototype's numbers cannot vary, because code computes them.
 - **The prototype costs about two and a half times more** per enquiry and is not slower.
-- **The prototype's one failure is real.** For a two-day event (T19), one run in three said the proposal "fits within your budget" although only one of the two days was priced. We traced the cause and changed the code, but we ran out of API credit before we could run it again, so that fix is **not verified live**.
+- **20 of 20 is not a clean score.** The prototype failed the two-day test (T19) twice during the build. First it presented one day's price as the price for both days, and the safety check did not notice. After a first fix, one run in three still said the proposal "fits within your budget" although only one day was priced. We fixed both and reran T19: 3 of 3. So the tool was improved using the same tests it is scored on, and the score on unseen enquiries should be expected to be lower. The earlier failing runs are kept in `eval/raw/prototype_before_t19_fix/`.
 
 ## 10. Limitations
 
 - **Two tests favour the prototype by construction.** T18 (two sessions) and T19 (two days) probe what our rules do not cover, and the expected behaviour is "flag it, do not price it". The baseline's answer of simply pricing two bookings is arguably more useful to the client. Without those two tests the scores are in `test_table.md`.
 - **Part of the scoring is a model's judgment.** Totals are checked by code. Whether a free-text reply reaches the right verdict or breaks a rule is judged by a grader model, the same model we are testing. Treat those figures as estimates. We read the baseline's flagged sentences by hand and dropped one criterion (literal promise words) because every hit was harmless.
-- **The run is incomplete.** 57 of the planned 60 runs per system were scored; the rest were lost when the API credit ran out.
+- **No held-out test set.** All 20 enquiries were visible while we built and tuned the prototype. The baseline was never tuned.
 - **No human timing.** We measured the tool's seconds, not how long a salesperson takes by hand or how long the review takes. The efficiency claim is therefore an expectation, not a measurement.
 - **Costs are estimates** from a price-per-token constant, taken from a reseller's list and not checked against the provider's own.
 - **The AI can still misread an enquiry.** The price will then be correct for the wrong request. The quotes are the safeguard, and with a single review at the end the salesperson has to actually look at them.
@@ -171,9 +171,9 @@ The saved outputs of every evaluation run are in `eval/raw/`, so the test table 
 
 | Member | Contribution |
 |---|---|
-| `<name 1>` | `<to fill in>` |
-| `<name 2>` | `<to fill in>` |
-| `<name 3>` | `<to fill in>` |
+| Alix | `<to fill in>` |
+| Anais | `<to fill in>` |
+| Augustin | `<to fill in>` |
 
 ## 15. References
 

@@ -12,10 +12,9 @@
     "model": "claude-sonnet-5-5"
   },
   "grade": {
-    "verdict_matches_expected": false,
-    "violations": [
-      "grader gave no usable answer"
-    ],
-    "graded": false
+    "verdict_matches_expected": true,
+    "violations": [],
+    "reason": "The reply proposes the Loft with coffee and a projector for €535, which is €65 under budget. It rejects the Studio for accessibility. The optional-extras figure of €715 for adding lunch is correct (535+180). It does not confirm a date or availability.",
+    "graded": true
   }
 }

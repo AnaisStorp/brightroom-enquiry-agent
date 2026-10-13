@@ -43,14 +43,14 @@ Before recording: start the app (`.venv/bin/streamlit run app.py`), open http://
 
 | Show | Say |
 |---|---|
-| `appendix/test_table.md`, the summary table | "We tested 20 enquiries, the five from the case and fifteen of our own, up to three runs each, against the single-prompt baseline. Expected answers were worked out by hand first." |
-| The summary rows | "The baseline passed 14 of 20, our prototype 19 of 20. To be fair to the baseline: it is good at arithmetic, it got the total right in 38 of 39 runs. Where it falls down is the hard cases. It proposes when it should ask, and it gives different answers on different runs. Our numbers cannot vary, because code computes them." |
+| `appendix/test_table.md`, the summary table | "We tested 20 enquiries, the five from the case and fifteen of our own, three runs each, against the single-prompt baseline. Expected answers were worked out by hand first." |
+| The summary rows | "The baseline passed 14 of 20, our prototype 20 of 20. To be fair to the baseline: it is good at arithmetic, it got the total right in 41 of 42 runs. Where it falls down is the hard cases. It proposes when it should ask, and it gives different answers on different runs. Our numbers cannot vary, because code computes them." |
 | The cost row | "The price for that: our solution costs about two and a half times more per enquiry, roughly three cents instead of one. It is not slower." |
 
 ## 6. Limits and next step (about 30 seconds)
 
 | Show | Say |
 |---|---|
-| The limitations section of `design_rationale.md` | "What it does not do. Our one failure was a two-day event: one run in three said the proposal fits the budget when only one day was priced. We changed the code, but have not been able to rerun it, so that fix is unverified." |
+| The limitations section of `design_rationale.md` | "Twenty out of twenty is not a clean score. A two-day event failed twice while we were building: the tool presented one day's price as the price for both. We fixed it and it now passes, but that means we tuned on our own tests. On new enquiries, expect less." |
 | Same section | "Two of our own tests favour our design, and we say which. Part of the scoring is a model's judgment, so those figures are estimates. And we did not time a human, so the efficiency gain is an expectation, not a measurement." |
 | The app again | "Next, we would price multi-day requests properly, and time a salesperson with and without the tool. The salesperson stays responsible for the final check, for availability and for sending." |

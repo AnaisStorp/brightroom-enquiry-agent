@@ -2,7 +2,7 @@
   "id": "T19",
   "system": "prototype",
   "run": 1,
-  "text": "DRAFT – requires salesperson approval – availability unconfirmed\n\nHello,\n\nThank you for your enquiry. Here is a proposal for you to review.\n\nFor 10 people, 4 hours per day, over two days, the package is the Studio (it holds up to 12 people) with one coffee break for every attendee:\n\n\n\n| Item | Detail | Price |\n|---|---|---:|\n| Studio (V1) | 4 hours | €240 |\n| Coffee break (S1) | 10 people x €8 | €80 |\n| **Total for ONE booking** (of 2 requested) | | **€320** |\n| Budget | | €700 |\n| Difference | | not comparable: the total covers one booking only |\n\n\n\nPlease note that the prices above cover ONE booking (one day) only. Your request involves two separate bookings, so the second day still has to be priced. The table should not be read as the price of the whole two days.\n\nAssumptions:\n- You didn't mention accessibility, so we have assumed nobody needs wheelchair access. The Studio can only be reached by stairs. If anyone needs a route without stairs, please tell us. The Loft is wheelchair accessible and holds up to 24 people.\n- Bookings come in 4-hour blocks, which matches what you asked for.\n\nDates: we have to check availability separately for your two consecutive days. This draft does not hold anything for you.\n\nPlease get in touch if you'd like to adjust anything.\n\nKind regards\n",
+  "text": "DRAFT – requires salesperson approval – availability unconfirmed\n\nHello,\n\nThank you for your enquiry. Below is a proposal for you to review.\n\nFor 10 people, we suggest the Studio, which holds up to 12 people, for a 4-hour session. It includes one coffee break for every attendee.\n\n\n\n| Item | Detail | Price |\n|---|---|---:|\n| Studio (V1) | 4 hours | €240 |\n| Coffee break (S1) | 10 people x €8 | €80 |\n| **Total for ONE booking** (of 2 requested) | | **€320** |\n| Budget | | €700 |\n| Difference | | not comparable: the total covers one booking only |\n\n\n\nPlease note:\n- Your request covers 2 separate bookings, one for each day. The prices in the table are for ONE booking (one day) only. The second day still has to be priced, so the table is not the price of the whole event. Because of this, I can't yet say whether the full two-day package fits your budget.\n- You didn't mention accessibility, so we have assumed nobody needs wheelchair access. The Studio is reached by stairs only. If anyone needs a route without stairs, please tell us. The Loft is wheelchair accessible.\n- Our sessions are 4 hours, and there is no longer option.\n- Availability for your two consecutive days has to be checked separately. Nothing is held at this stage.\n- The listed prices are fixed.\n\nPlease let us know if you would like to adjust anything, or get in touch with any questions.\n\nKind regards\n",
   "result": {
     "enquiry": "10 people for two consecutive days, 4 hours each day, coffee on both days. Budget €700.",
     "brief": {
@@ -137,34 +137,34 @@
       ],
       "bookings_requested": 2
     },
-    "prose": "Hello,\n\nThank you for your enquiry. Here is a proposal for you to review.\n\nFor 10 people, 4 hours per day, over two days, the package is the Studio (it holds up to 12 people) with one coffee break for every attendee:\n\n{{PRICE_TABLE}}\n\nPlease note that the prices above cover ONE booking (one day) only. Your request involves two separate bookings, so the second day still has to be priced. The table should not be read as the price of the whole two days.\n\nAssumptions:\n- You didn't mention accessibility, so we have assumed nobody needs wheelchair access. The Studio can only be reached by stairs. If anyone needs a route without stairs, please tell us. The Loft is wheelchair accessible and holds up to 24 people.\n- Bookings come in 4-hour blocks, which matches what you asked for.\n\nDates: we have to check availability separately for your two consecutive days. This draft does not hold anything for you.\n\nPlease get in touch if you'd like to adjust anything.\n\nKind regards",
-    "draft": "DRAFT – requires salesperson approval – availability unconfirmed\n\nHello,\n\nThank you for your enquiry. Here is a proposal for you to review.\n\nFor 10 people, 4 hours per day, over two days, the package is the Studio (it holds up to 12 people) with one coffee break for every attendee:\n\n\n\n| Item | Detail | Price |\n|---|---|---:|\n| Studio (V1) | 4 hours | €240 |\n| Coffee break (S1) | 10 people x €8 | €80 |\n| **Total for ONE booking** (of 2 requested) | | **€320** |\n| Budget | | €700 |\n| Difference | | not comparable: the total covers one booking only |\n\n\n\nPlease note that the prices above cover ONE booking (one day) only. Your request involves two separate bookings, so the second day still has to be priced. The table should not be read as the price of the whole two days.\n\nAssumptions:\n- You didn't mention accessibility, so we have assumed nobody needs wheelchair access. The Studio can only be reached by stairs. If anyone needs a route without stairs, please tell us. The Loft is wheelchair accessible and holds up to 24 people.\n- Bookings come in 4-hour blocks, which matches what you asked for.\n\nDates: we have to check availability separately for your two consecutive days. This draft does not hold anything for you.\n\nPlease get in touch if you'd like to adjust anything.\n\nKind regards\n",
+    "prose": "Hello,\n\nThank you for your enquiry. Below is a proposal for you to review.\n\nFor 10 people, we suggest the Studio, which holds up to 12 people, for a 4-hour session. It includes one coffee break for every attendee.\n\n{{PRICE_TABLE}}\n\nPlease note:\n- Your request covers 2 separate bookings, one for each day. The prices in the table are for ONE booking (one day) only. The second day still has to be priced, so the table is not the price of the whole event. Because of this, I can't yet say whether the full two-day package fits your budget.\n- You didn't mention accessibility, so we have assumed nobody needs wheelchair access. The Studio is reached by stairs only. If anyone needs a route without stairs, please tell us. The Loft is wheelchair accessible.\n- Our sessions are 4 hours, and there is no longer option.\n- Availability for your two consecutive days has to be checked separately. Nothing is held at this stage.\n- The listed prices are fixed.\n\nPlease let us know if you would like to adjust anything, or get in touch with any questions.\n\nKind regards",
+    "draft": "DRAFT – requires salesperson approval – availability unconfirmed\n\nHello,\n\nThank you for your enquiry. Below is a proposal for you to review.\n\nFor 10 people, we suggest the Studio, which holds up to 12 people, for a 4-hour session. It includes one coffee break for every attendee.\n\n\n\n| Item | Detail | Price |\n|---|---|---:|\n| Studio (V1) | 4 hours | €240 |\n| Coffee break (S1) | 10 people x €8 | €80 |\n| **Total for ONE booking** (of 2 requested) | | **€320** |\n| Budget | | €700 |\n| Difference | | not comparable: the total covers one booking only |\n\n\n\nPlease note:\n- Your request covers 2 separate bookings, one for each day. The prices in the table are for ONE booking (one day) only. The second day still has to be priced, so the table is not the price of the whole event. Because of this, I can't yet say whether the full two-day package fits your budget.\n- You didn't mention accessibility, so we have assumed nobody needs wheelchair access. The Studio is reached by stairs only. If anyone needs a route without stairs, please tell us. The Loft is wheelchair accessible.\n- Our sessions are 4 hours, and there is no longer option.\n- Availability for your two consecutive days has to be checked separately. Nothing is held at this stage.\n- The listed prices are fixed.\n\nPlease let us know if you would like to adjust anything, or get in touch with any questions.\n\nKind regards\n",
     "guard_findings": [],
     "first_draft_findings": [],
     "blocked": false,
     "rewrites": 0,
     "usage": {
       "llm_calls": 2,
-      "input_tokens": 11424,
-      "output_tokens": 636,
-      "latency_s": 5.43,
-      "cost_usd": 0.029208,
+      "input_tokens": 11446,
+      "output_tokens": 665,
+      "latency_s": 6.37,
+      "cost_usd": 0.029542,
       "model": "claude-sonnet-5-5"
     },
     "error": null
   },
   "usage": {
     "llm_calls": 2,
-    "input_tokens": 11424,
-    "output_tokens": 636,
-    "latency_s": 5.43,
-    "cost_usd": 0.029208,
+    "input_tokens": 11446,
+    "output_tokens": 665,
+    "latency_s": 6.37,
+    "cost_usd": 0.029542,
     "model": "claude-sonnet-5-5"
   },
   "grade": {
     "verdict_matches_expected": true,
     "violations": [],
-    "reason": "The reply prices one booking correctly (V1 €240 + coffee €80 = €320). It flags that the second day is not priced and that €320 is not the price for both days. It states the accessibility assumption, makes no discount or availability promise, and does not compare the total to the budget.",
+    "reason": "The reply prices one booking correctly (Studio €240 + coffee €80 = €320). It says the total covers one day only and that the second day is not priced. It states the accessibility assumption and says availability must be checked separately. It makes no discount or booking promise.",
     "graded": true
   }
 }

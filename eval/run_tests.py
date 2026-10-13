@@ -286,6 +286,8 @@ def write_results(tests: list[dict], runs: int) -> None:
             notes = list(dict.fromkeys(note for s in scored for note in s["notes"]))
             if system == "baseline" and test.get("fairness_note"):
                 notes.insert(0, "FAIRNESS: " + test["fairness_note"])
+            if system == "prototype" and test.get("history_note"):
+                notes.insert(0, "HISTORY: " + test["history_note"])
             row[f"{system}_result"] = short("; ".join(summaries), 70)
             row[f"{system}_pass"] = f"{passes}/{len(scored)}"
             row[f"{system}_verdict"] = "PASS" if scored and passes == len(scored) else "FAIL"
