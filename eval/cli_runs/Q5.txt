@@ -1,0 +1,52 @@
+ENQUIRY  30 people for 6 hours with lunch. We can spend €1,500. Please confirm it today.
+
+BRIEF (tool input)
+  headcount: {"status": "confirmed", "evidence": "30 people", "value": 30}
+  duration_hours: {"status": "confirmed", "evidence": "6 hours", "value": 6.0}
+  budget_eur: {"status": "confirmed", "evidence": "We can spend €1,500", "value": 1500.0}
+  lunch: {"status": "confirmed", "evidence": "with lunch", "value": true}
+  unlisted_requests: [{"request": "confirm the booking today", "evidence": "Please confirm it today."}]
+  date_requests: ["Please confirm it today."]
+
+STATUS  INFEASIBLE   total=None   budget_delta=None
+  - 30 people exceeds the largest venue (Loft, max 24).
+  - 6 hours requested: only 4-hour bookings exist and there is no longer-duration price.
+  - 'confirm the booking today' is not in the catalogue: flagged, not priced, not promised.
+  - Date/urgency request (Please confirm it today.): dates need a separate availability check. Nothing can be confirmed or booked from this draft.
+
+------------------------------------------------------------------------
+DRAFT – requires salesperson approval – availability unconfirmed
+Not sendable as an offer
+
+Hello,
+
+Thank you for your enquiry. Unfortunately, we can't meet the request as specified, for two reasons:
+
+- **Group size:** Our largest space is the Loft, which holds a maximum of 24 people. The Studio holds a maximum of 12. Neither fits 30 people.
+- **Duration:** Our bookings come in 4-hour blocks only. We have no 6-hour option and no price for a longer duration.
+
+Because there is no package that fits, we can't compare anything against your budget.
+
+There is one alternative you could consider. It would only go ahead if you agreed to it, and it means giving up some of what you asked for:
+
+
+
+| Option | Package | People | Total | What the client gives up |
+|---|---|---:|---:|---|
+| 1 | Loft + Lunch | 24 | €852 | duration shortened from 6 hours to the only available 4-hour block; headcount reduced from 30 to at most 24 |
+
+Every option changes a stated requirement and needs the client's explicit consent.
+
+
+
+This option is the Loft with lunch for up to 24 people, for a 4-hour block. You would give up the 6-hour duration, and your group would have to shrink from 30 to at most 24. The Loft has a route without stairs.
+
+You asked us to confirm this today. We can't do that, and nothing is held. Availability for any date has to be checked separately. Listed prices are fixed.
+
+If you'd like to look at the alternative, or want to talk through other ways to split the day or the group, please get in touch.
+
+Kind regards
+------------------------------------------------------------------------
+GUARD  passed   rewrites=0
+  [review] unlisted_item_mentioned: "confirm"  'confirm the booking today' is not in the catalogue. Check the draft declines it and does not offer it.
+USAGE  2 calls, 11266 in / 733 out tokens, 7.45s, $0.0299 (estimate)

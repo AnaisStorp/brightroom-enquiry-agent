@@ -1,0 +1,10 @@
+{
+  "id": "T11",
+  "enquiry": "10 people, 4 hours, with a facilitator for the whole workshop. Budget €600.",
+  "model": "claude-sonnet-5-5",
+  "output": "# BrightRoom Proposal\n\nThank you for your enquiry. Before the details, one point needs to be clear.\n\n**The facilitator covers 2 hours, not the full 4.** Our facilitator service (€280) is for 2 hours. It can be added only once per booking, and we have no extended-hours option. We can't offer a facilitator for the whole 4-hour workshop, but you could use the facilitator for the part of the session that needs guidance, such as the opening, a key exercise or the wrap-up, and run the remaining 2 hours yourselves.\n\n## Recommended option: Studio + Facilitator\n\n| Item | Details | Price |\n|---|---|---|\n| Studio (V1) | 4 hours, up to 12 people, Wi-Fi included | €240 |\n| Facilitator (S4) | 1 facilitator for 2 hours | €280 |\n| **Total** | | **€520** |\n\nThis is €80 under your €600 budget.\n\n## Ways to use the remaining €80\n\nChoose one of these:\n\n- **Option A: Coffee breaks for all 10 attendees** (10 × €8 = €80). The total is **€600**, exactly on budget.\n- **Option B: Projector** (€35). The total is **€555**.\n\nThe projector and coffee breaks together would come to €635, which is over budget. Lunch for 10 (€180) would also exceed the budget.\n\n## Good to know\n\n- **Accessibility:** The Studio is reached by stairs only and is not wheelchair accessible. If any attendee needs step-free access, the Loft (€420, up to 24 people) is the alternative. With the facilitator it comes to €700, which is over budget.\n- **Prices:** All prices are final totals in euros, with no taxes or fees.\n- **Availability:** Dates need a separate availability check. Please send us your preferred date(s) and we'll confirm.\n\nLet us know which option you prefer and your date, and we'll check availability.",
+  "input_tokens": 815,
+  "output_tokens": 1021,
+  "latency_s": 8.42,
+  "cost_usd": 0.01184
+}

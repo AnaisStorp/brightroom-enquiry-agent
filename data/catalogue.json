@@ -1,0 +1,65 @@
+{
+  "business": "BrightRoom",
+  "currency": "EUR",
+  "booking_hours": 4,
+  "venues": [
+    {
+      "id": "V1",
+      "name": "Studio",
+      "price": 240,
+      "hours": 4,
+      "max_people": 12,
+      "wheelchair_accessible": false,
+      "wifi_included": true,
+      "conditions": "4 hours; max 12 people; stairs only (NOT wheelchair accessible); Wi-Fi included"
+    },
+    {
+      "id": "V2",
+      "name": "Loft",
+      "price": 420,
+      "hours": 4,
+      "max_people": 24,
+      "wheelchair_accessible": true,
+      "wifi_included": true,
+      "conditions": "4 hours; max 24 people; wheelchair accessible; Wi-Fi included"
+    }
+  ],
+  "services": [
+    {
+      "id": "S1",
+      "name": "Coffee break",
+      "price": 8,
+      "pricing": "per_person",
+      "conditions": "one coffee break for every attendee"
+    },
+    {
+      "id": "S2",
+      "name": "Lunch",
+      "price": 18,
+      "pricing": "per_person",
+      "conditions": "one lunch for every attendee; vegetarian/vegan on request; NO allergen guarantee"
+    },
+    {
+      "id": "S3",
+      "name": "Projector",
+      "price": 35,
+      "pricing": "flat",
+      "conditions": "one projector for the booking"
+    },
+    {
+      "id": "S4",
+      "name": "Facilitator",
+      "price": 280,
+      "pricing": "flat",
+      "included_hours": 2,
+      "conditions": "one facilitator for 2 hours"
+    }
+  ],
+  "rules": [
+    "All prices are final totals in euros. No taxes or fees.",
+    "Exactly one venue per booking. Flat-price items can be added at most once.",
+    "Per-person services must cover the full headcount.",
+    "Only 4-hour bookings exist. There is no longer-duration price and no discount of any kind.",
+    "Dates always need a separate availability check."
+  ]
+}

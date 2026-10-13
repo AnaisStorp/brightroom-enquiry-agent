@@ -1,0 +1,49 @@
+ENQUIRY  10 people, 4 hours, coffee for everyone. Maximum budget €350.
+
+BRIEF (tool input)
+  headcount: {"status": "confirmed", "evidence": "10 people", "value": 10}
+  duration_hours: {"status": "confirmed", "evidence": "4 hours", "value": 4.0}
+  budget_eur: {"status": "confirmed", "evidence": "Maximum budget €350", "value": 350.0}
+  coffee_break: {"status": "confirmed", "evidence": "coffee for everyone", "value": true}
+
+STATUS  FEASIBLE_WITH_ASSUMPTIONS   total=320   budget_delta=30.0
+  - All stated requirements are met, subject to the listed assumptions.
+  - Accessibility not stated: assumed no wheelchair access is needed. The Studio is stairs-only.
+
+------------------------------------------------------------------------
+DRAFT – requires salesperson approval – availability unconfirmed
+
+Hello,
+
+Thank you for your enquiry. Here is a proposal for you to review:
+
+- Studio for your 4-hour event, which holds up to 12 people, so it fits your group of 10
+- One coffee break for every attendee
+
+
+
+| Item | Detail | Price |
+|---|---|---:|
+| Studio (V1) | 4 hours | €240 |
+| Coffee break (S1) | 10 people x €8 | €80 |
+| **Total** | | **€320** |
+| Budget | | €350 |
+| Difference | | €30 under budget |
+
+
+
+The package is within your budget.
+
+Assumption to check: you didn't mention accessibility, so I have assumed nobody in your group needs wheelchair access. The Studio can only be reached by stairs. If someone does need a route without stairs, please tell us, because we would then need to look at a different venue.
+
+Please also note:
+- BrightRoom only offers 4-hour bookings.
+- Availability depends on your date and has to be checked separately. Nothing is held at this stage.
+- The listed prices are fixed.
+
+Please get in touch if you would like to adjust anything or go ahead with this proposal.
+
+Kind regards
+------------------------------------------------------------------------
+GUARD  passed   rewrites=0
+USAGE  2 calls, 10896 in / 542 out tokens, 5.77s, $0.0272 (estimate)

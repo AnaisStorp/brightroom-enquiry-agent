@@ -1,0 +1,32 @@
+{
+  "headcount": {
+    "status": "confirmed",
+    "evidence": "10 people",
+    "value": 10
+  },
+  "duration_hours": {
+    "status": "confirmed",
+    "evidence": "4 hours",
+    "value": 4.0
+  },
+  "budget_eur": {
+    "status": "confirmed",
+    "evidence": "Budget €600",
+    "value": 600.0
+  },
+  "wheelchair_access": {
+    "status": "confirmed",
+    "evidence": "wheelchair access",
+    "value": true
+  },
+  "coffee_break": {
+    "status": "confirmed",
+    "evidence": "coffee",
+    "value": true
+  },
+  "projector": {
+    "status": "confirmed",
+    "evidence": "a projector",
+    "value": true
+  }
+}

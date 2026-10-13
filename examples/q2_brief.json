@@ -1,0 +1,27 @@
+{
+  "headcount": {
+    "status": "confirmed",
+    "evidence": "20 people",
+    "value": 20
+  },
+  "duration_hours": {
+    "status": "confirmed",
+    "evidence": "4 hours",
+    "value": 4.0
+  },
+  "budget_eur": {
+    "status": "confirmed",
+    "evidence": "Total budget €850",
+    "value": 850.0
+  },
+  "coffee_break": {
+    "status": "confirmed",
+    "evidence": "coffee and lunch are required",
+    "value": true
+  },
+  "lunch": {
+    "status": "confirmed",
+    "evidence": "coffee and lunch are required",
+    "value": true
+  }
+}

@@ -1,0 +1,49 @@
+ENQUIRY  10 people, 4 hours, wheelchair access, coffee and a projector. Budget €600.
+
+BRIEF (tool input)
+  headcount: {"status": "confirmed", "evidence": "10 people", "value": 10}
+  duration_hours: {"status": "confirmed", "evidence": "4 hours", "value": 4.0}
+  budget_eur: {"status": "confirmed", "evidence": "Budget €600", "value": 600.0}
+  wheelchair_access: {"status": "confirmed", "evidence": "wheelchair access", "value": true}
+  coffee_break: {"status": "confirmed", "evidence": "coffee", "value": true}
+  projector: {"status": "confirmed", "evidence": "a projector", "value": true}
+
+STATUS  FEASIBLE   total=535   budget_delta=65.0
+  - All stated requirements are met within budget.
+
+------------------------------------------------------------------------
+DRAFT – requires salesperson approval – availability unconfirmed
+
+Hello,
+
+Thank you for your enquiry. Here is a proposal for you to review:
+
+- **Venue:** the Loft, which holds up to 24 people and is wheelchair accessible. It suits your group of 10 for the 4 hours you asked for, and Wi-Fi is included. We left out the Studio because it can only be reached by stairs and is not wheelchair accessible.
+- **Coffee break:** one for every attendee.
+- **Projector:** one projector for the booking.
+
+
+
+| Item | Detail | Price |
+|---|---|---:|
+| Loft (V2) | 4 hours | €420 |
+| Coffee break (S1) | 10 people x €8 | €80 |
+| Projector (S3) | one projector for the booking | €35 |
+| **Total** | | **€535** |
+| Budget | | €600 |
+| Difference | | €65 under budget |
+
+
+
+This package fits within your budget.
+
+- BrightRoom only offers 4-hour bookings.
+- Availability has to be checked separately, and nothing is held for you at this stage.
+- The listed prices are fixed.
+
+If this looks right, or if you would like to add anything such as lunch or a facilitator, please get in touch and I will update the proposal.
+
+Kind regards
+------------------------------------------------------------------------
+GUARD  passed   rewrites=0
+USAGE  2 calls, 10998 in / 641 out tokens, 5.44s, $0.0284 (estimate)

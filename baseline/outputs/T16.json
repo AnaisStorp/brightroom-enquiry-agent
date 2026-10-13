@@ -1,0 +1,10 @@
+{
+  "id": "T16",
+  "enquiry": "22 people, 3 hours, coffee and a projector. Budget €700.",
+  "model": "claude-sonnet-5-5",
+  "output": "# BrightRoom Proposal\n\n**Your request:** 22 people, 3 hours, coffee break, projector, budget €700\n\n## Recommended setup\n\n| Item | Details | Price |\n|---|---|---|\n| **Loft** (V2) | Max 24 people, wheelchair accessible, Wi-Fi included, 4-hour booking | €420 |\n| **Coffee break** (S1) | €8 × 22 attendees | €176 |\n| **Projector** (S3) | One projector for the booking | €35 |\n| **Total** | | **€631** |\n\nThis is €69 under your €700 budget. All prices are final totals, with no taxes or fees.\n\n## Points to note\n\n- **Venue:** Our Studio holds a maximum of 12 people, so the Loft is the only option for 22 guests. It has room for up to 24.\n- **Duration:** We only offer 4-hour bookings. You would have the room for 4 hours, not 3, and the price is the same because we have no shorter rate. You are welcome to use the extra hour as setup or networking time.\n- **Coffee:** The coffee break covers every attendee, so it is priced for all 22 people.\n- **Availability:** We have not yet checked your date. Please send us your preferred date(s) and we will confirm availability.\n\n## Optional extras\n\nThese would take you over budget, so they are not included in the proposal:\n- Lunch is €18 per person, which is €396 for 22 people.\n- A facilitator for 2 hours is €280.\n\nSend us your preferred date and we can confirm the booking.",
+  "input_tokens": 809,
+  "output_tokens": 733,
+  "latency_s": 5.8,
+  "cost_usd": 0.00895
+}

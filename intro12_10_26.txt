@@ -1,0 +1,22 @@
+Diagnose: find the bottleneck and define business value
+Justify: Compare solutions and the autonomy they need
+Design: specify evidence, people and control points 
+Evaluate: defend a pilot; build and test it this afternoon 
+
+
+Agent vs agentic AI: 
+Agentic: multiple agents working towards a goal
+Agent: smaller and executing a specific singular task 
+
+MCP: standardize 
+A2A: agent 2 agents (they communicate)
+Skill: reusable, it's like a folder (an agent doesn't have a domain knowledge), a gent can trigger the skill by itself -> a playbook giving domain knowledge giving them intuition on which tool to use and when. 
+
+5 agentic patterns  :
+- specialised agents
+- Delegation and coordination
+- orchestration
+
+
+Reflection: check a draft against the fact, would have 2 models, one that drafts the other checks/reflects 
+-> 2 LLMs from 2 different companies so they dont share the same biais. 

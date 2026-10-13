@@ -1,0 +1,10 @@
+{
+  "id": "T9",
+  "enquiry": "10 people, 4 hours, coffee. Budget €320.",
+  "model": "claude-sonnet-5-5",
+  "output": "# BrightRoom Proposal\n\n**Thank you for your enquiry.** Here is a proposal that fits your budget exactly.\n\n## Recommended option: Studio + Coffee break\n\n| Item | Details | Price |\n|---|---|---|\n| Studio (V1) | 4 hours, up to 12 people, Wi-Fi included | €240 |\n| Coffee break (S1) | €8 × 10 attendees | €80 |\n| **Total** | | **€320** |\n\nThis is a final total in euros, with no taxes, fees or additional charges. It matches your €320 budget, so there is no room for add-ons within it.\n\n## Things to be aware of\n- **Accessibility:** The Studio is reached by stairs only and is **not wheelchair accessible**. If any attendee needs step-free access, please tell us.\n- **Loft alternative:** The Loft (€420, up to 24 people, wheelchair accessible) with coffee for 10 would total **€500**, which is €180 over your budget.\n- **Headcount:** The Studio holds a maximum of 12 people. Coffee break is priced per attendee, so if your numbers change, the price changes by €8 per person.\n- **Availability:** We have not yet checked your date. Please send your preferred date(s) and we will confirm availability before anything is booked.\n\n## Optional extras (outside the current budget)\n- Projector: €35 (flat)\n- Lunch: €18 per person (€180 for 10)\n- Facilitator: €280 (flat, covers 2 hours)\n\nSend us your preferred date and confirm whether step-free access is needed, and we'll check availability and finalise the booking.\n\nKind regards,\n**BrightRoom**",
+  "input_tokens": 805,
+  "output_tokens": 685,
+  "latency_s": 5.32,
+  "cost_usd": 0.00846
+}

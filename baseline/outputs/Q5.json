@@ -1,0 +1,10 @@
+{
+  "id": "Q5",
+  "enquiry": "30 people for 6 hours with lunch. We can spend €1,500. Please confirm it today.",
+  "model": "claude-sonnet-5-5",
+  "output": "# BrightRoom: Proposal\n\nThank you for your enquiry. Two parts of the request don't fit what we can offer, so I can't confirm it as written.\n\n## What we can't do\n\n- **30 people:** Our largest venue, the Loft, holds a maximum of **24 people**. Each booking uses exactly one venue, so 30 people can't be accommodated in a single booking.\n- **6 hours:** We only offer **4-hour bookings**. There is no longer-duration option, and no extra-hours price.\n- **Confirmation today:** Every date needs a separate availability check, and you haven't given us one yet. I can't confirm anything until that check is done.\n\n## What we can offer: Loft, 4 hours, up to 24 people\n\nThe Loft is wheelchair accessible and includes Wi-Fi.\n\n| Item | Calculation | Price |\n|---|---|---|\n| Loft (4 hours, max 24 people) | flat | €420 |\n| Lunch | 24 × €18 | €432 |\n| **Total** | | **€852** |\n\n**Optional extras** (all prices are final, with no taxes or fees):\n\n| Extra | Price |\n|---|---|\n| Coffee break (24 × €8) | €192 |\n| Projector (flat) | €35 |\n| Facilitator (flat, covers 2 hours only) | €280 |\n\nWith all extras, the total would be **€1,359**, within your €1,500 budget.\n\n**Lunch notes:** Vegetarian and vegan options are available on request. We cannot guarantee allergen safety.\n\n## Options for your group of 30\n\n1. **Reduce to 24 attendees** and book the Loft as above.\n2. **Split the group** into two separate 4-hour bookings, which our team would need to check and confirm. This is not a single combined session.\n\n## Next steps\n\nTo proceed, please send us:\n- your preferred date (and a backup date),\n- your final headcount,\n- which extras you'd like.\n\nWe'll check availability and confirm once the date is cleared.",
+  "input_tokens": 816,
+  "output_tokens": 1257,
+  "latency_s": 10.72,
+  "cost_usd": 0.0142
+}

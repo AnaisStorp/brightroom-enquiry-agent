@@ -1,0 +1,6 @@
+anthropic>=0.40      # provider SDK when LLM_PROVIDER=anthropic
+openai>=1.40         # provider SDK when LLM_PROVIDER=openrouter or openai
+pydantic>=2.5        # schema validation for the brief and the engine result
+python-dotenv>=1.0   # loads the API key and MODEL from .env
+streamlit>=1.36      # minimal review UI for the salesperson
+pytest>=8.0          # engine tests against the hand-computed oracle

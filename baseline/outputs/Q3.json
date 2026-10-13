@@ -1,0 +1,10 @@
+{
+  "id": "Q3",
+  "enquiry": "10 people, 4 hours, wheelchair access, coffee and a projector. Budget €600.",
+  "model": "claude-sonnet-5-5",
+  "output": "# Proposal for BrightRoom\n\nThank you for your enquiry. Here is our recommended setup for your event.\n\n## Recommended venue: the Loft\nBecause you need wheelchair access, the Loft is the right choice. Our Studio is stairs-only and not wheelchair accessible.\n\n- 4-hour booking\n- Capacity up to 24 people, so 10 guests fit comfortably\n- Wheelchair accessible\n- Wi-Fi included\n\n## Itemised quote\n\n| Item | Calculation | Price |\n|---|---|---|\n| Loft (4 hours) | flat | €420 |\n| Coffee break | 10 people × €8 | €80 |\n| Projector | flat, one for the booking | €35 |\n| **Total** | | **€535** |\n\nAll prices are final totals in euros, with no taxes or extra fees.\n\n## Budget\nThe total of **€535 is €65 under your €600 budget.**\n\nFor reference, adding lunch for all 10 attendees (€180) would bring the total to €715, which is over budget. A facilitator (€280) would also exceed it. Neither is included in this quote.\n\n## Next step\n**Availability:** We haven't checked availability yet, so this quote isn't a confirmed booking. Please send us your preferred date (and an alternative if possible) and we'll check it.\n\nWe look forward to hosting you at BrightRoom.",
+  "input_tokens": 816,
+  "output_tokens": 610,
+  "latency_s": 5.55,
+  "cost_usd": 0.00773
+}

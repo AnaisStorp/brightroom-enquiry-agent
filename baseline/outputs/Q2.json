@@ -1,0 +1,10 @@
+{
+  "id": "Q2",
+  "enquiry": "20 people, 4 hours, coffee and lunch are required. Total budget €850.",
+  "model": "claude-sonnet-5-5",
+  "output": "# BrightRoom Proposal: 20-Person Business Event\n\nThank you for your enquiry. Your requirements (20 people, 4 hours, coffee and lunch for everyone) come to **€940, which is €90 over your €850 budget**. Our prices are fixed totals with no discounts, so I can't bring the full request under budget. Below is the closest match, plus options that fit.\n\n## Recommended option: your full requirements\n\n| Item | Calculation | Price |\n|---|---|---|\n| Loft (4 hours, up to 24 people, wheelchair accessible, Wi-Fi included) | flat | €420 |\n| Coffee break | 20 × €8 | €160 |\n| Lunch (vegetarian/vegan on request) | 20 × €18 | €360 |\n| **Total** | | **€940** |\n\n**Why the Loft:** the Studio holds a maximum of 12 people, so the Loft is the only venue that fits 20.\n\n## Options to meet the €850 budget\n\n1. **Reduce the group to 16 people (Loft):** €420 + 16 × €8 + 16 × €18 = **€836**. This is the largest group that fits the budget with coffee and lunch for everyone.\n2. **Keep 20 people but drop one service:**\n   - Loft + lunch only: €780\n   - Loft + coffee only: €580\n\n   Per-person services must cover the whole group, so we can't offer coffee or lunch for only some attendees.\n3. **Raise the budget by €90** to €940 for the full package.\n\n## Optional add-ons (not included above)\n- Projector: €35 (once per booking)\n- Facilitator: €280 (covers 2 hours)\n\nEither would raise the total further, so they only fit if the budget increases.\n\n## Good to know\n- Bookings are 4 hours only. There are no longer-duration options.\n- Lunch has **no allergen guarantee**. Vegetarian and vegan meals are available on request.\n- All prices are final totals in euros, with no taxes or fees.\n- **Your date is not yet confirmed.** Please send your preferred date(s) so we can check availability.\n\nLet me know which option you prefer and your preferred date, and I'll proceed from there.\n\nKind regards,\nBrightRoom",
+  "input_tokens": 812,
+  "output_tokens": 1110,
+  "latency_s": 9.29,
+  "cost_usd": 0.01272
+}

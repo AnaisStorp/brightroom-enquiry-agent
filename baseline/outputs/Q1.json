@@ -1,0 +1,10 @@
+{
+  "id": "Q1",
+  "enquiry": "10 people, 4 hours, coffee for everyone. Maximum budget €350.",
+  "model": "claude-sonnet-5-5",
+  "output": "# BrightRoom Proposal\n\n**Your request:** 10 people, 4 hours, coffee for everyone, maximum budget €350.\n\n## Recommended option\n\n| Item | Details | Price |\n|---|---|---|\n| **Studio** (V1) | 4 hours, up to 12 people, Wi-Fi included | €240 |\n| **Coffee break** (S1) | €8 × 10 attendees | €80 |\n| **Total** | | **€320** |\n\nThis is €30 under your budget. All prices are final totals, with no taxes or fees.\n\n## Things to know\n\n- **Accessibility:** The Studio is reached by stairs only and is **not wheelchair accessible**. If any attendee needs step-free access, you would need the Loft (€420). With coffee for 10 (€80), that comes to €500, which is over your budget.\n- **Capacity:** The Studio holds up to 12 people, so your group of 10 fits with a little room to spare.\n- **Add-ons:** A projector costs €35, which would bring the total to €355 and exceed your budget by €5. We can't offer a discount, so it isn't included in this proposal. Lunch and a facilitator would also exceed the budget.\n- **Date:** Availability depends on your date and needs a separate check. Please send your preferred date or dates and we'll confirm.\n\n## Next steps\n\nLet us know your preferred date and whether anyone in the group needs step-free access, and we'll check availability and confirm the booking.",
+  "input_tokens": 812,
+  "output_tokens": 647,
+  "latency_s": 6.39,
+  "cost_usd": 0.00809
+}

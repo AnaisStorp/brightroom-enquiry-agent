@@ -1,0 +1,10 @@
+{
+  "id": "T8",
+  "enquiry": "13 people, 4 hours, coffee. Budget €400.",
+  "model": "claude-sonnet-5-5",
+  "output": "# BrightRoom Proposal\n\nHi, and thank you for your enquiry.\n\n**Your request:** 13 people, 4 hours, coffee, budget €400.\n\nYour group doesn't fit within the €400 budget as asked. Here is why, and two ways forward.\n\n## Option A: Fits all 13 people (recommended if headcount is fixed)\n\n| Item | Calculation | Price |\n|---|---|---|\n| Loft (4 hours, up to 24 people, wheelchair accessible, Wi-Fi included) | | €420 |\n| Coffee break | 13 × €8 | €104 |\n| **Total** | | **€524** |\n\nThe Studio holds a maximum of 12 people, so for 13 the Loft is the only venue that works. The Loft alone (€420) is already above your budget. This option is **€124 over budget**.\n\n## Option B: Within budget, if you can reduce to 12 people\n\n| Item | Calculation | Price |\n|---|---|---|\n| Studio (4 hours, max 12 people, Wi-Fi included) | | €240 |\n| Coffee break | 12 × €8 | €96 |\n| **Total** | | **€336** |\n\nThis leaves €64 of your budget free. Note that the Studio is reached by stairs only and is **not wheelchair accessible**. If you wanted to, you could add a projector (€35) for a total of €371, still within budget.\n\n## Good to know\n- All prices are final totals in euros, with no taxes or fees.\n- We only offer 4-hour bookings, and we can't offer discounts.\n- The coffee break must cover every attendee.\n- **Your date still needs an availability check.** Please tell us your preferred date(s) and we'll confirm.\n\nLet us know which option suits you and we'll check availability.\n\nBest regards,\nBrightRoom",
+  "input_tokens": 805,
+  "output_tokens": 770,
+  "latency_s": 6.34,
+  "cost_usd": 0.00931
+}

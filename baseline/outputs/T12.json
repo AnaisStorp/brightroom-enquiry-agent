@@ -1,0 +1,10 @@
+{
+  "id": "T12",
+  "enquiry": "10 people, 4 hours, coffee. Ideally also a photographer and some wine. Budget €600.",
+  "model": "claude-sonnet-5-5",
+  "output": "# Proposal for BrightRoom: 10-person event, 4 hours\n\nThank you for your enquiry. Here is what we can offer for your group.\n\n## Recommended option: Studio + coffee break\n\n| Item | Details | Price |\n|---|---|---|\n| Studio (V1) | 4 hours, max 12 people, Wi-Fi included | €240 |\n| Coffee break (S1) | 10 attendees × €8 | €80 |\n| **Total** | | **€320** |\n\nThis is well within your €600 budget. The Studio is reached by stairs only and is **not wheelchair accessible**. If anyone in your group needs step-free access, please tell us.\n\n## Alternative: Loft + coffee break\n\n| Item | Details | Price |\n|---|---|---|\n| Loft (V2) | 4 hours, max 24 people, wheelchair accessible, Wi-Fi included | €420 |\n| Coffee break (S1) | 10 × €8 | €80 |\n| **Total** | | **€500** |\n\n## Optional add-ons\n\n- **Projector (S3):** €35 flat\n- **Lunch (S2):** €18 per person, so €180 for 10. Vegetarian and vegan options are available on request, but we cannot guarantee allergen safety.\n- **Facilitator (S4):** €280 flat, covering 2 hours\n\nSome example totals within your budget:\n- Studio + coffee + projector: **€355**\n- Studio + coffee + lunch: **€500**\n- Studio + coffee + lunch + projector: **€535**\n- Loft + coffee + projector: **€535**\n\n## Photographer and wine\n\nWe don't offer a photographer or wine, so we can't include or price them. You are welcome to arrange these yourself, but please check with us first about any outside suppliers or alcohol on our premises.\n\n## Next steps\n\nAll prices are final totals in euros, with no taxes, fees or discounts. Our bookings are fixed at 4 hours. Please send us your preferred date(s) so we can check availability, which we need to confirm separately before booking. Please also let us know about any accessibility needs and which add-ons you would like.\n\nKind regards,\nBrightRoom",
+  "input_tokens": 819,
+  "output_tokens": 1091,
+  "latency_s": 18.44,
+  "cost_usd": 0.01255
+}

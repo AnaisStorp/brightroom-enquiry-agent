@@ -1,0 +1,10 @@
+{
+  "id": "T14",
+  "enquiry": "Bonjour, nous serions 18 personnes pour une demi-journée (4h), avec déjeuner végétarien pour tous et un vidéoprojecteur. Une collègue est en fauteuil roulant. Budget max 800 €.",
+  "model": "claude-sonnet-5-5",
+  "output": "**Objet : Proposition BrightRoom, événement de 18 personnes (demi-journée)**\n\nBonjour,\n\nMerci pour votre demande. Voici notre proposition.\n\n**Lieu recommandé : le Loft**\n- Durée : 4 heures\n- Capacité : jusqu'à 24 personnes, donc adapté à votre groupe de 18\n- Accessible aux personnes en fauteuil roulant, ce qui convient à votre collègue\n- Wi-Fi inclus\n\nNotre autre salle, le Studio, ne convient pas. Elle est limitée à 12 personnes et accessible uniquement par des escaliers.\n\n**Devis**\n\n| Poste | Détail | Montant |\n|---|---|---|\n| Loft (4 h) | forfait | 420 € |\n| Déjeuner | 18 personnes × 18 € | 324 € |\n| Vidéoprojecteur | forfait | 35 € |\n| **Total** | | **779 €** |\n\nCe total est ferme : nos prix sont des totaux finaux en euros, sans taxes ni frais supplémentaires. Il respecte votre budget maximum de 800 €, avec une marge de 21 €.\n\n**Points d'attention**\n- **Déjeuner végétarien :** les repas végétariens (ou végans) sont préparés sur demande, pour l'ensemble des 18 participants. Nous ne pouvons toutefois **pas garantir l'absence d'allergènes**. Si des participants ont des allergies, merci de nous le signaler.\n- **Pause café :** non incluse, car elle n'était pas demandée. Elle coûterait 8 € par personne, soit 144 € pour 18 personnes, ce qui porterait le total à 923 € et dépasserait votre budget.\n- **Disponibilité :** la date doit faire l'objet d'une vérification séparée. Cette proposition n'est donc pas encore une réservation confirmée. Pourriez-vous nous indiquer la date souhaitée (et une date alternative si possible) ?\n\nDès que vous nous aurez communiqué la date, nous vérifierons la disponibilité du Loft et reviendrons vers vous pour confirmer.\n\nCordialement,\nL'équipe BrightRoom",
+  "input_tokens": 865,
+  "output_tokens": 929,
+  "latency_s": 7.17,
+  "cost_usd": 0.01102
+}
