@@ -3,12 +3,17 @@
 import pytest  # pytest: fixtures and error assertions
 from streamlit.testing.v1 import AppTest  # streamlit: runs app.py in-process without a browser
 
-from src import llm, tools  # project: the model call to replace with a script, and the evidence check
+import json  # stdlib: reads the test enquiries
+from pathlib import Path  # stdlib: locates data/tests.json
+
+from src import llm, pipeline, tools  # project: the model call to script, saved runs, and the evidence check
 from src.brief_table import SALESPERSON_NOTE, brief_to_rows, rows_to_brief  # project: the code under test
 from tests.test_engine import BRIEFS  # project: hand-written briefs
 from tests.test_tool_and_guard import CLEAN, ScriptedModel  # project: a scripted stand-in for the model
 
 Q3 = "10 people, 4 hours, wheelchair access, coffee and a projector. Budget €600."
+TESTS_ENQUIRY = {t["id"]: t["enquiry"] for t in json.loads(
+    (Path(__file__).resolve().parent.parent / "data" / "tests.json").read_text(encoding="utf-8"))["tests"]}
 
 
 def value_of(rows, label):
@@ -42,11 +47,25 @@ def test_unreadable_value_is_reported_by_field_name():
         rows_to_brief(rows, BRIEFS["Q1"])
 
 
-def test_app_starts_empty_and_loads_a_test_enquiry():
-    app = AppTest.from_file("../app.py", default_timeout=20).run()
-    assert not app.exception and app.button[0].disabled
-    app.selectbox[0].select("Q3").run()
-    assert app.text_area[0].value == Q3 and not app.button[0].disabled
+@pytest.fixture
+def app(monkeypatch):
+    """The app with no saved runs on disk, so every request goes through the (scripted) model."""
+    monkeypatch.setattr(pipeline, "load_saved", lambda test_id: None)
+    return lambda: AppTest.from_file("../app.py", default_timeout=20)
+
+
+def shown(app_run):
+    return " ".join(element.value for kind in ("markdown", "success", "error", "info", "warning")
+                    for element in getattr(app_run, kind))
+
+
+def test_request_list_is_on_the_left_and_own_request_starts_empty(app):
+    running = app()
+    running.session_state["chosen"] = "own"
+    running.run()
+    assert not running.exception
+    assert len(running.sidebar.radio) == 1 and any("**Q3**" in o for o in running.sidebar.radio[0].options)
+    assert running.text_area[0].value == "" and running.button[0].disabled
 
 
 @pytest.mark.parametrize("test_id, banner, must_show", [
@@ -54,16 +73,27 @@ def test_app_starts_empty_and_loads_a_test_enquiry():
     ("Q2", "error", "Not sendable as an offer"),
     ("Q4", "info", "Headcount is missing"),
 ])
-def test_app_shows_status_draft_and_code_computed_prices(monkeypatch, test_id, banner, must_show):
+def test_clicking_a_request_shows_its_draft_and_code_computed_prices(app, monkeypatch, test_id, banner, must_show):
     prose = {"Q3": CLEAN, "Q2": "We cannot meet this.\n{{PRICE_TABLE}}\n{{ALTERNATIVES_TABLE}}",
              "Q4": "Could you tell us how many people will attend?"}[test_id]
-    monkeypatch.setattr(llm, "complete", ScriptedModel(BRIEFS[test_id].model_dump(mode="json"), prose))
-    app = AppTest.from_file("../app.py", default_timeout=20).run()
-    app.selectbox[0].select(test_id).run()
-    app.button[0].click().run()
-    assert not app.exception
-    assert len(getattr(app, banner)) >= 1
-    everything = " ".join(element.value for kind in ("markdown", "success", "error", "info", "warning")
-                          for element in getattr(app, kind))
-    assert must_show in everything
-    assert "requires salesperson approval" in everything
+    model = ScriptedModel(BRIEFS[test_id].model_dump(mode="json"), prose)
+    monkeypatch.setattr(llm, "complete", model)
+    running = app()
+    running.session_state["chosen"] = test_id
+    running.run()  # one click on the request: no further button needed
+    assert not running.exception and len(model.calls) == 2
+    assert len(getattr(running, banner)) >= 1
+    assert must_show in shown(running) and "requires salesperson approval" in shown(running)
+    assert TESTS_ENQUIRY[test_id] in shown(running)
+
+
+def test_saved_run_opens_without_calling_the_model(monkeypatch):
+    saved = pipeline.finish_offline(BRIEFS["Q3"], Q3, CLEAN)
+    monkeypatch.setattr(pipeline, "load_saved", lambda test_id: saved)
+    model = ScriptedModel()
+    monkeypatch.setattr(llm, "complete", model)
+    running = AppTest.from_file("../app.py", default_timeout=20)
+    running.session_state["chosen"] = "Q3"
+    running.run()
+    assert not running.exception and model.calls == []
+    assert "**€535**" in shown(running) and "saved run" in " ".join(c.value for c in running.caption)

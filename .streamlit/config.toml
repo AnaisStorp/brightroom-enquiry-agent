@@ -1,0 +1,42 @@
+# Look of the BrightRoom assistant: warm cream page, raspberry accents, soft rounded shapes.
+# Only native theme options are used (no custom CSS), so it survives Streamlit upgrades.
+
+[theme]
+base = "light"
+
+primaryColor = "#C2356E"              # raspberry: buttons and active elements (dark enough for white text)
+backgroundColor = "#FFFAF6"           # warm cream page
+secondaryBackgroundColor = "#FCEEF2"  # blush: input boxes, code blocks
+textColor = "#3A2A3C"                 # soft plum instead of black
+linkColor = "#C2356E"
+borderColor = "#F1CEDA"
+
+# Status colours, softened. Used by the green / amber / blue / red banners.
+greenColor = "#2F8F68"
+greenBackgroundColor = "#E4F6EC"
+orangeColor = "#C77F1A"
+yellowColor = "#C99A12"
+yellowBackgroundColor = "#FFF3D6"
+blueColor = "#3F7FD1"
+blueBackgroundColor = "#E6F0FD"
+redColor = "#D1435B"
+redBackgroundColor = "#FDE7EA"
+violetColor = "#8E5BD0"
+grayColor = "#8A7786"
+
+font = "Nunito:https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+headingFont = "Fredoka:https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&display=swap"
+headingFontWeights = 600
+
+baseRadius = "1.1rem"
+buttonRadius = "full"
+showWidgetBorder = true
+
+dataframeBorderColor = "#F1CEDA"
+dataframeHeaderBackgroundColor = "#FCEEF2"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false

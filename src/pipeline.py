@@ -61,8 +61,12 @@ def extract(enquiry: str) -> tuple[agent.Session, PipelineResult]:
                                    evidence_warnings=tools.check_evidence(brief, enquiry))
 
 
-def finish(session: agent.Session, partial: PipelineResult, brief: Optional[Brief] = None) -> PipelineResult:
-    """Steps 3-6, on the brief as extracted or as edited by the salesperson."""
+def finish(session: Optional[agent.Session], partial: PipelineResult,
+           brief: Optional[Brief] = None) -> PipelineResult:
+    """Steps 3-6, on the brief as extracted or as edited by the salesperson.
+
+    session may be None when a saved result is reopened and corrected: a new conversation is started."""
+    session = session or agent.new_session(partial.enquiry)
     brief = brief or partial.brief
     result = tools.execute(brief)
     prose = agent.write_draft(session, brief, result)
@@ -79,6 +83,31 @@ def finish(session: agent.Session, partial: PipelineResult, brief: Optional[Brie
         "evidence_warnings": tools.check_evidence(brief, partial.enquiry),
         "guard_findings": findings, "first_draft_findings": first_findings, "blocked": guard.blocked(findings), "rewrites": rewrites,
         "usage": _usage(session)})
+
+
+SAVED_RUNS = Path(__file__).resolve().parent.parent / "eval" / "raw" / "prototype"
+
+
+def load_saved(test_id: str) -> Optional[PipelineResult]:
+    """The first run the evaluation saved for a test enquiry, so the UI can open it instantly. None if absent."""
+    path = SAVED_RUNS / f"{test_id}_run1.json"
+    if not path.exists():
+        return None
+    try:
+        saved = PipelineResult.model_validate(json.loads(path.read_text(encoding="utf-8"))["result"])
+    except (KeyError, ValueError):
+        return None
+    return None if saved.error or saved.engine is None else saved
+
+
+def finish_offline(brief: Brief, enquiry: str, prose: str) -> PipelineResult:
+    """Steps 3, 5 and 6 on given prose, without calling the model. Used by tests and demos."""
+    result = tools.execute(brief)
+    findings = guard.check(prose, brief, result, enquiry)
+    return PipelineResult(enquiry=enquiry, brief=brief, engine=result, prose=prose,
+                          draft=render.assemble(prose, result),
+                          evidence_warnings=tools.check_evidence(brief, enquiry),
+                          guard_findings=findings, blocked=guard.blocked(findings))
 
 
 def run(enquiry: str) -> PipelineResult:

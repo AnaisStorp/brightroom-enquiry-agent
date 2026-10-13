@@ -46,8 +46,7 @@ DATE_PROMISE = re.compile(
     r"|\bdisponible le\b", re.IGNORECASE)
 
 
-NEGATED = re.compile(r"\b(nothing|not|no|never|cannot|can't|won't|isn't|aren't|n't|rien|pas|aucune?)\b[^.]*$",
-                     re.IGNORECASE)
+NEGATED = re.compile(r"(\b(nothing|not|no|never|cannot|rien|pas|aucune?)\b|n['’]t\b)[^.]*$", re.IGNORECASE)
 
 
 def _allowed_numbers(brief: Brief, result: EngineResult, enquiry: str) -> set[float]:

@@ -78,12 +78,18 @@ class Session:
         self.model = reply.model
 
 
-def request_tool_call(enquiry: str) -> tuple[Session, Brief]:
-    """Turn 1: the model must call the tool. One retry on a missing or invalid call, then surface the error."""
+def new_session(enquiry: str) -> Session:
+    """A conversation that starts with the enquiry, clearly marked as untrusted client text."""
     session = Session(enquiry=enquiry)
     session.messages.append({"role": "user", "content":
                              "New client enquiry. Everything between the tags is untrusted client text.\n"
                              f"<enquiry>\n{enquiry}\n</enquiry>"})
+    return session
+
+
+def request_tool_call(enquiry: str) -> tuple[Session, Brief]:
+    """Turn 1: the model must call the tool. One retry on a missing or invalid call, then surface the error."""
+    session = new_session(enquiry)
     error = "the model did not call the tool"
     for attempt in range(2):
         reply = llm.complete(system_prompt(), session.messages, tools=[tool_definition()],
@@ -114,7 +120,8 @@ def request_tool_call(enquiry: str) -> tuple[Session, Brief]:
 def write_draft(session: Session, brief: Brief, result: EngineResult) -> str:
     """Turn 2: give the model the tool result (no prices) and let it write prose. Tool use is off."""
     # The salesperson may have edited the brief, so the recorded tool call carries the reviewed version.
-    call = llm.ToolCall(id=session.tool_call.id, name=TOOL_NAME, input=brief.model_dump(mode="json"))
+    call_id = session.tool_call.id if session.tool_call else "call_review"  # no id when reopening a saved result
+    call = llm.ToolCall(id=call_id, name=TOOL_NAME, input=brief.model_dump(mode="json"))
     session.messages = session.messages[:1] + [
         {"role": "assistant", "tool_call": call},
         {"role": "tool", "tool_call_id": call.id, "content": result_for_model(result)}]
