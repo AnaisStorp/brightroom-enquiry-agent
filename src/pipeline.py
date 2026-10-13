@@ -66,13 +66,13 @@ def finish(session: agent.Session, partial: PipelineResult, brief: Optional[Brie
     brief = brief or partial.brief
     result = tools.execute(brief)
     prose = agent.write_draft(session, brief, result)
-    findings = guard.check(prose, brief, result)
+    findings = guard.check(prose, brief, result, partial.enquiry)
     rewrites, first_findings = 0, []
     if guard.blocked(findings):
         first_findings = findings
         prose = agent.rewrite_draft(session, [f"{f.message} (you wrote: \"{f.match}\")"
                                               for f in findings if f.severity == "block"])
-        findings = guard.check(prose, brief, result)
+        findings = guard.check(prose, brief, result, partial.enquiry)
         rewrites = 1
     return partial.model_copy(update={
         "brief": brief, "engine": result, "prose": prose, "draft": render.assemble(prose, result),

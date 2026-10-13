@@ -17,6 +17,7 @@ import json  # stdlib: serialises the tool result that goes back to the model
 import re  # stdlib: strips money amounts from the model's view and normalises quotes for the evidence check
 from typing import Optional  # stdlib: marks values that may be absent (None)
 
+from src.brief_table import SALESPERSON_NOTE  # project: marks values typed in by the salesperson, not quoted
 from src.engine import evaluate, load_catalogue  # project: the deterministic engine this tool runs
 from src.schema import Brief, EngineResult, SERVICE_FIELDS  # project: tool input and output shapes
 
@@ -65,7 +66,7 @@ def parse_input(tool_input: dict) -> Brief:
 
 def execute(brief: Brief) -> EngineResult:
     """Run the tool: every number in the result is computed here, by code, from the catalogue."""
-    return evaluate(brief, load_catalogue())
+    return evaluate(brief)
 
 
 # --------------------------------------------------------------------------- what goes back to the model
@@ -134,7 +135,7 @@ def check_evidence(brief: Brief, enquiry: str) -> list[str]:
     quoted += [(f"unlisted request '{r.request}'", r.evidence, True) for r in brief.unlisted_requests]
     warnings = []
     for name, evidence, filled in quoted:
-        if not filled:
+        if not filled or evidence == SALESPERSON_NOTE:
             continue
         if not evidence.strip():
             warnings.append(f"{name}: no evidence quote given. Check this value against the enquiry.")

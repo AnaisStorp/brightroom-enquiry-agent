@@ -1,0 +1,50 @@
+ENQUIRY  8 people on site and 6 more joining online, 4 hours, with a projector and video-conferencing. Budget €400.
+
+BRIEF (tool input)
+  headcount: {"status": "confirmed", "evidence": "8 people on site", "value": 8}
+  duration_hours: {"status": "confirmed", "evidence": "4 hours", "value": 4.0}
+  budget_eur: {"status": "confirmed", "evidence": "Budget €400", "value": 400.0}
+  projector: {"status": "confirmed", "evidence": "with a projector", "value": true}
+  bookings: 1
+  unlisted_requests: [{"request": "video-conferencing for 6 online participants", "evidence": "video-conferencing"}]
+
+STATUS  FEASIBLE_WITH_ASSUMPTIONS   total=275   budget_delta=125.0
+  - All stated requirements are met, subject to the listed assumptions.
+  - Accessibility not stated: assumed no wheelchair access is needed. The Studio is stairs-only.
+  - 'video-conferencing for 6 online participants' is not in the catalogue: flagged, not priced, not promised.
+
+------------------------------------------------------------------------
+DRAFT – requires salesperson approval – availability unconfirmed
+
+Hello,
+
+Thank you for your enquiry. Below is a proposal for you to review.
+
+For your 8 people on site for 4 hours, the Studio with a projector fits. The Studio holds up to 12 people, and one projector is included for the booking. The total comes within your budget.
+
+
+
+| Item | Detail | Price |
+|---|---|---:|
+| Studio (V1) | 4 hours | €240 |
+| Projector (S3) | one projector for the booking | €35 |
+| **Total** | | **€275** |
+| Budget | | €400 |
+| Difference | | €125 under budget |
+
+
+
+Please note the following:
+- **Accessibility:** You didn't mention any accessibility needs, so I have assumed nobody needs wheelchair access. The Studio can only be reached by stairs. If anyone needs a route without stairs, please tell me. The Loft is wheelchair accessible, and I would then need to re-check the package.
+- **Video-conferencing:** Video-conferencing for your 6 online participants is not something BrightRoom offers. I have not priced it, and I can't promise it. The proposal covers the room and the projector only.
+- **Duration:** Bookings are available only in 4-hour blocks.
+- **Prices:** The listed prices are fixed.
+- **Dates:** You haven't given a date. Availability has to be checked separately, and nothing is held at this stage.
+
+Please get in touch if you'd like to adjust anything.
+
+Kind regards
+------------------------------------------------------------------------
+GUARD  passed   rewrites=0
+  [review] unlisted_item_mentioned: "video"  'video-conferencing for 6 online participants' is not in the catalogue. Check the draft declines it and does not offer it.
+USAGE  2 calls, 11440 in / 1024 out tokens, 8.31s, $0.0331 (estimate)

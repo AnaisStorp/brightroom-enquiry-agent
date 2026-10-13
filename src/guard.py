@@ -50,8 +50,8 @@ NEGATED = re.compile(r"\b(nothing|not|no|never|cannot|can't|won't|isn't|aren't|n
                      re.IGNORECASE)
 
 
-def _allowed_numbers(brief: Brief, result: EngineResult) -> set[float]:
-    """Numbers the prose may repeat: what the client stated and the catalogue's non-price conditions."""
+def _allowed_numbers(brief: Brief, result: EngineResult, enquiry: str) -> set[float]:
+    """Numbers the prose may repeat: the client's own (non-money) numbers and the catalogue's conditions."""
     catalogue = load_catalogue()
     allowed = {float(catalogue["booking_hours"])}
     allowed |= {float(v["max_people"]) for v in catalogue["venues"]}
@@ -59,13 +59,19 @@ def _allowed_numbers(brief: Brief, result: EngineResult) -> set[float]:
     for value in (brief.headcount.value, brief.headcount_max, brief.duration_hours.value, brief.facilitator_hours):
         if value is not None:
             allowed.add(float(value))
+    if brief.bookings:
+        allowed |= {float(n) for n in range(1, brief.bookings + 1)}
+    quoted = [r.request + " " + r.evidence for r in brief.unlisted_requests]
+    quoted += brief.date_requests + brief.dietary_notes + brief.allergy_notes + [enquiry]
+    for text in quoted:  # numbers inside what the client asked for, e.g. "two sessions of 15"
+        allowed |= {float(n.replace(",", ".")) for n in NUMBER.findall(MONEY.sub(" ", text))}
     allowed |= {float(a.headcount) for a in result.alternatives}
     allowed |= {float(s.headcount) for s in result.scenarios}
     allowed |= {float(n) for n in range(1, len(result.alternatives) + 1)}  # "option 1", "option 2"
     return allowed
 
 
-def check(prose: str, brief: Brief, result: EngineResult) -> list[Finding]:
+def check(prose: str, brief: Brief, result: EngineResult, enquiry: str = "") -> list[Finding]:
     findings: list[Finding] = []
     text = LIST_MARKER.sub("", PLACEHOLDER.sub(" ", prose))
 
@@ -77,7 +83,7 @@ def check(prose: str, brief: Brief, result: EngineResult) -> list[Finding]:
                                 message="The model wrote a percentage. No discount or rate exists in the catalogue."))
 
     without_money = PERCENT.sub(" ", MONEY.sub(" ", text))
-    allowed = _allowed_numbers(brief, result)
+    allowed = _allowed_numbers(brief, result, enquiry)
     for m in NUMBER.finditer(without_money):
         if float(m.group(0).replace(",", ".")) not in allowed:
             findings.append(Finding(rule="unknown_number", severity="block", match=m.group(0),

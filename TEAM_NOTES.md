@@ -61,7 +61,8 @@ What it does **not** protect against, and we should say so honestly: a manipulat
 | `data/catalogue.json` | The six catalogue items, prices and rules. The only source of truth. | no |
 | `data/tests.json` | The 17 test enquiries with the hand-computed expected results. | no |
 | `src/schema.py` | The shapes of the brief and of the engine result. | no |
-| `src/engine.py` | The calculator: venue choice, prices, status, alternatives. | no |
+| `src/rules.py` | **The rules and calculations**, as plain if/else: which venue, what it costs, what is wrong, which status, which alternatives. | no |
+| `src/engine.py` | Applies those rules to one brief, in six numbered steps (warnings, read the brief, ask or assume, questions, calculate, checklist). | no |
 | `src/tools.py` | Defines the tool `calculate_package`, validates its input, strips prices from what the model sees, checks the evidence quotes. | no |
 | `src/agent.py` | The system prompt and the two model turns. | **yes** |
 | `src/llm.py` | Thin wrapper so the provider (Anthropic, OpenRouter, OpenAI) is a setting in `.env`. | **yes** |
@@ -69,7 +70,7 @@ What it does **not** protect against, and we should say so honestly: a manipulat
 | `src/render.py` | Builds the price tables and the header. | no |
 | `src/pipeline.py` | Runs steps 1 to 7 and has the command line. | calls agent |
 | `baseline/single_prompt.py` | The comparison: one plain prompt, no tool, no checks. | **yes** |
-| `tests/test_engine.py` | 54 tests of the calculator against the expected results. | no |
+| `tests/test_engine.py` | 54 tests of the rules and the engine against the expected results. | no |
 | `tests/test_tool_and_guard.py` | 43 tests of the tool boundary, the guard and the flow, with a scripted fake model. | no |
 | `eval/cli_runs/` | Saved live outputs for Q1 to Q5. | |
 | `baseline/outputs/` | Saved baseline outputs for all 17 tests. | |
@@ -126,7 +127,13 @@ Three values were not stated in the instructions and I filled them in by the sam
 
 ## 8. The rules the calculator applies
 
-**Choosing the package.** It lists all 32 possible packages (2 venues times every combination of the 4 services). It removes those that fail a hard constraint: group too big for the venue, wheelchair access needed but not available, longer than 4 hours, or a must-have service missing. It takes the cheapest one left.
+**Where they live.** `src/rules.py`, five rules read top to bottom, all if/else.
+
+**Choosing the venue (RULE 1).** More than 24 people: no venue. 13 to 24: the Loft. Up to 12 with a wheelchair need: the Loft. Otherwise: the cheaper Studio. Longer than 4 hours: nothing can be priced.
+
+**The price (RULE 2).** Venue price, plus €8 per person if coffee is required, plus €18 per person if lunch is required, plus €35 if a projector is required, plus €280 if a facilitator is required.
+
+The assignment describes this as "list all 32 packages, drop the invalid ones, take the cheapest". We wrote it as if/else because it is easier to read, and a test proves both methods give the same answer for every headcount from 1 to 30, with and without a wheelchair need, for every set of services. The price is that the rules are not general: a third venue would mean rewriting RULE 1.
 
 **Requirement or preference.** A service stated plainly ("coffee for everyone") is a must-have. Hedged wording ("ideally", "would be nice") makes it a preference: it is shown as an optional add-on and never forced into the package.
 

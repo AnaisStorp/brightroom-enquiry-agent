@@ -1,0 +1,51 @@
+ENQUIRY  10 people for two consecutive days, 4 hours each day, coffee on both days. Budget €700.
+
+BRIEF (tool input)
+  headcount: {"status": "confirmed", "evidence": "10 people", "value": 10}
+  duration_hours: {"status": "confirmed", "evidence": "4 hours each day", "value": 4.0}
+  budget_eur: {"status": "confirmed", "evidence": "Budget €700", "value": 700.0}
+  coffee_break: {"status": "confirmed", "evidence": "coffee on both days", "value": true}
+  bookings: 2
+  date_requests: ["two consecutive days"]
+
+STATUS  FEASIBLE_WITH_ASSUMPTIONS   total=320   budget_delta=380.0
+  - All stated requirements are met, subject to the listed assumptions.
+  - The request involves 2 separate bookings (several days, sessions or rooms). Every price shown is for ONE booking only; the other bookings have to be priced separately by the salesperson.
+  - Accessibility not stated: assumed no wheelchair access is needed. The Studio is stairs-only.
+  - Date/urgency request (two consecutive days): dates need a separate availability check. Nothing can be confirmed or booked from this draft.
+
+------------------------------------------------------------------------
+DRAFT – requires salesperson approval – availability unconfirmed
+
+Hello,
+
+Thank you for your enquiry. Here is a proposal for you to review.
+
+For 10 people, 4 hours per day, we suggest the Studio, which holds up to 12 people. Each day would include one coffee break for every attendee.
+
+
+
+| Item | Detail | Price |
+|---|---|---:|
+| Studio (V1) | 4 hours | €240 |
+| Coffee break (S1) | 10 people x €8 | €80 |
+| **Total for ONE booking** (of 2 requested) | | **€320** |
+| Budget | | €700 |
+| Difference | | €380 under budget |
+
+
+
+Please note that the prices above cover ONE booking (one day) only. Your request is for two consecutive days, so the second day still has to be priced separately. Please do not read the table as the price for the whole event. On the current figures, the single-day package fits within your budget, but we still need to check how the second day fits.
+
+Assumptions I have made:
+- You did not mention accessibility, so I have assumed nobody needs wheelchair access. The Studio can only be reached by stairs. If anyone needs a route without stairs, please tell us, because we would then look at the Loft instead.
+- Bookings are for 4 hours per day. We have no longer option.
+
+Availability for your two days has to be checked separately. Nothing is held for you at this point.
+
+Please get in touch if you would like to adjust anything or tell us your preferred dates.
+
+Kind regards
+------------------------------------------------------------------------
+GUARD  passed   rewrites=0
+USAGE  2 calls, 11424 in / 662 out tokens, 6.39s, $0.0295 (estimate)

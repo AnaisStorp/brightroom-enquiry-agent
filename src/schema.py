@@ -82,6 +82,10 @@ class Brief(BaseModel):
         "Catalogue item S4. true when a facilitator or moderator is asked for."))
     facilitator_hours: Optional[float] = Field(None, gt=0, description=(
         "Hours of facilitation asked for. 'For the whole workshop' = the requested duration. Null if not stated."))
+    bookings: Optional[int] = Field(None, ge=1, description=(
+        "How many separate bookings the request involves: several days, several sessions, or several rooms at "
+        "once each count as separate bookings. Null or 1 for one event in one room on one day. "
+        "Keep headcount as the total number of attendees of the whole event."))
     catering_unclear: BoolField = Field(default_factory=BoolField, description=(
         "true when food or catering is asked for without saying whether that means a coffee break or lunch "
         "(e.g. 'with food'). Leave coffee_break and lunch missing in that case."))
@@ -186,3 +190,4 @@ class EngineResult(BaseModel):
     alternatives: list[Alternative] = Field(default_factory=list)
     scenarios: list[Scenario] = Field(default_factory=list)
     standing_notes: list[str] = Field(default_factory=list)
+    bookings_requested: int = 1  # more than 1 = every price shown covers ONE booking only

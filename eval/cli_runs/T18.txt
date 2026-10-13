@@ -1,0 +1,49 @@
+ENQUIRY  We are 30 people. Could we split into two sessions of 15 on the same day, with coffee for everyone? Budget €1,200.
+
+BRIEF (tool input)
+  headcount: {"status": "confirmed", "evidence": "We are 30 people.", "value": 30}
+  budget_eur: {"status": "confirmed", "evidence": "Budget €1,200.", "value": 1200.0}
+  coffee_break: {"status": "confirmed", "evidence": "with coffee for everyone", "value": true}
+  bookings: 2
+  date_requests: ["on the same day"]
+
+STATUS  INFEASIBLE   total=None   budget_delta=None
+  - 30 people exceeds the largest venue (Loft, max 24).
+  - The request involves 2 separate bookings (several days, sessions or rooms). Every price shown is for ONE booking only; the other bookings have to be priced separately by the salesperson.
+  - Duration not stated: assumed the standard 4-hour block.
+  - Date/urgency request (on the same day): dates need a separate availability check. Nothing can be confirmed or booked from this draft.
+
+------------------------------------------------------------------------
+DRAFT – requires salesperson approval – availability unconfirmed
+Not sendable as an offer
+
+Hello,
+
+Thank you for your enquiry. As specified, we can't meet this request. The tool treated the 30 people as one group, and that is more than our largest room, the Loft, which holds at most 24 people. The Studio holds at most 12, so it doesn't fit either.
+
+You suggested two sessions of 15 on the same day. That counts as two separate bookings, and the figures below cover only ONE booking. The second booking still has to be priced separately. Because you didn't mention a duration, I assumed our standard 4-hour block. Only 4-hour bookings exist.
+
+Here is the option the client would have to agree to:
+
+
+
+| Option | Package | People | Total | What the client gives up |
+|---|---|---:|---:|---|
+| 1 | Loft + Coffee break | 24 | €612 | headcount reduced from 30 to at most 24 |
+
+Every option changes a stated requirement and needs the client's explicit consent.
+
+
+
+This option means reducing the headcount from 30 to at most 24, so it gives up part of your group. It is not an offer. It does not fit what you asked for, and I can't say whether it fits your budget.
+
+A few other points:
+- Availability for any date, including the same-day plan, has to be checked separately. Nothing is held.
+- The listed prices are fixed, and no price reductions are available.
+
+If you'd like to talk through the alternative or change the group size, please get in touch.
+
+Kind regards
+------------------------------------------------------------------------
+GUARD  passed   rewrites=0
+USAGE  2 calls, 11589 in / 636 out tokens, 6.73s, $0.0295 (estimate)

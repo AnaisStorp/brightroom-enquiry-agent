@@ -99,6 +99,15 @@ def test_missing_placeholder_is_flagged_and_table_still_added():
     assert "**€535**" in render.assemble("Here is the proposal.", result)
 
 
+def test_table_says_one_booking_when_several_were_requested():
+    draft = render.assemble("Proposal.\n{{PRICE_TABLE}}", tools.execute(BRIEFS["T19"]))
+    assert "Total for ONE booking** (of 2 requested)" in draft and "**€320**" in draft
+
+
+def test_guard_allows_numbers_the_client_used_in_an_unlisted_request():
+    assert ("unknown_number", "block") not in rules("We cannot offer two sessions of 15.", "T18")
+
+
 def test_infeasible_draft_is_labelled_not_sendable():
     draft = render.assemble("We cannot meet this.\n{{PRICE_TABLE}}\n{{ALTERNATIVES_TABLE}}", tools.execute(BRIEFS["Q2"]))
     assert draft.startswith(render.HEADER + "\n" + render.NOT_SENDABLE)

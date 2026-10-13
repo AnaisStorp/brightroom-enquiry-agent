@@ -8,7 +8,10 @@ from pathlib import Path  # stdlib: locates data/tests.json relative to this fil
 
 import pytest  # pytest: parametrises one test per oracle case
 
-from src.engine import enumerate_packages, evaluate, load_catalogue  # project: the code under test
+from itertools import combinations  # stdlib: builds every service combination for the brute-force cross-check
+
+from src import rules  # project: the if/else rules under test
+from src.engine import evaluate  # project: the code under test
 from src.schema import Brief  # project: the brief shape the engine consumes
 
 ORACLE = {t["id"]: t for t in json.loads(
@@ -62,6 +65,17 @@ BRIEFS = {
                  projector=f(True, "a projector"), budget_eur=f(700, "Budget €700")),
     "T17": Brief(headcount=f(50, "50 people"), budget_eur=f(100, "€100 total"),
                  unlisted_requests=[{"request": "confirm a booking", "evidence": "confirm a booking"}]),
+    "T18": Brief(headcount=f(30, "30 people"), coffee_break=f(True, "coffee for everyone"),
+                 budget_eur=f(1200, "Budget €1,200"),
+                 unlisted_requests=[{"request": "split into two sessions of 15",
+                                     "evidence": "split into two sessions of 15 on the same day"}]),
+    "T19": Brief(headcount=f(10, "10 people"), duration_hours=f(4, "4 hours each day"),
+                 coffee_break=f(True, "coffee on both days"), budget_eur=f(700, "Budget €700"), bookings=2,
+                 date_requests=["two consecutive days"]),
+    "T20": Brief(headcount=f(8, "8 people on site"), duration_hours=f(4, "4 hours"),
+                 projector=f(True, "a projector"), budget_eur=f(400, "Budget €400"),
+                 unlisted_requests=[{"request": "video-conferencing", "evidence": "video-conferencing"},
+                                    {"request": "6 online participants", "evidence": "6 more joining online"}]),
 }
 
 
@@ -69,8 +83,33 @@ def test_every_oracle_case_has_a_brief():
     assert set(BRIEFS) == set(ORACLE)
 
 
-def test_all_32_packages_are_enumerated():
-    assert len(enumerate_packages(load_catalogue())) == 32
+def test_if_else_rules_equal_cheapest_of_all_32_packages():
+    """The assignment says: enumerate all 32 packages (2 venues x 16 service sets), drop the invalid ones,
+    take the cheapest. rules.py does it with if/else instead. This proves both give the same answer for
+    every headcount from 1 to 30, with and without a wheelchair need, for every set of required services."""
+    service_ids = list(rules.SERVICES)
+    service_sets = [set(c) for k in range(5) for c in combinations(service_ids, k)]
+    assert len(rules.VENUES) * len(service_sets) == 32
+
+    def cost(venue, chosen, people):
+        return venue["price"] + sum(
+            rules.SERVICES[s]["price"] * (people if rules.SERVICES[s]["pricing"] == "per_person" else 1)
+            for s in chosen)
+
+    for people in range(1, 31):
+        for wheelchair in (False, True):
+            for required in service_sets:
+                valid = [(cost(venue, chosen, people), venue["id"])
+                         for venue in rules.VENUES.values() for chosen in service_sets
+                         if people <= venue["max_people"]
+                         and (venue["wheelchair_accessible"] or not wheelchair)
+                         and required <= chosen]
+                package = rules.build_package(rules.Request(
+                    headcount=people, duration=4, wheelchair=wheelchair, coffee="S1" in required,
+                    lunch="S2" in required, projector="S3" in required, facilitator="S4" in required,
+                    budget=None))
+                expected = min(valid) if valid else None
+                assert (package and (package.total, package.venue_id)) == expected
 
 
 @pytest.mark.parametrize("test_id", list(ORACLE))
@@ -89,6 +128,8 @@ def test_status_total_and_budget_delta(test_id):
         assert [s.total for s in result.scenarios] == expected["scenario_totals"]
     if "clarifications" in expected:
         assert result.clarifications == expected["clarifications"]
+    for word in expected.get("must_flag", []):
+        assert any(word in text for text in result.flags + result.assumptions)
 
 
 @pytest.mark.parametrize("test_id", list(ORACLE))
@@ -193,6 +234,18 @@ def test_t17_never_yields_a_package_for_50_people():
     result = evaluate(BRIEFS["T17"])
     assert result.package is None
     assert all(a.requires_client_consent for a in result.alternatives)
+
+
+def test_t19_two_days_are_never_priced_as_one_total():
+    result = evaluate(BRIEFS["T19"])
+    assert result.status.value == "FEASIBLE_WITH_ASSUMPTIONS" and result.bookings_requested == 2
+    assert any("ONE booking only" in a for a in result.assumptions)
+
+
+def test_several_bookings_are_never_plain_feasible():
+    brief = BRIEFS["Q3"].model_copy(update={"bookings": 3})
+    assert evaluate(BRIEFS["Q3"]).status.value == "FEASIBLE"
+    assert evaluate(brief).status.value == "FEASIBLE_WITH_ASSUMPTIONS"
 
 
 # ---- policy cases beyond the oracle list
